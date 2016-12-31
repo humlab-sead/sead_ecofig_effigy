@@ -1,0 +1,1615 @@
+{
+    "type": "FeatureCollection",
+    "features": [
+        {
+            "type": "Feature",
+            "geometry": {
+                "type": "Point",
+                "coordinates": [
+                    -2.827591658,
+                    51.18299866
+                ]
+            },
+            "properties": {
+                "name": "Abbots Way",
+                "sumRep": "2",
+                "environmentalIndicators": {
+                    "Aquatics": "0",
+                    "Carrion": "0",
+                    "Disturbed\/arable": "0",
+                    "Dung\/foul habitats": "0",
+                    "General synanthropic": "0",
+                    "Halotolerant": "0",
+                    "Heathland & moorland": "0",
+                    "Indicators: Coniferous": "0",
+                    "Indicators: Deciduous": "0",
+                    "Indicators: Dung": "0",
+                    "Indicators: Running water": "0",
+                    "Indicators: Standing water": "0",
+                    "Meadowland": "0",
+                    "Open wet habitats": "0",
+                    "Pasture\/Dung": "0",
+                    "Sandy\/dry disturbed\/arable": "0",
+                    "Stored grain pest": "0",
+                    "Wetlands\/marshes": "50",
+                    "Wood and trees": "50"
+                }
+            }
+        },
+        {
+            "type": "Feature",
+            "geometry": {
+                "type": "Point",
+                "coordinates": [
+                    -1.871111155,
+                    52.21111298
+                ]
+            },
+            "properties": {
+                "name": "Alcester: Roman Pit",
+                "sumRep": "1",
+                "environmentalIndicators": {
+                    "Aquatics": "0",
+                    "Carrion": "0",
+                    "Disturbed\/arable": "0",
+                    "Dung\/foul habitats": "0",
+                    "General synanthropic": "0",
+                    "Halotolerant": "0",
+                    "Heathland & moorland": "0",
+                    "Indicators: Coniferous": "0",
+                    "Indicators: Deciduous": "0",
+                    "Indicators: Dung": "0",
+                    "Indicators: Running water": "0",
+                    "Indicators: Standing water": "0",
+                    "Meadowland": "0",
+                    "Open wet habitats": "0",
+                    "Pasture\/Dung": "0",
+                    "Sandy\/dry disturbed\/arable": "0",
+                    "Stored grain pest": "0",
+                    "Wetlands\/marshes": "0",
+                    "Wood and trees": "100"
+                }
+            }
+        },
+        {
+            "type": "Feature",
+            "geometry": {
+                "type": "Point",
+                "coordinates": [
+                    -2.796111107,
+                    51.13944626
+                ]
+            },
+            "properties": {
+                "name": "Baker site",
+                "sumRep": "1",
+                "environmentalIndicators": {
+                    "Aquatics": "0",
+                    "Carrion": "0",
+                    "Disturbed\/arable": "0",
+                    "Dung\/foul habitats": "0",
+                    "General synanthropic": "0",
+                    "Halotolerant": "0",
+                    "Heathland & moorland": "0",
+                    "Indicators: Coniferous": "0",
+                    "Indicators: Deciduous": "0",
+                    "Indicators: Dung": "0",
+                    "Indicators: Running water": "0",
+                    "Indicators: Standing water": "0",
+                    "Meadowland": "0",
+                    "Open wet habitats": "0",
+                    "Pasture\/Dung": "0",
+                    "Sandy\/dry disturbed\/arable": "0",
+                    "Stored grain pest": "0",
+                    "Wetlands\/marshes": "0",
+                    "Wood and trees": "100"
+                }
+            }
+        },
+        {
+            "type": "Feature",
+            "geometry": {
+                "type": "Point",
+                "coordinates": [
+                    -7.300685406,
+                    55.04246521
+                ]
+            },
+            "properties": {
+                "name": "Ballyarnet Lake",
+                "sumRep": "2",
+                "environmentalIndicators": {
+                    "Aquatics": "0",
+                    "Carrion": "0",
+                    "Disturbed\/arable": "0",
+                    "Dung\/foul habitats": "0",
+                    "General synanthropic": "0",
+                    "Halotolerant": "0",
+                    "Heathland & moorland": "0",
+                    "Indicators: Coniferous": "50",
+                    "Indicators: Deciduous": "0",
+                    "Indicators: Dung": "0",
+                    "Indicators: Running water": "0",
+                    "Indicators: Standing water": "0",
+                    "Meadowland": "0",
+                    "Open wet habitats": "0",
+                    "Pasture\/Dung": "0",
+                    "Sandy\/dry disturbed\/arable": "0",
+                    "Stored grain pest": "0",
+                    "Wetlands\/marshes": "0",
+                    "Wood and trees": "50"
+                }
+            }
+        },
+        {
+            "type": "Feature",
+            "geometry": {
+                "type": "Point",
+                "coordinates": [
+                    -6.493055344,
+                    54.83555603
+                ]
+            },
+            "properties": {
+                "name": "Ballymacombes More",
+                "sumRep": "3",
+                "environmentalIndicators": {
+                    "Aquatics": "0",
+                    "Carrion": "0",
+                    "Disturbed\/arable": "0",
+                    "Dung\/foul habitats": "0",
+                    "General synanthropic": "0",
+                    "Halotolerant": "0",
+                    "Heathland & moorland": "0",
+                    "Indicators: Coniferous": "33,33333333",
+                    "Indicators: Deciduous": "0",
+                    "Indicators: Dung": "0",
+                    "Indicators: Running water": "0",
+                    "Indicators: Standing water": "0",
+                    "Meadowland": "0",
+                    "Open wet habitats": "0",
+                    "Pasture\/Dung": "0",
+                    "Sandy\/dry disturbed\/arable": "0",
+                    "Stored grain pest": "0",
+                    "Wetlands\/marshes": "0",
+                    "Wood and trees": "66,66666667"
+                }
+            }
+        },
+        {
+            "type": "Feature",
+            "geometry": {
+                "type": "Point",
+                "coordinates": [
+                    0.058195859,
+                    51.51885223
+                ]
+            },
+            "properties": {
+                "name": "Beckton: Woolwich Manor Way",
+                "sumRep": "3",
+                "environmentalIndicators": {
+                    "Aquatics": "0",
+                    "Carrion": "33,33333333",
+                    "Disturbed\/arable": "0",
+                    "Dung\/foul habitats": "0",
+                    "General synanthropic": "0",
+                    "Halotolerant": "0",
+                    "Heathland & moorland": "0",
+                    "Indicators: Coniferous": "0",
+                    "Indicators: Deciduous": "0",
+                    "Indicators: Dung": "0",
+                    "Indicators: Running water": "0",
+                    "Indicators: Standing water": "0",
+                    "Meadowland": "33,33333333",
+                    "Open wet habitats": "0",
+                    "Pasture\/Dung": "0",
+                    "Sandy\/dry disturbed\/arable": "33,33333333",
+                    "Stored grain pest": "0",
+                    "Wetlands\/marshes": "0",
+                    "Wood and trees": "0"
+                }
+            }
+        },
+        {
+            "type": "Feature",
+            "geometry": {
+                "type": "Point",
+                "coordinates": [
+                    -0.431420505,
+                    53.84418106
+                ]
+            },
+            "properties": {
+                "name": "Beverley: Morton Lane",
+                "sumRep": "1",
+                "environmentalIndicators": {
+                    "Aquatics": "0",
+                    "Carrion": "0",
+                    "Disturbed\/arable": "0",
+                    "Dung\/foul habitats": "0",
+                    "General synanthropic": "0",
+                    "Halotolerant": "0",
+                    "Heathland & moorland": "0",
+                    "Indicators: Coniferous": "0",
+                    "Indicators: Deciduous": "0",
+                    "Indicators: Dung": "0",
+                    "Indicators: Running water": "0",
+                    "Indicators: Standing water": "0",
+                    "Meadowland": "0",
+                    "Open wet habitats": "0",
+                    "Pasture\/Dung": "0",
+                    "Sandy\/dry disturbed\/arable": "0",
+                    "Stored grain pest": "0",
+                    "Wetlands\/marshes": "0",
+                    "Wood and trees": "100"
+                }
+            }
+        },
+        {
+            "type": "Feature",
+            "geometry": {
+                "type": "Point",
+                "coordinates": [
+                    0.203413978,
+                    50.94153976
+                ]
+            },
+            "properties": {
+                "name": "Bexley: Crossness",
+                "sumRep": "4",
+                "environmentalIndicators": {
+                    "Aquatics": "25",
+                    "Carrion": "0",
+                    "Disturbed\/arable": "0",
+                    "Dung\/foul habitats": "0",
+                    "General synanthropic": "0",
+                    "Halotolerant": "0",
+                    "Heathland & moorland": "50",
+                    "Indicators: Coniferous": "0",
+                    "Indicators: Deciduous": "0",
+                    "Indicators: Dung": "0",
+                    "Indicators: Running water": "25",
+                    "Indicators: Standing water": "0",
+                    "Meadowland": "0",
+                    "Open wet habitats": "0",
+                    "Pasture\/Dung": "0",
+                    "Sandy\/dry disturbed\/arable": "0",
+                    "Stored grain pest": "0",
+                    "Wetlands\/marshes": "0",
+                    "Wood and trees": "0"
+                }
+            }
+        },
+        {
+            "type": "Feature",
+            "geometry": {
+                "type": "Point",
+                "coordinates": [
+                    0.156975761,
+                    51.50448608
+                ]
+            },
+            "properties": {
+                "name": "Bexley: Norman Road",
+                "sumRep": "1",
+                "environmentalIndicators": {
+                    "Aquatics": "0",
+                    "Carrion": "0",
+                    "Disturbed\/arable": "0",
+                    "Dung\/foul habitats": "0",
+                    "General synanthropic": "0",
+                    "Halotolerant": "0",
+                    "Heathland & moorland": "0",
+                    "Indicators: Coniferous": "0",
+                    "Indicators: Deciduous": "0",
+                    "Indicators: Dung": "0",
+                    "Indicators: Running water": "0",
+                    "Indicators: Standing water": "0",
+                    "Meadowland": "0",
+                    "Open wet habitats": "0",
+                    "Pasture\/Dung": "0",
+                    "Sandy\/dry disturbed\/arable": "0",
+                    "Stored grain pest": "0",
+                    "Wetlands\/marshes": "0",
+                    "Wood and trees": "100"
+                }
+            }
+        },
+        {
+            "type": "Feature",
+            "geometry": {
+                "type": "Point",
+                "coordinates": [
+                    -0.786666691,
+                    53.38000107
+                ]
+            },
+            "properties": {
+                "name": "Bole Ings",
+                "sumRep": "1",
+                "environmentalIndicators": {
+                    "Aquatics": "0",
+                    "Carrion": "0",
+                    "Disturbed\/arable": "0",
+                    "Dung\/foul habitats": "0",
+                    "General synanthropic": "0",
+                    "Halotolerant": "0",
+                    "Heathland & moorland": "0",
+                    "Indicators: Coniferous": "0",
+                    "Indicators: Deciduous": "0",
+                    "Indicators: Dung": "0",
+                    "Indicators: Running water": "0",
+                    "Indicators: Standing water": "0",
+                    "Meadowland": "0",
+                    "Open wet habitats": "0",
+                    "Pasture\/Dung": "0",
+                    "Sandy\/dry disturbed\/arable": "0",
+                    "Stored grain pest": "0",
+                    "Wetlands\/marshes": "0",
+                    "Wood and trees": "100"
+                }
+            }
+        },
+        {
+            "type": "Feature",
+            "geometry": {
+                "type": "Point",
+                "coordinates": [
+                    1.731944442,
+                    52.64583206
+                ]
+            },
+            "properties": {
+                "name": "Caister",
+                "sumRep": "1",
+                "environmentalIndicators": {
+                    "Aquatics": "0",
+                    "Carrion": "0",
+                    "Disturbed\/arable": "0",
+                    "Dung\/foul habitats": "0",
+                    "General synanthropic": "0",
+                    "Halotolerant": "0",
+                    "Heathland & moorland": "0",
+                    "Indicators: Coniferous": "0",
+                    "Indicators: Deciduous": "0",
+                    "Indicators: Dung": "0",
+                    "Indicators: Running water": "0",
+                    "Indicators: Standing water": "0",
+                    "Meadowland": "0",
+                    "Open wet habitats": "0",
+                    "Pasture\/Dung": "0",
+                    "Sandy\/dry disturbed\/arable": "0",
+                    "Stored grain pest": "0",
+                    "Wetlands\/marshes": "0",
+                    "Wood and trees": "100"
+                }
+            }
+        },
+        {
+            "type": "Feature",
+            "geometry": {
+                "type": "Point",
+                "coordinates": [
+                    -2.506388903,
+                    53.23777771
+                ]
+            },
+            "properties": {
+                "name": "Davenham: Church Moss",
+                "sumRep": "5",
+                "environmentalIndicators": {
+                    "Aquatics": "20",
+                    "Carrion": "0",
+                    "Disturbed\/arable": "0",
+                    "Dung\/foul habitats": "0",
+                    "General synanthropic": "0",
+                    "Halotolerant": "0",
+                    "Heathland & moorland": "40",
+                    "Indicators: Coniferous": "0",
+                    "Indicators: Deciduous": "0",
+                    "Indicators: Dung": "0",
+                    "Indicators: Running water": "0",
+                    "Indicators: Standing water": "0",
+                    "Meadowland": "20",
+                    "Open wet habitats": "0",
+                    "Pasture\/Dung": "0",
+                    "Sandy\/dry disturbed\/arable": "0",
+                    "Stored grain pest": "0",
+                    "Wetlands\/marshes": "20",
+                    "Wood and trees": "0"
+                }
+            }
+        },
+        {
+            "type": "Feature",
+            "geometry": {
+                "type": "Point",
+                "coordinates": [
+                    -7.665305138,
+                    52.74577332
+                ]
+            },
+            "properties": {
+                "name": "Derryville Bog",
+                "sumRep": "1",
+                "environmentalIndicators": {
+                    "Aquatics": "0",
+                    "Carrion": "0",
+                    "Disturbed\/arable": "0",
+                    "Dung\/foul habitats": "0",
+                    "General synanthropic": "0",
+                    "Halotolerant": "0",
+                    "Heathland & moorland": "0",
+                    "Indicators: Coniferous": "0",
+                    "Indicators: Deciduous": "0",
+                    "Indicators: Dung": "0",
+                    "Indicators: Running water": "0",
+                    "Indicators: Standing water": "0",
+                    "Meadowland": "0",
+                    "Open wet habitats": "0",
+                    "Pasture\/Dung": "0",
+                    "Sandy\/dry disturbed\/arable": "0",
+                    "Stored grain pest": "0",
+                    "Wetlands\/marshes": "0",
+                    "Wood and trees": "100"
+                }
+            }
+        },
+        {
+            "type": "Feature",
+            "geometry": {
+                "type": "Point",
+                "coordinates": [
+                    -2.162499905,
+                    52.25611115
+                ]
+            },
+            "properties": {
+                "name": "Droitwich: Bays Meadow",
+                "sumRep": "1",
+                "environmentalIndicators": {
+                    "Aquatics": "0",
+                    "Carrion": "0",
+                    "Disturbed\/arable": "0",
+                    "Dung\/foul habitats": "0",
+                    "General synanthropic": "0",
+                    "Halotolerant": "0",
+                    "Heathland & moorland": "0",
+                    "Indicators: Coniferous": "0",
+                    "Indicators: Deciduous": "0",
+                    "Indicators: Dung": "0",
+                    "Indicators: Running water": "0",
+                    "Indicators: Standing water": "0",
+                    "Meadowland": "0",
+                    "Open wet habitats": "0",
+                    "Pasture\/Dung": "0",
+                    "Sandy\/dry disturbed\/arable": "0",
+                    "Stored grain pest": "0",
+                    "Wetlands\/marshes": "100",
+                    "Wood and trees": "0"
+                }
+            }
+        },
+        {
+            "type": "Feature",
+            "geometry": {
+                "type": "Point",
+                "coordinates": [
+                    0.527499974,
+                    50.84500122
+                ]
+            },
+            "properties": {
+                "name": "Folkestone: Amsterdam",
+                "sumRep": "2",
+                "environmentalIndicators": {
+                    "Aquatics": "0",
+                    "Carrion": "0",
+                    "Disturbed\/arable": "0",
+                    "Dung\/foul habitats": "0",
+                    "General synanthropic": "50",
+                    "Halotolerant": "0",
+                    "Heathland & moorland": "0",
+                    "Indicators: Coniferous": "0",
+                    "Indicators: Deciduous": "0",
+                    "Indicators: Dung": "0",
+                    "Indicators: Running water": "0",
+                    "Indicators: Standing water": "0",
+                    "Meadowland": "0",
+                    "Open wet habitats": "0",
+                    "Pasture\/Dung": "0",
+                    "Sandy\/dry disturbed\/arable": "0",
+                    "Stored grain pest": "50",
+                    "Wetlands\/marshes": "0",
+                    "Wood and trees": "0"
+                }
+            }
+        },
+        {
+            "type": "Feature",
+            "geometry": {
+                "type": "Point",
+                "coordinates": [
+                    -2.902499914,
+                    51.5316658
+                ]
+            },
+            "properties": {
+                "name": "Goldcliff 2007",
+                "sumRep": "1",
+                "environmentalIndicators": {
+                    "Aquatics": "0",
+                    "Carrion": "0",
+                    "Disturbed\/arable": "0",
+                    "Dung\/foul habitats": "0",
+                    "General synanthropic": "0",
+                    "Halotolerant": "0",
+                    "Heathland & moorland": "0",
+                    "Indicators: Coniferous": "0",
+                    "Indicators: Deciduous": "0",
+                    "Indicators: Dung": "0",
+                    "Indicators: Running water": "0",
+                    "Indicators: Standing water": "0",
+                    "Meadowland": "0",
+                    "Open wet habitats": "0",
+                    "Pasture\/Dung": "0",
+                    "Sandy\/dry disturbed\/arable": "0",
+                    "Stored grain pest": "0",
+                    "Wetlands\/marshes": "0",
+                    "Wood and trees": "100"
+                }
+            }
+        },
+        {
+            "type": "Feature",
+            "geometry": {
+                "type": "Point",
+                "coordinates": [
+                    -2.902499914,
+                    51.5316658
+                ]
+            },
+            "properties": {
+                "name": "Goldcliff 3",
+                "sumRep": "1",
+                "environmentalIndicators": {
+                    "Aquatics": "0",
+                    "Carrion": "0",
+                    "Disturbed\/arable": "0",
+                    "Dung\/foul habitats": "0",
+                    "General synanthropic": "0",
+                    "Halotolerant": "0",
+                    "Heathland & moorland": "0",
+                    "Indicators: Coniferous": "0",
+                    "Indicators: Deciduous": "0",
+                    "Indicators: Dung": "0",
+                    "Indicators: Running water": "0",
+                    "Indicators: Standing water": "0",
+                    "Meadowland": "0",
+                    "Open wet habitats": "0",
+                    "Pasture\/Dung": "0",
+                    "Sandy\/dry disturbed\/arable": "0",
+                    "Stored grain pest": "0",
+                    "Wetlands\/marshes": "100",
+                    "Wood and trees": "0"
+                }
+            }
+        },
+        {
+            "type": "Feature",
+            "geometry": {
+                "type": "Point",
+                "coordinates": [
+                    0.106003664,
+                    51.49282074
+                ]
+            },
+            "properties": {
+                "name": "Greenwich: Abbey Wood",
+                "sumRep": "2",
+                "environmentalIndicators": {
+                    "Aquatics": "0",
+                    "Carrion": "0",
+                    "Disturbed\/arable": "0",
+                    "Dung\/foul habitats": "0",
+                    "General synanthropic": "0",
+                    "Halotolerant": "0",
+                    "Heathland & moorland": "50",
+                    "Indicators: Coniferous": "0",
+                    "Indicators: Deciduous": "0",
+                    "Indicators: Dung": "0",
+                    "Indicators: Running water": "0",
+                    "Indicators: Standing water": "0",
+                    "Meadowland": "0",
+                    "Open wet habitats": "0",
+                    "Pasture\/Dung": "0",
+                    "Sandy\/dry disturbed\/arable": "0",
+                    "Stored grain pest": "0",
+                    "Wetlands\/marshes": "0",
+                    "Wood and trees": "50"
+                }
+            }
+        },
+        {
+            "type": "Feature",
+            "geometry": {
+                "type": "Point",
+                "coordinates": [
+                    0.009281486,
+                    51.48822403
+                ]
+            },
+            "properties": {
+                "name": "Greenwich: Bellot St.",
+                "sumRep": "2",
+                "environmentalIndicators": {
+                    "Aquatics": "0",
+                    "Carrion": "0",
+                    "Disturbed\/arable": "0",
+                    "Dung\/foul habitats": "0",
+                    "General synanthropic": "0",
+                    "Halotolerant": "0",
+                    "Heathland & moorland": "50",
+                    "Indicators: Coniferous": "0",
+                    "Indicators: Deciduous": "0",
+                    "Indicators: Dung": "0",
+                    "Indicators: Running water": "0",
+                    "Indicators: Standing water": "0",
+                    "Meadowland": "0",
+                    "Open wet habitats": "0",
+                    "Pasture\/Dung": "0",
+                    "Sandy\/dry disturbed\/arable": "0",
+                    "Stored grain pest": "0",
+                    "Wetlands\/marshes": "0",
+                    "Wood and trees": "50"
+                }
+            }
+        },
+        {
+            "type": "Feature",
+            "geometry": {
+                "type": "Point",
+                "coordinates": [
+                    -0.189444438,
+                    51.5652771
+                ]
+            },
+            "properties": {
+                "name": "Hampstead: West Heath Spa",
+                "sumRep": "1",
+                "environmentalIndicators": {
+                    "Aquatics": "0",
+                    "Carrion": "0",
+                    "Disturbed\/arable": "0",
+                    "Dung\/foul habitats": "0",
+                    "General synanthropic": "0",
+                    "Halotolerant": "0",
+                    "Heathland & moorland": "0",
+                    "Indicators: Coniferous": "0",
+                    "Indicators: Deciduous": "0",
+                    "Indicators: Dung": "0",
+                    "Indicators: Running water": "0",
+                    "Indicators: Standing water": "0",
+                    "Meadowland": "0",
+                    "Open wet habitats": "0",
+                    "Pasture\/Dung": "0",
+                    "Sandy\/dry disturbed\/arable": "0",
+                    "Stored grain pest": "0",
+                    "Wetlands\/marshes": "0",
+                    "Wood and trees": "100"
+                }
+            }
+        },
+        {
+            "type": "Feature",
+            "geometry": {
+                "type": "Point",
+                "coordinates": [
+                    -0.9375,
+                    53.55138779
+                ]
+            },
+            "properties": {
+                "name": "Hatfield Moors",
+                "sumRep": "2",
+                "environmentalIndicators": {
+                    "Aquatics": "0",
+                    "Carrion": "0",
+                    "Disturbed\/arable": "0",
+                    "Dung\/foul habitats": "0",
+                    "General synanthropic": "0",
+                    "Halotolerant": "0",
+                    "Heathland & moorland": "0",
+                    "Indicators: Coniferous": "0",
+                    "Indicators: Deciduous": "0",
+                    "Indicators: Dung": "0",
+                    "Indicators: Running water": "0",
+                    "Indicators: Standing water": "0",
+                    "Meadowland": "0",
+                    "Open wet habitats": "0",
+                    "Pasture\/Dung": "0",
+                    "Sandy\/dry disturbed\/arable": "0",
+                    "Stored grain pest": "0",
+                    "Wetlands\/marshes": "0",
+                    "Wood and trees": "100"
+                }
+            }
+        },
+        {
+            "type": "Feature",
+            "geometry": {
+                "type": "Point",
+                "coordinates": [
+                    -0.938888907,
+                    53.54999924
+                ]
+            },
+            "properties": {
+                "name": "Hatfield: Tyrham Hall",
+                "sumRep": "5",
+                "environmentalIndicators": {
+                    "Aquatics": "0",
+                    "Carrion": "0",
+                    "Disturbed\/arable": "0",
+                    "Dung\/foul habitats": "0",
+                    "General synanthropic": "0",
+                    "Halotolerant": "0",
+                    "Heathland & moorland": "0",
+                    "Indicators: Coniferous": "20",
+                    "Indicators: Deciduous": "0",
+                    "Indicators: Dung": "0",
+                    "Indicators: Running water": "0",
+                    "Indicators: Standing water": "0",
+                    "Meadowland": "0",
+                    "Open wet habitats": "0",
+                    "Pasture\/Dung": "0",
+                    "Sandy\/dry disturbed\/arable": "0",
+                    "Stored grain pest": "0",
+                    "Wetlands\/marshes": "0",
+                    "Wood and trees": "80"
+                }
+            }
+        },
+        {
+            "type": "Feature",
+            "geometry": {
+                "type": "Point",
+                "coordinates": [
+                    0.245609641,
+                    51.40209961
+                ]
+            },
+            "properties": {
+                "name": "Horton Kirby, South Darenth",
+                "sumRep": "1",
+                "environmentalIndicators": {
+                    "Aquatics": "0",
+                    "Carrion": "0",
+                    "Disturbed\/arable": "0",
+                    "Dung\/foul habitats": "0",
+                    "General synanthropic": "0",
+                    "Halotolerant": "0",
+                    "Heathland & moorland": "100",
+                    "Indicators: Coniferous": "0",
+                    "Indicators: Deciduous": "0",
+                    "Indicators: Dung": "0",
+                    "Indicators: Running water": "0",
+                    "Indicators: Standing water": "0",
+                    "Meadowland": "0",
+                    "Open wet habitats": "0",
+                    "Pasture\/Dung": "0",
+                    "Sandy\/dry disturbed\/arable": "0",
+                    "Stored grain pest": "0",
+                    "Wetlands\/marshes": "0",
+                    "Wood and trees": "0"
+                }
+            }
+        },
+        {
+            "type": "Feature",
+            "geometry": {
+                "type": "Point",
+                "coordinates": [
+                    -1.691666722,
+                    52.54333496
+                ]
+            },
+            "properties": {
+                "name": "Lea Marston B",
+                "sumRep": "2",
+                "environmentalIndicators": {
+                    "Aquatics": "0",
+                    "Carrion": "0",
+                    "Disturbed\/arable": "50",
+                    "Dung\/foul habitats": "0",
+                    "General synanthropic": "0",
+                    "Halotolerant": "0",
+                    "Heathland & moorland": "0",
+                    "Indicators: Coniferous": "0",
+                    "Indicators: Deciduous": "0",
+                    "Indicators: Dung": "0",
+                    "Indicators: Running water": "0",
+                    "Indicators: Standing water": "0",
+                    "Meadowland": "0",
+                    "Open wet habitats": "0",
+                    "Pasture\/Dung": "0",
+                    "Sandy\/dry disturbed\/arable": "50",
+                    "Stored grain pest": "0",
+                    "Wetlands\/marshes": "0",
+                    "Wood and trees": "0"
+                }
+            }
+        },
+        {
+            "type": "Feature",
+            "geometry": {
+                "type": "Point",
+                "coordinates": [
+                    -0.00856877,
+                    51.50831223
+                ]
+            },
+            "properties": {
+                "name": "London: Poplar High St.",
+                "sumRep": "2",
+                "environmentalIndicators": {
+                    "Aquatics": "50",
+                    "Carrion": "0",
+                    "Disturbed\/arable": "0",
+                    "Dung\/foul habitats": "0",
+                    "General synanthropic": "0",
+                    "Halotolerant": "0",
+                    "Heathland & moorland": "50",
+                    "Indicators: Coniferous": "0",
+                    "Indicators: Deciduous": "0",
+                    "Indicators: Dung": "0",
+                    "Indicators: Running water": "0",
+                    "Indicators: Standing water": "0",
+                    "Meadowland": "0",
+                    "Open wet habitats": "0",
+                    "Pasture\/Dung": "0",
+                    "Sandy\/dry disturbed\/arable": "0",
+                    "Stored grain pest": "0",
+                    "Wetlands\/marshes": "0",
+                    "Wood and trees": "0"
+                }
+            }
+        },
+        {
+            "type": "Feature",
+            "geometry": {
+                "type": "Point",
+                "coordinates": [
+                    -2.795000076,
+                    51.16110992
+                ]
+            },
+            "properties": {
+                "name": "Meare Heath",
+                "sumRep": "2",
+                "environmentalIndicators": {
+                    "Aquatics": "0",
+                    "Carrion": "0",
+                    "Disturbed\/arable": "0",
+                    "Dung\/foul habitats": "0",
+                    "General synanthropic": "0",
+                    "Halotolerant": "0",
+                    "Heathland & moorland": "0",
+                    "Indicators: Coniferous": "0",
+                    "Indicators: Deciduous": "0",
+                    "Indicators: Dung": "0",
+                    "Indicators: Running water": "0",
+                    "Indicators: Standing water": "50",
+                    "Meadowland": "0",
+                    "Open wet habitats": "0",
+                    "Pasture\/Dung": "0",
+                    "Sandy\/dry disturbed\/arable": "0",
+                    "Stored grain pest": "0",
+                    "Wetlands\/marshes": "50",
+                    "Wood and trees": "0"
+                }
+            }
+        },
+        {
+            "type": "Feature",
+            "geometry": {
+                "type": "Point",
+                "coordinates": [
+                    -2.792222261,
+                    50.99750137
+                ]
+            },
+            "properties": {
+                "name": "Meare: Lake Village",
+                "sumRep": "1",
+                "environmentalIndicators": {
+                    "Aquatics": "0",
+                    "Carrion": "0",
+                    "Disturbed\/arable": "0",
+                    "Dung\/foul habitats": "0",
+                    "General synanthropic": "0",
+                    "Halotolerant": "0",
+                    "Heathland & moorland": "0",
+                    "Indicators: Coniferous": "0",
+                    "Indicators: Deciduous": "0",
+                    "Indicators: Dung": "0",
+                    "Indicators: Running water": "0",
+                    "Indicators: Standing water": "0",
+                    "Meadowland": "0",
+                    "Open wet habitats": "0",
+                    "Pasture\/Dung": "0",
+                    "Sandy\/dry disturbed\/arable": "0",
+                    "Stored grain pest": "0",
+                    "Wetlands\/marshes": "0",
+                    "Wood and trees": "100"
+                }
+            }
+        },
+        {
+            "type": "Feature",
+            "geometry": {
+                "type": "Point",
+                "coordinates": [
+                    -0.13166666,
+                    52.61666489
+                ]
+            },
+            "properties": {
+                "name": "Pode Hole",
+                "sumRep": "2",
+                "environmentalIndicators": {
+                    "Aquatics": "0",
+                    "Carrion": "0",
+                    "Disturbed\/arable": "0",
+                    "Dung\/foul habitats": "0",
+                    "General synanthropic": "0",
+                    "Halotolerant": "0",
+                    "Heathland & moorland": "0",
+                    "Indicators: Coniferous": "0",
+                    "Indicators: Deciduous": "50",
+                    "Indicators: Dung": "0",
+                    "Indicators: Running water": "0",
+                    "Indicators: Standing water": "0",
+                    "Meadowland": "0",
+                    "Open wet habitats": "0",
+                    "Pasture\/Dung": "0",
+                    "Sandy\/dry disturbed\/arable": "0",
+                    "Stored grain pest": "0",
+                    "Wetlands\/marshes": "0",
+                    "Wood and trees": "50"
+                }
+            }
+        },
+        {
+            "type": "Feature",
+            "geometry": {
+                "type": "Point",
+                "coordinates": [
+                    -2.849999905,
+                    51.54999924
+                ]
+            },
+            "properties": {
+                "name": "Redwick",
+                "sumRep": "2",
+                "environmentalIndicators": {
+                    "Aquatics": "0",
+                    "Carrion": "0",
+                    "Disturbed\/arable": "0",
+                    "Dung\/foul habitats": "0",
+                    "General synanthropic": "0",
+                    "Halotolerant": "0",
+                    "Heathland & moorland": "0",
+                    "Indicators: Coniferous": "0",
+                    "Indicators: Deciduous": "0",
+                    "Indicators: Dung": "0",
+                    "Indicators: Running water": "0",
+                    "Indicators: Standing water": "0",
+                    "Meadowland": "0",
+                    "Open wet habitats": "0",
+                    "Pasture\/Dung": "0",
+                    "Sandy\/dry disturbed\/arable": "0",
+                    "Stored grain pest": "0",
+                    "Wetlands\/marshes": "50",
+                    "Wood and trees": "50"
+                }
+            }
+        },
+        {
+            "type": "Feature",
+            "geometry": {
+                "type": "Point",
+                "coordinates": [
+                    -1.491944432,
+                    54.12472153
+                ]
+            },
+            "properties": {
+                "name": "Ripon",
+                "sumRep": "1",
+                "environmentalIndicators": {
+                    "Aquatics": "0",
+                    "Carrion": "0",
+                    "Disturbed\/arable": "0",
+                    "Dung\/foul habitats": "0",
+                    "General synanthropic": "0",
+                    "Halotolerant": "0",
+                    "Heathland & moorland": "0",
+                    "Indicators: Coniferous": "0",
+                    "Indicators: Deciduous": "0",
+                    "Indicators: Dung": "0",
+                    "Indicators: Running water": "0",
+                    "Indicators: Standing water": "0",
+                    "Meadowland": "0",
+                    "Open wet habitats": "0",
+                    "Pasture\/Dung": "0",
+                    "Sandy\/dry disturbed\/arable": "0",
+                    "Stored grain pest": "0",
+                    "Wetlands\/marshes": "100",
+                    "Wood and trees": "0"
+                }
+            }
+        },
+        {
+            "type": "Feature",
+            "geometry": {
+                "type": "Point",
+                "coordinates": [
+                    -2.787777662,
+                    51.14666748
+                ]
+            },
+            "properties": {
+                "name": "Rowlands Track",
+                "sumRep": "1",
+                "environmentalIndicators": {
+                    "Aquatics": "0",
+                    "Carrion": "0",
+                    "Disturbed\/arable": "0",
+                    "Dung\/foul habitats": "0",
+                    "General synanthropic": "0",
+                    "Halotolerant": "0",
+                    "Heathland & moorland": "0",
+                    "Indicators: Coniferous": "0",
+                    "Indicators: Deciduous": "0",
+                    "Indicators: Dung": "0",
+                    "Indicators: Running water": "0",
+                    "Indicators: Standing water": "0",
+                    "Meadowland": "0",
+                    "Open wet habitats": "0",
+                    "Pasture\/Dung": "0",
+                    "Sandy\/dry disturbed\/arable": "0",
+                    "Stored grain pest": "0",
+                    "Wetlands\/marshes": "0",
+                    "Wood and trees": "100"
+                }
+            }
+        },
+        {
+            "type": "Feature",
+            "geometry": {
+                "type": "Point",
+                "coordinates": [
+                    -0.536944449,
+                    51.43611145
+                ]
+            },
+            "properties": {
+                "name": "Runnymede 1",
+                "sumRep": "2",
+                "environmentalIndicators": {
+                    "Aquatics": "0",
+                    "Carrion": "0",
+                    "Disturbed\/arable": "0",
+                    "Dung\/foul habitats": "0",
+                    "General synanthropic": "0",
+                    "Halotolerant": "0",
+                    "Heathland & moorland": "0",
+                    "Indicators: Coniferous": "0",
+                    "Indicators: Deciduous": "0",
+                    "Indicators: Dung": "0",
+                    "Indicators: Running water": "0",
+                    "Indicators: Standing water": "0",
+                    "Meadowland": "0",
+                    "Open wet habitats": "0",
+                    "Pasture\/Dung": "0",
+                    "Sandy\/dry disturbed\/arable": "0",
+                    "Stored grain pest": "0",
+                    "Wetlands\/marshes": "0",
+                    "Wood and trees": "100"
+                }
+            }
+        },
+        {
+            "type": "Feature",
+            "geometry": {
+                "type": "Point",
+                "coordinates": [
+                    -1.666944504,
+                    52.51472092
+                ]
+            },
+            "properties": {
+                "name": "Shustoke",
+                "sumRep": "1",
+                "environmentalIndicators": {
+                    "Aquatics": "0",
+                    "Carrion": "0",
+                    "Disturbed\/arable": "0",
+                    "Dung\/foul habitats": "0",
+                    "General synanthropic": "0",
+                    "Halotolerant": "0",
+                    "Heathland & moorland": "0",
+                    "Indicators: Coniferous": "0",
+                    "Indicators: Deciduous": "0",
+                    "Indicators: Dung": "0",
+                    "Indicators: Running water": "0",
+                    "Indicators: Standing water": "0",
+                    "Meadowland": "0",
+                    "Open wet habitats": "0",
+                    "Pasture\/Dung": "0",
+                    "Sandy\/dry disturbed\/arable": "0",
+                    "Stored grain pest": "0",
+                    "Wetlands\/marshes": "0",
+                    "Wood and trees": "100"
+                }
+            }
+        },
+        {
+            "type": "Feature",
+            "geometry": {
+                "type": "Point",
+                "coordinates": [
+                    -6.458889008,
+                    54.02222061
+                ]
+            },
+            "properties": {
+                "name": "Sluggan Bog",
+                "sumRep": "4",
+                "environmentalIndicators": {
+                    "Aquatics": "0",
+                    "Carrion": "0",
+                    "Disturbed\/arable": "0",
+                    "Dung\/foul habitats": "0",
+                    "General synanthropic": "0",
+                    "Halotolerant": "0",
+                    "Heathland & moorland": "0",
+                    "Indicators: Coniferous": "25",
+                    "Indicators: Deciduous": "0",
+                    "Indicators: Dung": "0",
+                    "Indicators: Running water": "0",
+                    "Indicators: Standing water": "0",
+                    "Meadowland": "0",
+                    "Open wet habitats": "0",
+                    "Pasture\/Dung": "0",
+                    "Sandy\/dry disturbed\/arable": "0",
+                    "Stored grain pest": "0",
+                    "Wetlands\/marshes": "0",
+                    "Wood and trees": "75"
+                }
+            }
+        },
+        {
+            "type": "Feature",
+            "geometry": {
+                "type": "Point",
+                "coordinates": [
+                    -0.585277796,
+                    52.32860947
+                ]
+            },
+            "properties": {
+                "name": "South Stanwick",
+                "sumRep": "1",
+                "environmentalIndicators": {
+                    "Aquatics": "0",
+                    "Carrion": "0",
+                    "Disturbed\/arable": "0",
+                    "Dung\/foul habitats": "0",
+                    "General synanthropic": "0",
+                    "Halotolerant": "0",
+                    "Heathland & moorland": "0",
+                    "Indicators: Coniferous": "0",
+                    "Indicators: Deciduous": "0",
+                    "Indicators: Dung": "0",
+                    "Indicators: Running water": "0",
+                    "Indicators: Standing water": "0",
+                    "Meadowland": "0",
+                    "Open wet habitats": "0",
+                    "Pasture\/Dung": "0",
+                    "Sandy\/dry disturbed\/arable": "0",
+                    "Stored grain pest": "0",
+                    "Wetlands\/marshes": "0",
+                    "Wood and trees": "100"
+                }
+            }
+        },
+        {
+            "type": "Feature",
+            "geometry": {
+                "type": "Point",
+                "coordinates": [
+                    -0.60759604,
+                    52.32168961
+                ]
+            },
+            "properties": {
+                "name": "Stanwick, Northants.",
+                "sumRep": "6",
+                "environmentalIndicators": {
+                    "Aquatics": "33,33333333",
+                    "Carrion": "0",
+                    "Disturbed\/arable": "0",
+                    "Dung\/foul habitats": "0",
+                    "General synanthropic": "0",
+                    "Halotolerant": "0",
+                    "Heathland & moorland": "0",
+                    "Indicators: Coniferous": "0",
+                    "Indicators: Deciduous": "0",
+                    "Indicators: Dung": "0",
+                    "Indicators: Running water": "0",
+                    "Indicators: Standing water": "16,66666667",
+                    "Meadowland": "0",
+                    "Open wet habitats": "0",
+                    "Pasture\/Dung": "16,66666667",
+                    "Sandy\/dry disturbed\/arable": "0",
+                    "Stored grain pest": "0",
+                    "Wetlands\/marshes": "33,33333333",
+                    "Wood and trees": "0"
+                }
+            }
+        },
+        {
+            "type": "Feature",
+            "geometry": {
+                "type": "Point",
+                "coordinates": [
+                    -2.768055439,
+                    51.16388702
+                ]
+            },
+            "properties": {
+                "name": "Stileway",
+                "sumRep": "4",
+                "environmentalIndicators": {
+                    "Aquatics": "0",
+                    "Carrion": "0",
+                    "Disturbed\/arable": "0",
+                    "Dung\/foul habitats": "0",
+                    "General synanthropic": "0",
+                    "Halotolerant": "0",
+                    "Heathland & moorland": "0",
+                    "Indicators: Coniferous": "0",
+                    "Indicators: Deciduous": "0",
+                    "Indicators: Dung": "0",
+                    "Indicators: Running water": "0",
+                    "Indicators: Standing water": "0",
+                    "Meadowland": "0",
+                    "Open wet habitats": "0",
+                    "Pasture\/Dung": "0",
+                    "Sandy\/dry disturbed\/arable": "0",
+                    "Stored grain pest": "0",
+                    "Wetlands\/marshes": "0",
+                    "Wood and trees": "100"
+                }
+            }
+        },
+        {
+            "type": "Feature",
+            "geometry": {
+                "type": "Point",
+                "coordinates": [
+                    -2.266666651,
+                    52.32500076
+                ]
+            },
+            "properties": {
+                "name": "Stourport",
+                "sumRep": "3",
+                "environmentalIndicators": {
+                    "Aquatics": "0",
+                    "Carrion": "0",
+                    "Disturbed\/arable": "0",
+                    "Dung\/foul habitats": "0",
+                    "General synanthropic": "0",
+                    "Halotolerant": "0",
+                    "Heathland & moorland": "33,33333333",
+                    "Indicators: Coniferous": "0",
+                    "Indicators: Deciduous": "0",
+                    "Indicators: Dung": "0",
+                    "Indicators: Running water": "0",
+                    "Indicators: Standing water": "0",
+                    "Meadowland": "33,33333333",
+                    "Open wet habitats": "0",
+                    "Pasture\/Dung": "0",
+                    "Sandy\/dry disturbed\/arable": "0",
+                    "Stored grain pest": "0",
+                    "Wetlands\/marshes": "33,33333333",
+                    "Wood and trees": "0"
+                }
+            }
+        },
+        {
+            "type": "Feature",
+            "geometry": {
+                "type": "Point",
+                "coordinates": [
+                    -2.787777662,
+                    51.17722321
+                ]
+            },
+            "properties": {
+                "name": "Sweet Track: Drove Site",
+                "sumRep": "3",
+                "environmentalIndicators": {
+                    "Aquatics": "0",
+                    "Carrion": "0",
+                    "Disturbed\/arable": "0",
+                    "Dung\/foul habitats": "0",
+                    "General synanthropic": "0",
+                    "Halotolerant": "0",
+                    "Heathland & moorland": "0",
+                    "Indicators: Coniferous": "0",
+                    "Indicators: Deciduous": "0",
+                    "Indicators: Dung": "0",
+                    "Indicators: Running water": "0",
+                    "Indicators: Standing water": "33,33333333",
+                    "Meadowland": "0",
+                    "Open wet habitats": "0",
+                    "Pasture\/Dung": "0",
+                    "Sandy\/dry disturbed\/arable": "0",
+                    "Stored grain pest": "0",
+                    "Wetlands\/marshes": "33,33333333",
+                    "Wood and trees": "33,33333333"
+                }
+            }
+        },
+        {
+            "type": "Feature",
+            "geometry": {
+                "type": "Point",
+                "coordinates": [
+                    -2.787777662,
+                    51.17722321
+                ]
+            },
+            "properties": {
+                "name": "Sweet Track: Site TG",
+                "sumRep": "6",
+                "environmentalIndicators": {
+                    "Aquatics": "0",
+                    "Carrion": "0",
+                    "Disturbed\/arable": "0",
+                    "Dung\/foul habitats": "0",
+                    "General synanthropic": "0",
+                    "Halotolerant": "0",
+                    "Heathland & moorland": "0",
+                    "Indicators: Coniferous": "0",
+                    "Indicators: Deciduous": "0",
+                    "Indicators: Dung": "0",
+                    "Indicators: Running water": "0",
+                    "Indicators: Standing water": "16,66666667",
+                    "Meadowland": "0",
+                    "Open wet habitats": "0",
+                    "Pasture\/Dung": "0",
+                    "Sandy\/dry disturbed\/arable": "0",
+                    "Stored grain pest": "0",
+                    "Wetlands\/marshes": "50",
+                    "Wood and trees": "33,33333333"
+                }
+            }
+        },
+        {
+            "type": "Feature",
+            "geometry": {
+                "type": "Point",
+                "coordinates": [
+                    -0.8838889,
+                    53.63249969
+                ]
+            },
+            "properties": {
+                "name": "Thorne Moors II",
+                "sumRep": "6",
+                "environmentalIndicators": {
+                    "Aquatics": "0",
+                    "Carrion": "0",
+                    "Disturbed\/arable": "0",
+                    "Dung\/foul habitats": "0",
+                    "General synanthropic": "0",
+                    "Halotolerant": "0",
+                    "Heathland & moorland": "0",
+                    "Indicators: Coniferous": "16,66666667",
+                    "Indicators: Deciduous": "0",
+                    "Indicators: Dung": "0",
+                    "Indicators: Running water": "0",
+                    "Indicators: Standing water": "0",
+                    "Meadowland": "0",
+                    "Open wet habitats": "0",
+                    "Pasture\/Dung": "0",
+                    "Sandy\/dry disturbed\/arable": "0",
+                    "Stored grain pest": "0",
+                    "Wetlands\/marshes": "0",
+                    "Wood and trees": "83,33333333"
+                }
+            }
+        },
+        {
+            "type": "Feature",
+            "geometry": {
+                "type": "Point",
+                "coordinates": [
+                    -0.914103985,
+                    53.62688446
+                ]
+            },
+            "properties": {
+                "name": "Thorne Moors Trackway Site",
+                "sumRep": "5",
+                "environmentalIndicators": {
+                    "Aquatics": "0",
+                    "Carrion": "0",
+                    "Disturbed\/arable": "0",
+                    "Dung\/foul habitats": "0",
+                    "General synanthropic": "0",
+                    "Halotolerant": "0",
+                    "Heathland & moorland": "0",
+                    "Indicators: Coniferous": "0",
+                    "Indicators: Deciduous": "0",
+                    "Indicators: Dung": "0",
+                    "Indicators: Running water": "0",
+                    "Indicators: Standing water": "0",
+                    "Meadowland": "0",
+                    "Open wet habitats": "0",
+                    "Pasture\/Dung": "0",
+                    "Sandy\/dry disturbed\/arable": "0",
+                    "Stored grain pest": "0",
+                    "Wetlands\/marshes": "0",
+                    "Wood and trees": "100"
+                }
+            }
+        },
+        {
+            "type": "Feature",
+            "geometry": {
+                "type": "Point",
+                "coordinates": [
+                    -0.8838889,
+                    53.63249969
+                ]
+            },
+            "properties": {
+                "name": "Thorne Waste",
+                "sumRep": "3",
+                "environmentalIndicators": {
+                    "Aquatics": "0",
+                    "Carrion": "0",
+                    "Disturbed\/arable": "0",
+                    "Dung\/foul habitats": "0",
+                    "General synanthropic": "0",
+                    "Halotolerant": "0",
+                    "Heathland & moorland": "0",
+                    "Indicators: Coniferous": "33,33333333",
+                    "Indicators: Deciduous": "0",
+                    "Indicators: Dung": "0",
+                    "Indicators: Running water": "0",
+                    "Indicators: Standing water": "0",
+                    "Meadowland": "0",
+                    "Open wet habitats": "0",
+                    "Pasture\/Dung": "0",
+                    "Sandy\/dry disturbed\/arable": "0",
+                    "Stored grain pest": "0",
+                    "Wetlands\/marshes": "0",
+                    "Wood and trees": "66,66666667"
+                }
+            }
+        },
+        {
+            "type": "Feature",
+            "geometry": {
+                "type": "Point",
+                "coordinates": [
+                    -0.13425307,
+                    52.62086105
+                ]
+            },
+            "properties": {
+                "name": "Thorney",
+                "sumRep": "1",
+                "environmentalIndicators": {
+                    "Aquatics": "0",
+                    "Carrion": "0",
+                    "Disturbed\/arable": "0",
+                    "Dung\/foul habitats": "0",
+                    "General synanthropic": "0",
+                    "Halotolerant": "0",
+                    "Heathland & moorland": "0",
+                    "Indicators: Coniferous": "0",
+                    "Indicators: Deciduous": "0",
+                    "Indicators: Dung": "0",
+                    "Indicators: Running water": "0",
+                    "Indicators: Standing water": "0",
+                    "Meadowland": "0",
+                    "Open wet habitats": "0",
+                    "Pasture\/Dung": "0",
+                    "Sandy\/dry disturbed\/arable": "0",
+                    "Stored grain pest": "0",
+                    "Wetlands\/marshes": "0",
+                    "Wood and trees": "100"
+                }
+            }
+        },
+        {
+            "type": "Feature",
+            "geometry": {
+                "type": "Point",
+                "coordinates": [
+                    -1.846944451,
+                    51.17166519
+                ]
+            },
+            "properties": {
+                "name": "Wilsford",
+                "sumRep": "5",
+                "environmentalIndicators": {
+                    "Aquatics": "0",
+                    "Carrion": "20",
+                    "Disturbed\/arable": "0",
+                    "Dung\/foul habitats": "0",
+                    "General synanthropic": "0",
+                    "Halotolerant": "0",
+                    "Heathland & moorland": "0",
+                    "Indicators: Coniferous": "0",
+                    "Indicators: Deciduous": "0",
+                    "Indicators: Dung": "20",
+                    "Indicators: Running water": "0",
+                    "Indicators: Standing water": "0",
+                    "Meadowland": "20",
+                    "Open wet habitats": "0",
+                    "Pasture\/Dung": "20",
+                    "Sandy\/dry disturbed\/arable": "20",
+                    "Stored grain pest": "0",
+                    "Wetlands\/marshes": "0",
+                    "Wood and trees": "0"
+                }
+            }
+        },
+        {
+            "type": "Feature",
+            "geometry": {
+                "type": "Point",
+                "coordinates": [
+                    -2.810833216,
+                    52.53388977
+                ]
+            },
+            "properties": {
+                "name": "Worldsend",
+                "sumRep": "8",
+                "environmentalIndicators": {
+                    "Aquatics": "0",
+                    "Carrion": "0",
+                    "Disturbed\/arable": "0",
+                    "Dung\/foul habitats": "0",
+                    "General synanthropic": "0",
+                    "Halotolerant": "0",
+                    "Heathland & moorland": "0",
+                    "Indicators: Coniferous": "25",
+                    "Indicators: Deciduous": "0",
+                    "Indicators: Dung": "0",
+                    "Indicators: Running water": "0",
+                    "Indicators: Standing water": "0",
+                    "Meadowland": "0",
+                    "Open wet habitats": "0",
+                    "Pasture\/Dung": "0",
+                    "Sandy\/dry disturbed\/arable": "0",
+                    "Stored grain pest": "0",
+                    "Wetlands\/marshes": "0",
+                    "Wood and trees": "75"
+                }
+            }
+        }
+    ]
+}

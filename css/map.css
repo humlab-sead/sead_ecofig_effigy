@@ -1,0 +1,14 @@
+#cesiumContainer {
+	position:fixed;
+	height: 95vh;
+	width: 100vw;
+	margin:0px;
+	padding:0px;
+	
+	/*
+	padding:0px;
+	margin:0px;
+	left:0px;
+	height: calc(100% - 82px - 4vh);
+	*/
+}

@@ -1,0 +1,120 @@
+{
+	"type": "FeatureCollection",
+	"properties": [],
+	"features": [
+	    {
+	        "id": 132,
+	        "type": "Feature",
+	        "properties": {
+	            "markerType": "pine"
+	        },
+	        "geometry": {
+	            "type": "GeometryCollection",
+	            "geometries": [
+	                {
+	                    "type": "Point",
+	                    "coordinates": [
+	                        -2.636719,
+	                        52.422523
+	                    ]
+	                }
+	            ]
+	        }
+	    },
+	    {
+	        "id": 131,
+	        "type": "Feature",
+	        "properties": {
+	            "markerType": "grass"
+	        },
+	        "geometry": {
+	            "type": "GeometryCollection",
+	            "geometries": [
+	                {
+	                    "type": "Point",
+	                    "coordinates": [
+	                        -2.436719,
+	                        52.822523
+	                    ]
+	                }
+	            ]
+	        }
+	    },
+	    {
+	        "id": 130,
+	        "type": "Feature",
+	        "properties": {
+	            "markerType": "grass"
+	        },
+	        "geometry": {
+	            "type": "GeometryCollection",
+	            "geometries": [
+	                {
+	                    "type": "Point",
+	                    "coordinates": [
+	                        -3.36719,
+	                        51.822523
+	                    ]
+	                }
+	            ]
+	        }
+	    },
+	    {
+	        "id": 133,
+	        "type": "Feature",
+	        "properties": {
+	            "markerType": "pine"
+	        },
+	        "geometry": {
+	            "type": "GeometryCollection",
+	            "geometries": [
+	                {
+	                    "type": "Point",
+	                    "coordinates": [
+	                        -0.549316,
+	                        52.233687
+	                    ]
+	                }
+	            ]
+	        }
+	    },
+	    {
+	        "id": 134,
+	        "type": "Feature",
+	        "properties": {
+	            "markerType": "cow"
+	        },
+	        "geometry": {
+	            "type": "GeometryCollection",
+	            "geometries": [
+	                {
+	                    "type": "Point",
+	                    "coordinates": [
+	                        -1.472168,
+	                        50.978318
+	                    ]
+	                }
+	            ]
+	        }
+	    },
+	    {
+	        "id": 135,
+	        "type": "Feature",
+	        "properties": {
+	            "markerType": "cow"
+	        },
+	        "geometry": {
+	            "type": "GeometryCollection",
+	            "geometries": [
+	                {
+	                    "type": "Point",
+	                    "coordinates": [
+	                        -1.872168,
+	                        52.978318
+	                    ]
+	                }
+	            ]
+	        }
+	    }
+	]
+}

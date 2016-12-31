@@ -1,0 +1,33 @@
+#timelineContainer {
+	position: fixed;
+	background-color: red;
+	top: 95vh;
+	width: 100vw;
+	height: 5vh;
+	margin: 0px;
+	
+}
+
+#timeline {
+	width: 95vw;
+	margin-left: 2.5vw;
+	margin-right: 2.5vw;
+}
+
+#timelineContainer label {
+	position: fixed;
+	margin-top: 0px;
+	margin-left: 0; /* -10px */
+	text-align: center;
+}
+
+#timelineLabelsContainer {
+	background-color: yellow;
+	width: 100vw;
+	height: 100%;
+}
+
+.timelineYearLabel {
+	width: 3.4em;
+	background-color: blue;
+}

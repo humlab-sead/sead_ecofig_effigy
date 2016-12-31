@@ -1,0 +1,289 @@
+{
+    "accessors": {
+        "Cube.003_buffer_accessor_0": {
+            "bufferView": "Cube.003_buffer_view_0",
+            "byteOffset": 0,
+            "byteStride": 24,
+            "componentType": 5126,
+            "count": 120,
+            "max": [
+                8.658164978027344,
+                5.366879463195801,
+                1.0
+            ],
+            "min": [
+                -3.361738681793213,
+                -1.0000005960464478,
+                -1.0
+            ],
+            "type": "VEC3"
+        },
+        "Cube.003_buffer_accessor_1": {
+            "bufferView": "Cube.003_buffer_view_0",
+            "byteOffset": 12,
+            "byteStride": 24,
+            "componentType": 5126,
+            "count": 120,
+            "max": [
+                1.0,
+                1.0,
+                1.0
+            ],
+            "min": [
+                -1.0,
+                -1.0,
+                -1.0
+            ],
+            "type": "VEC3"
+        },
+        "Cube.003_buffer_accessor_2": {
+            "bufferView": "Cube.003_buffer_view_1",
+            "byteOffset": 0,
+            "byteStride": 2,
+            "componentType": 5123,
+            "count": 180,
+            "max": [
+                119
+            ],
+            "min": [
+                0
+            ],
+            "type": "SCALAR"
+        }
+    },
+    "asset": {
+        "profile": {
+            "api": "WebGL",
+            "version": "1.0.3"
+        },
+        "version": "1.0"
+    },
+    "bufferViews": {
+        "Cube.003_buffer_view_0": {
+            "buffer": "Cube.003_buffer",
+            "byteLength": 2880,
+            "byteOffset": 0,
+            "target": 34962
+        },
+        "Cube.003_buffer_view_1": {
+            "buffer": "Cube.003_buffer",
+            "byteLength": 360,
+            "byteOffset": 2880,
+            "target": 34963
+        }
+    },
+    "buffers": {
+        "Cube.003_buffer": {
+            "byteLength": 3240,
+            "type": "arraybuffer",
+            "uri": "data:text/plain;base64,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"
+        }
+    },
+    "cameras": {
+        "Camera": {
+            "perspective": {
+                "aspectRatio": 1.703595982340029,
+                "yfov": 0.5033799409866333,
+                "zfar": 100.0,
+                "znear": 0.10000000149011612
+            },
+            "type": "perspective"
+        }
+    },
+    "extensionsUsed": [
+        "KHR_materials_common"
+    ],
+    "extras": {
+        "lights": {
+            "Lamp": {
+                "point": {
+                    "color": [
+                        1.0,
+                        1.0,
+                        1.0
+                    ],
+                    "constantAttenuation": 1,
+                    "linearAttenuation": 0,
+                    "quadraticAttenuation": 0.03333335240683057
+                },
+                "type": "point"
+            }
+        }
+    },
+    "materials": {
+        "Material": {
+            "extensions": {
+                "KHR_materials_common": {
+                    "technique": "LAMBERT",
+                    "values": {
+                        "ambient": [
+                            1.0,
+                            1.0,
+                            1.0,
+                            1.0
+                        ],
+                        "diffuse": [
+                            1.0,
+                            1.0,
+                            1.0,
+                            1.0
+                        ],
+                        "doubleSided": false,
+                        "emission": [
+                            0.0,
+                            0.0,
+                            0.0,
+                            1.0
+                        ],
+                        "shininess": 50,
+                        "specular": [
+                            0.0,
+                            0.0,
+                            0.0,
+                            1.0
+                        ],
+                        "transparency": 1.0,
+                        "transparent": false
+                    }
+                }
+            }
+        }
+    },
+    "meshes": {
+        "Cube.003": {
+            "name": "Cube.003",
+            "primitives": [
+                {
+                    "attributes": {
+                        "NORMAL": "Cube.003_buffer_accessor_1",
+                        "POSITION": "Cube.003_buffer_accessor_0"
+                    },
+                    "indices": "Cube.003_buffer_accessor_2",
+                    "material": "Material",
+                    "mode": 4
+                }
+            ]
+        }
+    },
+    "nodes": {
+        "Camera": {
+            "camera": "Camera",
+            "children": [],
+            "matrix": [
+                0.6859206557273865,
+                0.7276763319969177,
+                0.0,
+                0.0,
+                -0.32401347160339355,
+                0.305420845746994,
+                0.8953956365585327,
+                0.0,
+                0.6515582203865051,
+                -0.6141703724861145,
+                0.44527140259742737,
+                0.0,
+                7.481131553649902,
+                -6.5076398849487305,
+                6.365701675415039,
+                1.0
+            ],
+            "name": "Camera"
+        },
+        "Cube.003": {
+            "children": [],
+            "matrix": [
+                1.2562149542816314e-08,
+                0.0,
+                -0.16639071702957153,
+                0.0,
+                2.3726952846914173e-08,
+                -0.07281749695539474,
+                1.791335134764785e-15,
+                0.0,
+                -2.7484941482543945,
+                -8.955731232163089e-07,
+                -2.07505536309327e-07,
+                0.0,
+                0.22441180050373077,
+                0.01356518268585205,
+                1.4626743793487549,
+                1.0
+            ],
+            "meshes": [
+                "Cube.003"
+            ],
+            "name": "Cube.003"
+        },
+        "Lamp": {
+            "children": [],
+            "extras": {
+                "light": "Lamp"
+            },
+            "matrix": [
+                -0.29086464643478394,
+                0.9551711678504944,
+                -0.05518905818462372,
+                0.0,
+                -0.7711008191108704,
+                -0.1998833566904068,
+                0.6045247316360474,
+                0.0,
+                0.5663931965827942,
+                0.21839119493961334,
+                0.7946722507476807,
+                0.0,
+                4.076245307922363,
+                1.0054539442062378,
+                6.925898551940918,
+                1.0
+            ],
+            "name": "Lamp"
+        },
+        "Scene_root": {
+            "children": [
+                "Cube.003",
+                "Lamp",
+                "Camera"
+            ],
+            "matrix": [
+                -1.0,
+                0.0,
+                0.0,
+                0.0,
+                0.0,
+                0.0,
+                1.0,
+                0.0,
+                0.0,
+                1.0,
+                0.0,
+                0.0,
+                0.0,
+                0.0,
+                0.0,
+                1.0
+            ],
+            "name": "Scene_root"
+        }
+    },
+    "samplers": {
+        "default": {}
+    },
+    "scene": "Scene",
+    "scenes": {
+        "Scene": {
+            "extras": {
+                "active_camera": "Camera",
+                "background_color": [
+                    0.05087608844041824,
+                    0.05087608844041824,
+                    0.05087608844041824
+                ],
+                "frames_per_second": 24
+            },
+            "nodes": [
+                "Scene_root"
+            ]
+        }
+    }
+}

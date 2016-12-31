@@ -1,0 +1,470 @@
+{
+    "accessors": {
+        "Lopo-Pine.001_buffer_accessor_0": {
+            "bufferView": "Lopo-Pine.001_buffer_view_0",
+            "byteOffset": 0,
+            "byteStride": 24,
+            "componentType": 5126,
+            "count": 64,
+            "max": [
+                0,
+                0,
+                1.9839640855789185
+            ],
+            "min": [
+                -5.4871392250061035,
+                -3.6837615966796875,
+                -0.2937816381454468
+            ],
+            "type": "VEC3"
+        },
+        "Lopo-Pine.001_buffer_accessor_1": {
+            "bufferView": "Lopo-Pine.001_buffer_view_0",
+            "byteOffset": 12,
+            "byteStride": 24,
+            "componentType": 5126,
+            "count": 64,
+            "max": [
+                0.9198032021522522,
+                0.9198023676872253,
+                0.09384854137897491
+            ],
+            "min": [
+                -0.9198032021522522,
+                -0.9198032021522522,
+                -1.0
+            ],
+            "type": "VEC3"
+        },
+        "Lopo-Pine.001_buffer_accessor_2": {
+            "bufferView": "Lopo-Pine.001_buffer_view_1",
+            "byteOffset": 0,
+            "byteStride": 2,
+            "componentType": 5123,
+            "count": 66,
+            "max": [
+                63
+            ],
+            "min": [
+                0
+            ],
+            "type": "SCALAR"
+        },
+        "Lopo-Pine_buffer_accessor_0": {
+            "bufferView": "Lopo-Pine_buffer_view_0",
+            "byteOffset": 0,
+            "byteStride": 24,
+            "componentType": 5126,
+            "count": 72,
+            "max": [
+                0,
+                0,
+                7.835871696472168
+            ],
+            "min": [
+                -6.68781852722168,
+                -4.884441375732422,
+                0
+            ],
+            "type": "VEC3"
+        },
+        "Lopo-Pine_buffer_accessor_1": {
+            "bufferView": "Lopo-Pine_buffer_view_0",
+            "byteOffset": 12,
+            "byteStride": 24,
+            "componentType": 5126,
+            "count": 72,
+            "max": [
+                0.8935617804527283,
+                0.893561601638794,
+                0.2540769875049591
+            ],
+            "min": [
+                -0.893561840057373,
+                -0.8935615420341492,
+                -0.9908380508422852
+            ],
+            "type": "VEC3"
+        },
+        "Lopo-Pine_buffer_accessor_2": {
+            "bufferView": "Lopo-Pine_buffer_view_1",
+            "byteOffset": 0,
+            "byteStride": 2,
+            "componentType": 5123,
+            "count": 72,
+            "max": [
+                71
+            ],
+            "min": [
+                0
+            ],
+            "type": "SCALAR"
+        }
+    },
+    "asset": {
+        "profile": {
+            "api": "WebGL",
+            "version": "1.0.3"
+        },
+        "version": "1.0"
+    },
+    "bufferViews": {
+        "Lopo-Pine.001_buffer_view_0": {
+            "buffer": "Lopo-Pine.001_buffer",
+            "byteLength": 1536,
+            "byteOffset": 0,
+            "target": 34962
+        },
+        "Lopo-Pine.001_buffer_view_1": {
+            "buffer": "Lopo-Pine.001_buffer",
+            "byteLength": 132,
+            "byteOffset": 1536,
+            "target": 34963
+        },
+        "Lopo-Pine_buffer_view_0": {
+            "buffer": "Lopo-Pine_buffer",
+            "byteLength": 1728,
+            "byteOffset": 0,
+            "target": 34962
+        },
+        "Lopo-Pine_buffer_view_1": {
+            "buffer": "Lopo-Pine_buffer",
+            "byteLength": 144,
+            "byteOffset": 1728,
+            "target": 34963
+        }
+    },
+    "buffers": {
+        "Lopo-Pine.001_buffer": {
+            "byteLength": 1668,
+            "type": "arraybuffer",
+            "uri": "data:text/plain;base64,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"
+        },
+        "Lopo-Pine_buffer": {
+            "byteLength": 1872,
+            "type": "arraybuffer",
+            "uri": "data:text/plain;base64,yIGlwAOZV8CI8v0/TbNTPZCK/z2Np32/PB+fwB3jXMCI8v0/TbNTPZCK/z2Np32/sryYwAOZV8CI8v0/Tor/vZmyUz2Pp32/yIGlwAOZV8CI8v0/CrJTPWSK/z2Op32/1CaowO7TSsCI8v0/WYr/PYCyUz2Pp32/PB+fwL/EOMCJ8v0/fLJTPTCK/72Op32/PB+fwFhNnMD92OY/eLJTvW2K/z2Op32/1CaowO7TSsCI8v0/Zor/PeWxU72Qp32/0p5wwMo5jMD92OY/Tor/vZmyUz2Pp32/PB+fwFsaur8C2eY/eLJTPUCK/72Op32/yIGlwAOZV8CI8v0/TIr/PZOyUz2Op32/uHdQwO7TSsD/2OY/d8BkPwCBvT5fFoI+yIGlwNkOPsCJ8v0/Zor/PeWxU72Qp32/PB+fwFsaur8C2eY/EIG9PnTAZD9YFoI+uHdQwO7TSsD/2OY/n4r/vYCyUz2Np32/EO/FwJVo+r8B2eY/Vor/PUGyU72Np32/yIGlwNkOPsCJ8v0/fLJTPTCK/72Op32/PB+fwPLTSsB2v/pAF4G9vnLAZD9hFoI+PB+fwFhNnMD92OY/EYG9PnPAZL9ZFoI+EO/FwMo5jMD+2OY/TIr/PZOyUz2Op32/0p5wwJdo+r8A2eY/d8BkPwCBvT5fFoI+sryYwAOZV8CI8v0/n4r/vYCyUz2Np32/PB+fwFhNnMD92OY/TbNTPZCK/z2Np32/0p5wwJdo+r8A2eY/MIr/vXyyU72Op32/uHdQwO7TSsD/2OY/Tor/vZmyUz2Pp32/0p5wwMo5jMD92OY/EYG9PnPAZL9ZFoI+0p5wwMo5jMD92OY/c8BkPxOBvb5aFoI+pReWwO7TSsCI8v0/MIr/vXyyU72Op32/EO/FwJVo+r8B2eY/fLJTPTCK/72Op32/PB+fwPLTSsB2v/pAEYG9PnPAZL9ZFoI+PB+fwPLTSsB2v/pAdsBkvwCBvT5hFoI+nALWwO3TSsAA2eY/dsBkvwCBvT5hFoI+PB+fwFsaur8C2eY/17FTvT2K/72Qp32/0p5wwJdo+r8A2eY/Qor/vUCyU72Qp32/sryYwNkOPsCJ8v0/MIr/vXyyU72Op32/pReWwO7TSsCI8v0/n4r/vYCyUz2Np32/uHdQwO7TSsD/2OY/Qor/vUCyU72Qp32/nALWwO3TSsAA2eY/Vor/PUGyU72Np32/EO/FwMo5jMD+2OY/FoG9vnLAZL9gFoI+sryYwAOZV8CI8v0/rLJTvfuJ/z2Qp32/1CaowO7TSsCI8v0/TIr/PZOyUz2Op32/yIGlwNkOPsCJ8v0/Vor/PUGyU72Np32/PB+fwL/EOMCJ8v0/17FTvT2K/72Qp32/EO/FwJVo+r8B2eY/F4G9vnLAZD9hFoI+EO/FwJVo+r8B2eY/eLJTPUCK/72Op32/pReWwO7TSsCI8v0/Qor/vUCyU72Qp32/PB+fwPLTSsB2v/pAd8BkPwCBvT5fFoI+PB+fwPLTSsB2v/pAEIG9PnTAZD9YFoI+EO/FwMo5jMD+2OY/WYr/PYCyUz2Pp32/0p5wwMo5jMD92OY/eLJTvW2K/z2Op32/PB+fwPLTSsB2v/pAc8BkPxOBvb5aFoI+EO/FwMo5jMD+2OY/CrJTPWSK/z2Op32/uHdQwO7TSsD/2OY/c8BkPxOBvb5aFoI+nALWwO3TSsAA2eY/eMBkv/WAvb5bFoI+sryYwNkOPsCJ8v0/xbJTvTyK/72Op32/PB+fwB3jXMCI8v0/eLJTvW2K/z2Op32/PB+fwFsaur8C2eY/F4G9vnLAZD9hFoI+nALWwO3TSsAA2eY/WYr/PYCyUz2Pp32/PB+fwPLTSsB2v/pAeMBkv/WAvb5bFoI+nALWwO3TSsAA2eY/Zor/PeWxU72Qp32/PB+fwFhNnMD92OY/FoG9vnLAZL9gFoI+PB+fwPLTSsB2v/pAFoG9vnLAZL9gFoI+0p5wwJdo+r8A2eY/EIG9PnTAZD9YFoI+sryYwNkOPsCJ8v0/17FTvT2K/72Qp32/EO/FwMo5jMD+2OY/eMBkv/WAvb5bFoI+PB+fwFhNnMD92OY/CrJTPWSK/z2Op32/EO/FwJVo+r8B2eY/dsBkvwCBvT5hFoI+PB+fwFsaur8C2eY/xbJTvTyK/72Op32/PB+fwB3jXMCI8v0/rLJTvfuJ/z2Qp32/PB+fwL/EOMCJ8v0/eLJTPUCK/72Op32/0p5wwJdo+r8A2eY/xbJTvTyK/72Op32/0p5wwMo5jMD92OY/rLJTvfuJ/z2Qp32/QwBGADYAPwAqACAAIQAkAC0AGwAiABcAGAAIAAIAFQAjAA4ALAAJAEUABQAQABwAMQAGADcARAAnAEcAQQAzAAMAAAABABYAMAA5AAQAKAAKABMAJQAPACkADAAHADsADQAvAD4AFAAuAAsANAAyABoAGQAdABIAPAA9ACYAQAA6ADUAKwARADgAHwAeAEIA"
+        }
+    },
+    "cameras": {
+        "Camera": {
+            "perspective": {
+                "aspectRatio": 1.703595982340029,
+                "yfov": 0.5033799409866333,
+                "zfar": 100.0,
+                "znear": 0.10000000149011612
+            },
+            "type": "perspective"
+        }
+    },
+    "extensionsUsed": [
+        "KHR_materials_common"
+    ],
+    "extras": {
+        "lights": {
+            "Lamp": {
+                "point": {
+                    "color": [
+                        1.0,
+                        1.0,
+                        1.0
+                    ],
+                    "constantAttenuation": 1,
+                    "linearAttenuation": 0,
+                    "quadraticAttenuation": 0.03333335240683057
+                },
+                "type": "point"
+            }
+        }
+    },
+    "materials": {
+        "Material": {
+            "extensions": {
+                "KHR_materials_common": {
+                    "technique": "PHONG",
+                    "values": {
+                        "ambient": [
+                            1.0,
+                            1.0,
+                            1.0,
+                            1.0
+                        ],
+                        "diffuse": [
+                            0.64000004529953,
+                            0.64000004529953,
+                            0.64000004529953,
+                            1.0
+                        ],
+                        "doubleSided": false,
+                        "emission": [
+                            0.0,
+                            0.0,
+                            0.0,
+                            1.0
+                        ],
+                        "shininess": 50,
+                        "specular": [
+                            0.5,
+                            0.5,
+                            0.5,
+                            1.0
+                        ],
+                        "transparency": 1.0,
+                        "transparent": false
+                    }
+                }
+            }
+        },
+        "Material.001": {
+            "extensions": {
+                "KHR_materials_common": {
+                    "technique": "PHONG",
+                    "values": {
+                        "ambient": [
+                            1.0,
+                            1.0,
+                            1.0,
+                            1.0
+                        ],
+                        "diffuse": [
+                            0.47406163811683655,
+                            0.1389402598142624,
+                            0.0,
+                            1.0
+                        ],
+                        "doubleSided": false,
+                        "emission": [
+                            0.0,
+                            0.0,
+                            0.0,
+                            1.0
+                        ],
+                        "shininess": 50,
+                        "specular": [
+                            0.5,
+                            0.5,
+                            0.5,
+                            1.0
+                        ],
+                        "transparency": 1.0,
+                        "transparent": false
+                    }
+                }
+            }
+        },
+        "Material.002": {
+            "extensions": {
+                "KHR_materials_common": {
+                    "technique": "PHONG",
+                    "values": {
+                        "ambient": [
+                            1.0,
+                            1.0,
+                            1.0,
+                            1.0
+                        ],
+                        "diffuse": [
+                            0.009840689599514008,
+                            0.40565386414527893,
+                            0.0,
+                            1.0
+                        ],
+                        "doubleSided": false,
+                        "emission": [
+                            0.0,
+                            0.0,
+                            0.0,
+                            1.0
+                        ],
+                        "shininess": 50,
+                        "specular": [
+                            0.016454456374049187,
+                            0.17527729272842407,
+                            0.0,
+                            1.0
+                        ],
+                        "transparency": 1.0,
+                        "transparent": false
+                    }
+                }
+            }
+        }
+    },
+    "meshes": {
+        "Lopo-Pine": {
+            "name": "Lopo-Pine",
+            "primitives": [
+                {
+                    "attributes": {
+                        "NORMAL": "Lopo-Pine_buffer_accessor_1",
+                        "POSITION": "Lopo-Pine_buffer_accessor_0"
+                    },
+                    "indices": "Lopo-Pine_buffer_accessor_2",
+                    "material": "Material.002",
+                    "mode": 4
+                }
+            ]
+        },
+        "Lopo-Pine.001": {
+            "name": "Lopo-Pine.001",
+            "primitives": [
+                {
+                    "attributes": {
+                        "NORMAL": "Lopo-Pine.001_buffer_accessor_1",
+                        "POSITION": "Lopo-Pine.001_buffer_accessor_0"
+                    },
+                    "indices": "Lopo-Pine.001_buffer_accessor_2",
+                    "material": "Material.001",
+                    "mode": 4
+                }
+            ]
+        }
+    },
+    "nodes": {
+        "Camera": {
+            "camera": "Camera",
+            "children": [],
+            "matrix": [
+                0.6859206557273865,
+                0.7276763319969177,
+                0.0,
+                0.0,
+                -0.32401347160339355,
+                0.305420845746994,
+                0.8953956365585327,
+                0.0,
+                0.6515582203865051,
+                -0.6141703724861145,
+                0.44527140259742737,
+                0.0,
+                7.481131553649902,
+                -6.5076398849487305,
+                5.34366512298584,
+                1.0
+            ],
+            "name": "Camera"
+        },
+        "Lamp": {
+            "children": [],
+            "extras": {
+                "light": "Lamp"
+            },
+            "matrix": [
+                -0.29086464643478394,
+                0.9551711678504944,
+                -0.05518905818462372,
+                0.0,
+                -0.7711008191108704,
+                -0.1998833566904068,
+                0.6045247316360474,
+                0.0,
+                0.5663931965827942,
+                0.21839119493961334,
+                0.7946722507476807,
+                0.0,
+                4.076245307922363,
+                1.0054539442062378,
+                5.903861999511719,
+                1.0
+            ],
+            "name": "Lamp"
+        },
+        "Lopo-Pine": {
+            "children": [],
+            "matrix": [
+                1.0,
+                0.0,
+                0.0,
+                0.0,
+                0.0,
+                1.0,
+                0.0,
+                0.0,
+                0.0,
+                0.0,
+                1.0,
+                0.0,
+                4.983942985534668,
+                3.169339179992676,
+                0.29015079140663147,
+                1.0
+            ],
+            "meshes": [
+                "Lopo-Pine"
+            ],
+            "name": "Lopo-Pine"
+        },
+        "Lopo-Pine.001": {
+            "children": [],
+            "matrix": [
+                1.0,
+                0.0,
+                0.0,
+                0.0,
+                0.0,
+                1.0,
+                0.0,
+                0.0,
+                0.0,
+                0.0,
+                1.0,
+                0.0,
+                4.983942985534668,
+                3.169339179992676,
+                0.29015079140663147,
+                1.0
+            ],
+            "meshes": [
+                "Lopo-Pine.001"
+            ],
+            "name": "Lopo-Pine.001"
+        },
+        "Scene_root": {
+            "children": [
+                "Lopo-Pine.001",
+                "Lopo-Pine",
+                "Lamp",
+                "Camera"
+            ],
+            "matrix": [
+                -1.0,
+                0.0,
+                0.0,
+                0.0,
+                0.0,
+                0.0,
+                1.0,
+                0.0,
+                0.0,
+                1.0,
+                0.0,
+                0.0,
+                0.0,
+                0.0,
+                0.0,
+                1.0
+            ],
+            "name": "Scene_root"
+        }
+    },
+    "samplers": {
+        "default": {}
+    },
+    "scene": "Scene",
+    "scenes": {
+        "Scene": {
+            "extras": {
+                "active_camera": "Camera",
+                "background_color": [
+                    0.05087608844041824,
+                    0.05087608844041824,
+                    0.05087608844041824
+                ],
+                "frames_per_second": 24
+            },
+            "nodes": [
+                "Scene_root"
+            ]
+        }
+    }
+}

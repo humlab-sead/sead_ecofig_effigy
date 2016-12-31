@@ -1,0 +1,47 @@
+TimeSlice & Site;SiteName;LatDD;LongDD;Aquatics;Carrion;Disturbed/arable;Dung/foul habitats;General synanthropic;Halotolerant;Heathland & moorland;Indicators: Coniferous;Indicators: Deciduous;Indicators: Dung;Indicators: Running water;Indicators: Standing water;Meadowland;Open wet habitats;Pasture/Dung;Sandy/dry disturbed/arable;Stored grain pest;Wetlands/marshes;Wood and trees;SumRep
+H_Abbots Way;Abbots Way;51,18299866;-2,827591658;0;0;0;0;0;0;0;0;0;0;0;0;0;0;0;0;0;50;50;2
+H_Alcester: Roman Pit;Alcester: Roman Pit;52,21111298;-1,871111155;0;0;0;0;0;0;0;0;0;0;0;0;0;0;0;0;0;0;100;1
+H_Baker site;Baker site;51,13944626;-2,796111107;0;0;0;0;0;0;0;0;0;0;0;0;0;0;0;0;0;0;100;1
+H_Ballyarnet Lake;Ballyarnet Lake;55,04246521;-7,300685406;0;0;0;0;0;0;0;50;0;0;0;0;0;0;0;0;0;0;50;2
+H_Ballymacombes More;Ballymacombes More;54,83555603;-6,493055344;0;0;0;0;0;0;0;33,33333333;0;0;0;0;0;0;0;0;0;0;66,66666667;3
+H_Beckton: Woolwich Manor Way;Beckton: Woolwich Manor Way;51,51885223;0,058195859;0;33,33333333;0;0;0;0;0;0;0;0;0;0;33,33333333;0;0;33,33333333;0;0;0;3
+H_Beverley: Morton Lane;Beverley: Morton Lane;53,84418106;-0,431420505;0;0;0;0;0;0;0;0;0;0;0;0;0;0;0;0;0;0;100;1
+H_Bexley: Crossness;Bexley: Crossness;50,94153976;0,203413978;25;0;0;0;0;0;50;0;0;0;25;0;0;0;0;0;0;0;0;4
+H_Bexley: Norman Road;Bexley: Norman Road;51,50448608;0,156975761;0;0;0;0;0;0;0;0;0;0;0;0;0;0;0;0;0;0;100;1
+H_Bole Ings;Bole Ings;53,38000107;-0,786666691;0;0;0;0;0;0;0;0;0;0;0;0;0;0;0;0;0;0;100;1
+H_Caister;Caister;52,64583206;1,731944442;0;0;0;0;0;0;0;0;0;0;0;0;0;0;0;0;0;0;100;1
+H_Davenham: Church Moss;Davenham: Church Moss;53,23777771;-2,506388903;20;0;0;0;0;0;40;0;0;0;0;0;20;0;0;0;0;20;0;5
+H_Derryville Bog;Derryville Bog;52,74577332;-7,665305138;0;0;0;0;0;0;0;0;0;0;0;0;0;0;0;0;0;0;100;1
+H_Droitwich: Bays Meadow;Droitwich: Bays Meadow;52,25611115;-2,162499905;0;0;0;0;0;0;0;0;0;0;0;0;0;0;0;0;0;100;0;1
+H_Folkestone: Amsterdam;Folkestone: Amsterdam;50,84500122;0,527499974;0;0;0;0;50;0;0;0;0;0;0;0;0;0;0;0;50;0;0;2
+H_Goldcliff 2007;Goldcliff 2007;51,5316658;-2,902499914;0;0;0;0;0;0;0;0;0;0;0;0;0;0;0;0;0;0;100;1
+H_Goldcliff 3;Goldcliff 3;51,5316658;-2,902499914;0;0;0;0;0;0;0;0;0;0;0;0;0;0;0;0;0;100;0;1
+H_Greenwich: Abbey Wood;Greenwich: Abbey Wood;51,49282074;0,106003664;0;0;0;0;0;0;50;0;0;0;0;0;0;0;0;0;0;0;50;2
+H_Greenwich: Bellot St.;Greenwich: Bellot St.;51,48822403;0,009281486;0;0;0;0;0;0;50;0;0;0;0;0;0;0;0;0;0;0;50;2
+H_Hampstead: West Heath Spa;Hampstead: West Heath Spa;51,5652771;-0,189444438;0;0;0;0;0;0;0;0;0;0;0;0;0;0;0;0;0;0;100;1
+H_Hatfield Moors;Hatfield Moors;53,55138779;-0,9375;0;0;0;0;0;0;0;0;0;0;0;0;0;0;0;0;0;0;100;2
+H_Hatfield: Tyrham Hall;Hatfield: Tyrham Hall;53,54999924;-0,938888907;0;0;0;0;0;0;0;20;0;0;0;0;0;0;0;0;0;0;80;5
+H_Horton Kirby, South Darenth;Horton Kirby, South Darenth;51,40209961;0,245609641;0;0;0;0;0;0;100;0;0;0;0;0;0;0;0;0;0;0;0;1
+H_Lea Marston B;Lea Marston B;52,54333496;-1,691666722;0;0;50;0;0;0;0;0;0;0;0;0;0;0;0;50;0;0;0;2
+H_London: Poplar High St.;London: Poplar High St.;51,50831223;-0,00856877;50;0;0;0;0;0;50;0;0;0;0;0;0;0;0;0;0;0;0;2
+H_Meare Heath;Meare Heath;51,16110992;-2,795000076;0;0;0;0;0;0;0;0;0;0;0;50;0;0;0;0;0;50;0;2
+H_Meare: Lake Village;Meare: Lake Village;50,99750137;-2,792222261;0;0;0;0;0;0;0;0;0;0;0;0;0;0;0;0;0;0;100;1
+H_Pode Hole;Pode Hole;52,61666489;-0,13166666;0;0;0;0;0;0;0;0;50;0;0;0;0;0;0;0;0;0;50;2
+H_Redwick;Redwick;51,54999924;-2,849999905;0;0;0;0;0;0;0;0;0;0;0;0;0;0;0;0;0;50;50;2
+H_Ripon;Ripon;54,12472153;-1,491944432;0;0;0;0;0;0;0;0;0;0;0;0;0;0;0;0;0;100;0;1
+H_Rowlands Track;Rowlands Track;51,14666748;-2,787777662;0;0;0;0;0;0;0;0;0;0;0;0;0;0;0;0;0;0;100;1
+H_Runnymede 1;Runnymede 1;51,43611145;-0,536944449;0;0;0;0;0;0;0;0;0;0;0;0;0;0;0;0;0;0;100;2
+H_Shustoke;Shustoke;52,51472092;-1,666944504;0;0;0;0;0;0;0;0;0;0;0;0;0;0;0;0;0;0;100;1
+H_Sluggan Bog;Sluggan Bog;54,02222061;-6,458889008;0;0;0;0;0;0;0;25;0;0;0;0;0;0;0;0;0;0;75;4
+H_South Stanwick;South Stanwick;52,32860947;-0,585277796;0;0;0;0;0;0;0;0;0;0;0;0;0;0;0;0;0;0;100;1
+H_Stanwick, Northants.;Stanwick, Northants.;52,32168961;-0,60759604;33,33333333;0;0;0;0;0;0;0;0;0;0;16,66666667;0;0;16,66666667;0;0;33,33333333;0;6
+H_Stileway;Stileway;51,16388702;-2,768055439;0;0;0;0;0;0;0;0;0;0;0;0;0;0;0;0;0;0;100;4
+H_Stourport;Stourport;52,32500076;-2,266666651;0;0;0;0;0;0;33,33333333;0;0;0;0;0;33,33333333;0;0;0;0;33,33333333;0;3
+H_Sweet Track: Drove Site;Sweet Track: Drove Site;51,17722321;-2,787777662;0;0;0;0;0;0;0;0;0;0;0;33,33333333;0;0;0;0;0;33,33333333;33,33333333;3
+H_Sweet Track: Site TG;Sweet Track: Site TG;51,17722321;-2,787777662;0;0;0;0;0;0;0;0;0;0;0;16,66666667;0;0;0;0;0;50;33,33333333;6
+H_Thorne Moors II;Thorne Moors II;53,63249969;-0,8838889;0;0;0;0;0;0;0;16,66666667;0;0;0;0;0;0;0;0;0;0;83,33333333;6
+H_Thorne Moors Trackway Site;Thorne Moors Trackway Site;53,62688446;-0,914103985;0;0;0;0;0;0;0;0;0;0;0;0;0;0;0;0;0;0;100;5
+H_Thorne Waste;Thorne Waste;53,63249969;-0,8838889;0;0;0;0;0;0;0;33,33333333;0;0;0;0;0;0;0;0;0;0;66,66666667;3
+H_Thorney;Thorney;52,62086105;-0,13425307;0;0;0;0;0;0;0;0;0;0;0;0;0;0;0;0;0;0;100;1
+H_Wilsford;Wilsford;51,17166519;-1,846944451;0;20;0;0;0;0;0;0;0;20;0;0;20;0;20;20;0;0;0;5
+H_Worldsend;Worldsend;52,53388977;-2,810833216;0;0;0;0;0;0;0;25;0;0;0;0;0;0;0;0;0;0;75;8

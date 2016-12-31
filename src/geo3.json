@@ -1,0 +1,36 @@
+{
+	"type": "FeatureCollection",
+	"features": [{
+		"type": "Feature",
+		"geometry": {
+			"type": "Point",
+			"coordinates": [0.1533333, 52.21667]
+		},
+		"properties": {
+			"name": "Barnwell Station",
+			"environmentalIndicators": {
+				"Aquatics": "8",
+				"Carrion": "0",
+				"Disturbed\/arable": "8",
+				"Dry dead wood": "0",
+				"Dung\/foul habitats": "0",
+				"General synanthropic": "0",
+				"Halotolerant": "0",
+				"Heathland & moorland": "25",
+				"Indicators: Coniferous": "0",
+				"Indicators: Deciduous": "0",
+				"Indicators: Dung": "0",
+				"Indicators: Running water": "0",
+				"Indicators: Standing water": "0",
+				"Meadowland": "25",
+				"Mould beetles": "0",
+				"Open wet habitats": "0",
+				"Pasture\/Dung": "0",
+				"Sandy\/dry disturbed\/arable": "16",
+				"Stored grain pest": "0",
+				"Wetlands\/marshes": "8",
+				"Wood and trees": "8"
+			}
+		}
+	}]
+}
