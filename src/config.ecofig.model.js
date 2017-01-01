@@ -29,7 +29,7 @@ const ecofigDefaultModelSetup = {
     ecofigCoalesceConfig: { merge: true, proximity: mergeProximity, strategy: null, ignoreSite: false, ignoreEpoch: false },
 
     boundry: {
-        modelStrategy: new ecofigBoundryConfig.modelStrategy(new ecofigBoundryConfig.geometryStrategy(), ecofigBoundryConfig),
+        modelStrategy: null, 
         config: ecofigBoundryConfig
     },
     ecofigLayoutStrategy: null /*new CircularEcofigLayoutStrategy()*/,

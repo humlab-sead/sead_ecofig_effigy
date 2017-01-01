@@ -21,7 +21,7 @@ const Json2Ecofig = {
 
     getValues: items =>
     {
-        return items.keys()
+        return Object.keys(items)
             .filter(x => ecofigConfig.ecoCodeConfig.ecoCodeLabelMap.has(x))
             .map(x => EcofigFactory.createNewValue(x, parseFloat(items[x]) / 100.0 || 0.0))
             .filter(x => x.scale > 0);

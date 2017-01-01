@@ -9,15 +9,25 @@ import { default as ecofigConfig } from './config.js';
 
 
 const EcofigLoader = {
-    load: () => 
-        fetch(ecofigConfig.restUrl, {
-            method: 'get',
-            mode: 'no-cors', // cors???
-            headers: {
-                'Accept': 'application/json',
-                'Content-Type': 'application/json'
-            }
-        })
+    cache: null,
+    load: function() {
+        if (this.cache !== null) {
+            return this.cache;
+        } else {
+            fetch(ecofigConfig.restUrl, {
+                method: 'get',
+                mode: 'no-cors', // cors???
+                headers: {
+                    'Accept': 'application/json',
+                    'Content-Type': 'application/json'
+                }
+            }).then(jsonData => {
+                this.cache = jsonData;
+                // FIXME: This is no return from outer function!
+                return jsonData;
+            })
+        }
+    }
 }
 
 class EcofigStore {
@@ -28,8 +38,18 @@ class EcofigStore {
     }
 
     findAll() {
-        this.values = this.values || this.loader.load().then(jsonData => Json2Ecofig.createMany(jsonData.features));
-        return this.values;
+        return new Promise(
+            (resolve/*, reject*/) => {
+                if (this.values != null) {
+                    resolve(this.values);
+                } else {
+                    return this.loader.load()
+                        .then(data => {
+                            this.values = Json2Ecofig.createMany(data.features);
+                            return this.values;
+                        });
+                }
+            })
     }
 
     // find(filter = {}) {

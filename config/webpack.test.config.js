@@ -9,7 +9,7 @@ let CircularDependencyPlugin = require('circular-dependency-plugin')
 
 module.exports = {
     debug: true,
-    entry: './test/EcofigStore.spec.js', //'./test/complete.test.entry.js',
+    entry: [ 'babel-polyfill', './test/EcofigStore.spec.js'], //'./test/complete.test.entry.js',
     output: {
         path: './public/test',
         filename: 'testBundle.js',
@@ -45,10 +45,12 @@ module.exports = {
             // exclude detection of files based on a RegExp 
             //exclude: /a\.js/,
             // add errors to webpack instead of warnings 
-            failOnError: true
+            exclude: /node_modules/,
+            failOnError: false
         })
     ],
-    devtool : 'cheap-module-eval-source-map', //"source-map", // '#cheap-module-inline-source-map'
+    // FIXME: Use cheap source map instead
+    devtool : 'source-map', //"source-map", // '#cheap-module-inline-source-map'
     devServer: {
         contentBase: '../public/test',
         inline: true,
