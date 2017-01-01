@@ -1,6 +1,5 @@
 /node_modules
 /archive
-.vscode
 *.log
 /public
 .DS_Store
