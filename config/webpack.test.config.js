@@ -34,7 +34,15 @@ module.exports = {
             //{ test: /\.css$/,                  loader: 'style!css' },
             { test: /\.spec\.js$/,   loader: 'mocha' },
             { test: /Cesium\.js$/,   loader: "script", exclude: /node_modules/ },
-            { test: /\.js$/,         loader: 'babel', exclude: /(node_modules)/ },
+            {
+                test: /\.js$/,
+                loader: 'babel',
+                exclude: /(node_modules)/,
+                query: {
+                    plugins: ['transform-runtime'],
+                    //presets: ['es2015', 'stage-0', 'react'],
+                }    
+            },
             { test: /\.json$/, loader: "json-loader" }
         ]
     },

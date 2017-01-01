@@ -55,12 +55,15 @@ describe('EcofigStore', function() {
         });
         it('can be loaded', function() {
             let store = new EcofigStore(EcofigTestLoader);
-            store.findAll().then(
-                (ecofigs) => {
-                    assert.isNotNull(ecofigs);
-                    assert.isTrue(ecofigs.length > 0);
-                }
-            )
+            let ecofigs = store.findAll()
+            assert.isNotNull(ecofigs);
+            assert.isTrue(ecofigs.length > 0);            
+            // store.findAll().then(
+            //     (ecofigs) => {
+            //         assert.isNotNull(ecofigs);
+            //         assert.isTrue(ecofigs.length > 0);
+            //     }
+            // )
         });
     });
 
