@@ -1,0 +1,12 @@
+// Place your settings in this file to overwrite default and user settings.
+{
+    "editor.insertSpaces": true,
+    "editor.tabSize": 4,
+    "editor.detectIndentation": false,
+    "terminal.integrated.shell.windows": "C:\\Program Files\\Git\\bin\\bash.exe",
+    "editor.wrappingColumn": -1,
+    "editor.quickSuggestions": true,
+    "editor.quickSuggestionsDelay": 10,
+    "editor.parameterHints": false,
+    "workbench.editor.showTabs": true
+}
