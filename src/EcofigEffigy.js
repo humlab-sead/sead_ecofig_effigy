@@ -17,7 +17,7 @@ class EcofigDepiction { //  alt-names: SiteEffigy, SiteDepiction, EcofigEffigy
         // TODO: Move to a controller
         ecofigConfig.ecofigModelSetup.ecofigLayoutStrategy.layout(this.ecofig);
 
-        this.cesiumModels = new Map(this.ecofig.values.map(x => [ x.ecoCode.ecoCode, ecofigConfig.ecofigModelSetup.cesiumModelStrategy.create(this.ecofig, x) ]));
+        this.cesiumModels = new Map(this.ecofig.values.map(x => [ x.ecoCode.id, ecofigConfig.ecofigModelSetup.cesiumModelStrategy.create(this.ecofig, x) ]));
         this.cesiumBoundry = ecofigConfig.ecoFigModelSetup.boundryModelStrategy.createBoundryFor();
     }
 

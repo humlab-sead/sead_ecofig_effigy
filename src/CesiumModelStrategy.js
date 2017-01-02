@@ -24,7 +24,7 @@ class GltfCesiumModelStrategy extends CesiumModelStrategy {
 
         // TODO Implement the various possible config setups!!!
 
-        let ecoCodeConfig = this.ecoCodeConfig.get(ecofigValue.ecoCode.ecoCode);
+        let ecoCodeConfig = this.ecoCodeConfig.get(ecofigValue.ecoCode.id);
         return this.createModels(ecofig, ecofigValue, ecoCodeConfig);
     }
 

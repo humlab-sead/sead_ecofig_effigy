@@ -2,6 +2,17 @@
 
 Visualization prototype for reconstructed environmental markers (Ecofigs) in [SEAD](http://www.sead.se/)/[Bugs CEP](http://bugscep.com/).
 
+## Project Objectives
+
+* To create a boilerplate for JavaScript applications focusing on the tool chain.
+* Enable use of npm packages in browser applications (> 350 000 packages)
+* Enable use of features in latest version(s) of JavaScript 
+* Use npm to simplify dependency management
+* Simplify deploy using a bundler
+* Enable code linting i.e. code analysis and error detection
+* Enable use of task runners for minification, optimazation etc.
+* Enable unit testing
+
 ## Demo
 
 A fully working live demo can be tested at http:// (demo currently offline)
@@ -11,25 +22,29 @@ A fully working live demo can be tested at http:// (demo currently offline)
 These instructions will setup a local copy of the project for development and testing.
 See deployment for notes on how to deploy the project on a live system.
 
-### Prerequisites
-
 ### Development Setup
 
-Say what the step will be
-
+Clone the repository:
 ```
-$ npm install -dev
+$ git clone https://github.com/humlab/sead_ecofig_effigy.git
+```
+Move to folder and build assets:
+```
+$ cd sead_ecofig_effigy
 $ npm run build:assets
 ```
 
 ## Running Tests
-
-To run the test in a browser you first need to start the webpack development server:
+Test can be run in a browser (using webpack-dev-server) or from the  the command line (with Node.js). 
+You can build tests using the "test-build" script:
 ```
 $ npm run test:build
+```
+The following command starts the web server and opens a Mocha test page in the default browser with file watch and hot reload:
+```
 $ npm run test:server
 ```
-The test results are now avaliable att http://localhost:8090/testBundle with file watch and hot reload.
+The test results are avaliable att http://localhost:8090/testBundle.
 
 ### Configuration
 

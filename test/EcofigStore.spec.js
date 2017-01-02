@@ -3,7 +3,11 @@
 import geoData  from './fixtures/geo2.json';
 import EcofigStore from '../src/EcofigStore.js';
 
-var assert = require('chai').assert;
+var chai = require('chai');
+// var chaiAsPromised = require('chai-as-promised')
+// chai.use(chaiAsPromised);
+var assert = chai.assert;
+
 // var Cesium = require('cesium/Source/Cesium');
 
 // chai-promises
@@ -18,12 +22,10 @@ var assert = require('chai').assert;
 
 // Simple test loader. Ought to be replaced by a mocker (e.g. fetch-mock)
 const EcofigTestLoader = {
+    cache: null,
     load: function() {
-        return new Promise(
-            (resolve/*, reject*/) => window.setTimeout(() => resolve(geoData), Math.random() * 1000 + 1000)
-        ).then(jsonData => {
-            return jsonData.features;
-        })
+        return new Promise((resolve/*, reject*/) => window.setTimeout(() => resolve(geoData), Math.random() * 250 + 250)
+        )
     }
 }
 // nock('http://example.com/').get('/todos').reply(200, { todos: ['do something'] })
@@ -35,47 +37,46 @@ describe('EcofigStore', function() {
             assert.isTrue(true);
         });
         it('fixture data is loaded', function() {
-            assert.isTrue(geoData.features.length > 0);
+            assert.isTrue(geoData.features.length > 0, 'length mismatch');
         });
         it('is an array of data with at least one element', function() {
-            EcofigTestLoader.load().then(
-                features => {
-                    assert.isNotNull(features);
-                    assert.isTrue(features.length >= 0);
+            return EcofigTestLoader.load().then(
+                geoJson => {
+                    assert.isNotNull(geoJson, 'features is null');
+                    assert.isNotNull(geoJson.features, 'features is null');
+                    assert.isTrue(Array.isArray(geoJson.features), 'array expected');
+                    assert.isAbove(geoJson.features.length, 0, 'length 0 unexpected');
                 });
         });
     });
 
     describe('EcofigStore', function() {
         it('has a recognizable class', function() {
-            assert.isNotNull(EcofigStore);
+            assert.isNotNull(EcofigStore, 'class is not defined');
         });
         it('can be created', function() {
-            assert.isNotNull(new EcofigStore());
+            assert.isNotNull(new EcofigStore(), 'create failed');
         });
+        // it('can be loaded', function() {
+        //     let store = new EcofigStore(EcofigTestLoader);
+        //     return assert.eventually.ok(store.findAll());
+        // });
         it('can be loaded', function() {
             let store = new EcofigStore(EcofigTestLoader);
-            let ecofigs = store.findAll()
-            assert.isNotNull(ecofigs);
-            assert.isTrue(ecofigs.length > 0);            
-            // store.findAll().then(
-            //     (ecofigs) => {
-            //         assert.isNotNull(ecofigs);
-            //         assert.isTrue(ecofigs.length > 0);
-            //     }
-            // )
+            return store.findAll().then(
+                function (ecofigs) {
+                    assert.isNotNull(ecofigs);
+                    assert.isTrue(Array.isArray(ecofigs));
+                    assert.equal(ecofigs.length, 7);
+                    assert.equal(ecofigs[0].site, geoData.features[0].properties.name);
+                    assert.deepEqual(ecofigs[0].position, geoData.features[0].geometry.coordinates);
+                    //done();
+                },
+                function (err) {
+                    //done(err);
+                });
         });
     });
 
-    // describe('findAll()', function() {
-
-    //     it('should return a list of Ecofigs', function() {
-    //         let ecofigStore = new EcofigStore(EcofigTestLoader);
-    //         assert.isTrue(ecofigStore);
-    //         // var data = ecofigStore.findAll();
-    //         // assert.isTrue(data.length > 0);
-    //         // console.log("Hello, world!");
-    //     });        
-    // });
 });
 

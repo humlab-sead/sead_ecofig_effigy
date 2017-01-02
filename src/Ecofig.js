@@ -21,9 +21,10 @@ const Json2Ecofig = {
 
     getValues: items =>
     {
+        let map = ecofigConfig.ecoCodeConfig.ecoCodeLabelMap;
         return Object.keys(items)
-            .filter(x => ecofigConfig.ecoCodeConfig.ecoCodeLabelMap.has(x))
-            .map(x => EcofigFactory.createNewValue(x, parseFloat(items[x]) / 100.0 || 0.0))
+            .filter(x => map.has(x))
+            .map(x => EcofigFactory.createValue(map.get(x).id , parseFloat(items[x]) / 100.0 || 0.0))
             .filter(x => x.scale > 0);
     }
 }
@@ -31,7 +32,7 @@ const Json2Ecofig = {
 const EcofigFactory = {
 
     clone: e => new Ecofig(
-        Object.assign({}, e, { id: ++__id, position: e.position.splice(), values: EcofigFactory.cloneValues(e.values) })
+        Object.assign({ }, e, { id: ++__id, position: e.position.splice(), values: EcofigFactory.cloneValues(e.values) })
     ),
 
     cloneValue: value => Object.assign({}, value, { position: value.position.slice() }),
@@ -41,7 +42,7 @@ const EcofigFactory = {
     createValue: (ecocodeKey, scale=0.0, position=[0,0]) => (
         {
             id: ecocodeKey,
-            ecoCode: ecofigConfig.ecoCodeConfig.ecoCodeLabelMap.get(ecocodeKey),
+            ecoCode: ecofigConfig.ecoCodeConfig.ecoCodeMap.get(ecocodeKey),
             scale: scale,
             position: position
         }),
@@ -72,8 +73,12 @@ class Ecofig {
         return EcofigFactory.clone(this);
     }
 
+    sum() {
+        return this.values.reduce((a,b) => a + b.scale, 0);
+    }
+
     normalize() {
-        let sum = this.values.reduce((a,b) => a.scale + b.scale, 0);
+        let sum = this.sum();
         this.values.forEach(x => x.scale = sum === 0 ? 0.0 : x.scale / sum);
         return this;
     }
@@ -85,7 +90,7 @@ class Ecofig {
     }
 
     getValue(id) {
-        return this.values.find(z => z.id === id);
+        return this.values.find(z => z.ecoCode.id === id);
     }
 
     addValue(x) {

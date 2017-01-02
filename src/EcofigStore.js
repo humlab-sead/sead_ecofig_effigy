@@ -7,42 +7,34 @@ promise.polyfill();
 import { Json2Ecofig } from './Ecofig.js';
 import { default as ecofigConfig } from './config.js';
 
+// const ES7EcofigLoader = {
+//     load: async function() {
+//         await fetch(ecofigConfig.restUrl, {
+//             method: 'get',
+//             mode: 'no-cors', // cors???
+//             headers: {
+//                 'Accept': 'application/json',
+//                 'Content-Type': 'application/json'
+//             }
+//         }).then(jsonData => {
+//             return jsonData;
+//         })
+//     }
+// }
+
 const EcofigLoader = {
-    load: async function() {
-        await fetch(ecofigConfig.restUrl, {
+    cache: { },
+    load: function(url) {
+        EcofigLoader.cache[url] = EcofigLoader.cache.hasOwnProperty(url) ? EcofigLoader.cache[url] : fetch(ecofigConfig.restUrl, {
             method: 'get',
             mode: 'no-cors', // cors???
             headers: {
                 'Accept': 'application/json',
                 'Content-Type': 'application/json'
             }
-        }).then(jsonData => {
-            return jsonData;
         })
     }
 }
-
-// const ES6EcofigLoader = {
-//     cache: null,
-//     load: async function() {
-//         if (this.cache !== null) {
-//             return this.cache;
-//         } else {
-//             await fetch(ecofigConfig.restUrl, {
-//                 method: 'get',
-//                 mode: 'no-cors', // cors???
-//                 headers: {
-//                     'Accept': 'application/json',
-//                     'Content-Type': 'application/json'
-//                 }
-//             }).then(jsonData => {
-//                 this.cache = jsonData;
-//                 // FIXME: This is no return from outer function!
-//                 return jsonData;
-//             })
-//         }
-//     }
-// }
 
 class EcofigStore {
     
@@ -51,26 +43,19 @@ class EcofigStore {
         this.values = null;
     }
 
+    getValuePromise() {
+        return new Promise(resolve => resolve(this.values));
+    }
+
     findAll() {
         if (this.values != null) {
-            return this.values;
-        } 
-        let data = this.loader.load();
-        this.values = Json2Ecofig.createMany(data.features)
-        return this.values;
-        // return new Promise(
-        //     (resolve/*, reject*/) => {
-        //         if (this.values != null) {
-        //             resolve(this.values);
-        //         } else {
-        //             return this.loader.load()
-        //                 .then(data => {
-        //                     this.values = Json2Ecofig.createMany(data.features);
-        //                     return this.values;
-        //                 });
-        //         }
-        //     })
-
+            return this.getValuePromise();
+        }
+        return this.loader.load()
+            .then(data => {
+                this.values = Json2Ecofig.createMany(data.features);
+                return this.values;
+            });
     }
 
     // find(filter = {}) {

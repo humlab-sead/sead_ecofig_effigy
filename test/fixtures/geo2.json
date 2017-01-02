@@ -32,5 +32,197 @@
 				"Wood and trees": "8"
 			}
 		}
+	}, {
+		"type": "Feature",
+		"geometry": {
+			"type": "Point",
+			"coordinates": [0.1533333, 52.21667]
+		},
+		"properties": {
+			"name": "Barnwell Station",
+			"environmentalIndicators": {
+				"Aquatics": "0",
+				"Carrion": "0",
+				"Disturbed\/arable": "5",
+				"Dry dead wood": "0",
+				"Dung\/foul habitats": "0",
+				"General synanthropic": "0",
+				"Halotolerant": "5",
+				"Heathland & moorland": "17",
+				"Indicators: Coniferous": "0",
+				"Indicators: Deciduous": "0",
+				"Indicators: Dung": "0",
+				"Indicators: Running water": "0",
+				"Indicators: Standing water": "0",
+				"Meadowland": "17",
+				"Mould beetles": "0",
+				"Open wet habitats": "17",
+				"Pasture\/Dung": "0",
+				"Sandy\/dry disturbed\/arable": "23",
+				"Stored grain pest": "0",
+				"Wetlands\/marshes": "5",
+				"Wood and trees": "5"
+			}
+		}
+	}, {
+		"type": "Feature",
+		"geometry": {
+			"type": "Point",
+			"coordinates": [0.1533333, 52.21667]
+		},
+		"properties": {
+			"name": "Barnwell Station",
+			"environmentalIndicators": {
+				"Aquatics": "0",
+				"Carrion": "0",
+				"Disturbed\/arable": "0",
+				"Dry dead wood": "0",
+				"Dung\/foul habitats": "0",
+				"General synanthropic": "0",
+				"Halotolerant": "0",
+				"Heathland & moorland": "0",
+				"Indicators: Coniferous": "0",
+				"Indicators: Deciduous": "0",
+				"Indicators: Dung": "0",
+				"Indicators: Running water": "0",
+				"Indicators: Standing water": "0",
+				"Meadowland": "66",
+				"Mould beetles": "0",
+				"Open wet habitats": "0",
+				"Pasture\/Dung": "0",
+				"Sandy\/dry disturbed\/arable": "0",
+				"Stored grain pest": "0",
+				"Wetlands\/marshes": "33",
+				"Wood and trees": "0"
+			}
+		}
+	}, {
+		"type": "Feature",
+		"geometry": {
+			"type": "Point",
+			"coordinates": [0.1533333, 52.21667]
+		},
+		"properties": {
+			"name": "Barnwell Station",
+			"environmentalIndicators": {
+				"Aquatics": "0",
+				"Carrion": "20",
+				"Disturbed\/arable": "0",
+				"Dry dead wood": "0",
+				"Dung\/foul habitats": "0",
+				"General synanthropic": "0",
+				"Halotolerant": "0",
+				"Heathland & moorland": "20",
+				"Indicators: Coniferous": "0",
+				"Indicators: Deciduous": "0",
+				"Indicators: Dung": "0",
+				"Indicators: Running water": "0",
+				"Indicators: Standing water": "0",
+				"Meadowland": "20",
+				"Mould beetles": "0",
+				"Open wet habitats": "0",
+				"Pasture\/Dung": "0",
+				"Sandy\/dry disturbed\/arable": "0",
+				"Stored grain pest": "0",
+				"Wetlands\/marshes": "20",
+				"Wood and trees": "20"
+			}
+		}
+	}, {
+		"type": "Feature",
+		"geometry": {
+			"type": "Point",
+			"coordinates": [0.1533333, 52.21667]
+		},
+		"properties": {
+			"name": "Barnwell Station",
+			"environmentalIndicators": {
+				"Aquatics": "10",
+				"Carrion": "10",
+				"Disturbed\/arable": "0",
+				"Dry dead wood": "0",
+				"Dung\/foul habitats": "10",
+				"General synanthropic": "0",
+				"Halotolerant": "10",
+				"Heathland & moorland": "10",
+				"Indicators: Coniferous": "0",
+				"Indicators: Deciduous": "0",
+				"Indicators: Dung": "0",
+				"Indicators: Running water": "0",
+				"Indicators: Standing water": "0",
+				"Meadowland": "10",
+				"Mould beetles": "0",
+				"Open wet habitats": "0",
+				"Pasture\/Dung": "10",
+				"Sandy\/dry disturbed\/arable": "10",
+				"Stored grain pest": "0",
+				"Wetlands\/marshes": "10",
+				"Wood and trees": "10"
+			}
+		}
+	}, {
+		"type": "Feature",
+		"geometry": {
+			"type": "Point",
+			"coordinates": [6.503889, 47.73333]
+		},
+		"properties": {
+			"name": "La Grande Pile",
+			"environmentalIndicators": {
+				"Aquatics": "20",
+				"Carrion": "2",
+				"Disturbed\/arable": "8",
+				"Dry dead wood": "0",
+				"Dung\/foul habitats": "2",
+				"General synanthropic": "2",
+				"Halotolerant": "2",
+				"Heathland & moorland": "8",
+				"Indicators: Coniferous": "0",
+				"Indicators: Deciduous": "2",
+				"Indicators: Dung": "0",
+				"Indicators: Running water": "0",
+				"Indicators: Standing water": "5",
+				"Meadowland": "8",
+				"Mould beetles": "0",
+				"Open wet habitats": "5",
+				"Pasture\/Dung": "2",
+				"Sandy\/dry disturbed\/arable": "5",
+				"Stored grain pest": "0",
+				"Wetlands\/marshes": "8",
+				"Wood and trees": "11"
+			}
+		}
+	}, {
+		"type": "Feature",
+		"geometry": {
+			"type": "Point",
+			"coordinates": [0.0825, 53.69167]
+		},
+		"properties": {
+			"name": "Dimlington",
+			"environmentalIndicators": {
+				"Aquatics": "4",
+				"Carrion": "6",
+				"Disturbed\/arable": "4",
+				"Dry dead wood": "0",
+				"Dung\/foul habitats": "6",
+				"General synanthropic": "6",
+				"Halotolerant": "6",
+				"Heathland & moorland": "11",
+				"Indicators: Coniferous": "0",
+				"Indicators: Deciduous": "0",
+				"Indicators: Dung": "0",
+				"Indicators: Running water": "0",
+				"Indicators: Standing water": "0",
+				"Meadowland": "6",
+				"Mould beetles": "0",
+				"Open wet habitats": "9",
+				"Pasture\/Dung": "6",
+				"Sandy\/dry disturbed\/arable": "6",
+				"Stored grain pest": "0",
+				"Wetlands\/marshes": "13",
+				"Wood and trees": "9"
+			}
+		}
 	}]
 }

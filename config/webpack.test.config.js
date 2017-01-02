@@ -9,7 +9,7 @@ let CircularDependencyPlugin = require('circular-dependency-plugin')
 
 module.exports = {
     debug: true,
-    entry: [ 'babel-polyfill', './test/EcofigStore.spec.js'], //'./test/complete.test.entry.js',
+    entry: [ 'babel-polyfill', './test/complete.test.entry.js'], //'./test/complete.test.entry.js',
     output: {
         path: './public/test',
         filename: 'testBundle.js',
@@ -37,11 +37,7 @@ module.exports = {
             {
                 test: /\.js$/,
                 loader: 'babel',
-                exclude: /(node_modules)/,
-                query: {
-                    plugins: ['transform-runtime'],
-                    //presets: ['es2015', 'stage-0', 'react'],
-                }    
+                exclude: /(node_modules)/
             },
             { test: /\.json$/, loader: "json-loader" }
         ]
