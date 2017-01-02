@@ -4,6 +4,7 @@ var Cesium = require('cesium/Source/Cesium');
 
 const fromDegrees = Cesium.Cartesian3.fromDegrees;
 const toRadians = Cesium.Math.toRadians;
+const fromDegreesArray = Cesium.Cartesian3.fromDegreesArray;
 
 const distance = (p, q) =>  Cesium.Cartesian3.distance(fromDegrees(p[0], p[1]),fromDegrees(q[0], q[1]));
 const loadJson = url => Cesium.loadJson(url);
@@ -24,7 +25,11 @@ const CesiumUtility = {
     },
 
     distance: distance,
-    loadJson: loadJson
+    loadJson: loadJson,
+    fromDegreesArray: fromDegreesArray,
+    fromDegrees: fromDegrees,
+    toRadians: toRadians
+
 }
 
 export default CesiumUtility;

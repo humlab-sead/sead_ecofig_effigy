@@ -78,9 +78,16 @@ describe('Ecofig', function() {
             let ecofig = Json2Ecofig.create(geoData.features[0]);
             assert.equal(ecofig.values.length, geoData.features.length);
             ecofig.addValue( {id: 'dummy', ecoCode: 'dummy', scale: 0.0, position: [0, 0] });
-
+            assert.equal(ecofig.values.length, geoData.features.length + 1);
+            ecofig.trim();
+            assert.equal(ecofig.values.length, geoData.features.length);
         });
 
+        it('can be cloned', function() {
+            let ecofig1 = Json2Ecofig.create(geoData.features[0]);
+            let ecofig2 = ecofig1.clone();
+            assert.deepEqual(ecofig2, ecofig2)
+        });
     });
 
 })

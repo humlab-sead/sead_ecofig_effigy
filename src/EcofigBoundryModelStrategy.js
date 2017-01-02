@@ -3,7 +3,8 @@
  Creates a Cesium Model for a ecofig boundry
 */
 
-var Cesium = require('cesium/Source/Cesium');
+// var Cesium = require('cesium/Source/Cesium');
+import { default as utility } from './CesiumUtility.js';
 
 class CircleEcofigBoundryModelStrategy {
 
@@ -13,24 +14,38 @@ class CircleEcofigBoundryModelStrategy {
         this.config = config;
     }
 
-    createBoundryFor(ecofig) {
+    createMaterial()
+    {
+        return utility.fromCssColorString(this.config.bgColor.rgb, this.config.bgColor.a)
+    }
 
-        let polyCoords = this.boundryStrategy.create(ecofig).reduce((a, b) => a.concat(b), []);
+    // FIXME
+    createTooltip(ecofig) {
+        return ecofig.values.reduce( (a, b) => a + b.ecoCode.label + ' ' + b.scale + '%<br/>', '');
+    }
+
+    transformCoordinates(coordinates)
+    {
+        return utility.fromDegreesArray(coordinates);
+    }
+
+    create(ecofig) {
+
+        let coordinates = this.boundryStrategy.create(ecofig).reduce((a, b) => a.concat(b), []);
+
         return {
             name : "Environment",
             description: this.createTooltip(ecofig),
             polygon : {
                 hierarchy : {
-                    positions: Cesium.Cartesian3.fromDegreesArray(polyCoords),
+                    positions: this.transformCoordinates(coordinates),
                 },
-                material : Cesium.Color.fromCssColorString(this.config.rgb, this.config.a)
+                material : this.createMaterial()
             }
         }       
     }
 
-    createTooltip(ecofig) {
-        return ecofig.values.reduce( (a, b) => a + b.ecoCode.label + ' ' + b.scale + '%<br/>', '');
-    }
+
     
 }
 
