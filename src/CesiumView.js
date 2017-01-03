@@ -41,9 +41,14 @@ class CesiumView {
         cesiumUtility.flyTo(this.viewer.camera, ecofigConfig.ecofigModelSetup.startDestination, ecofigConfig.ecofigModelSetup.startOrientation);
     }
 
-    // get(url) {
-    //     this.markers.get(url);
-    // }
+    display(models, boundry) {
+        models.forEach(x => this.viewer.scene.primitives.add(x));
+        this.viewer.entities.add(boundry);
+    }
+
+    removeAll() {
+        this.viewer.entities.removeAll();
+    }
 }
 
 export default CesiumView;

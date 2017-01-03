@@ -17,8 +17,6 @@ class EcofigEffigyController {
 
     dispatch(viewer, ecofigEffegy) {
         ecofigEffegy.layout();
-        ecofigEffegy.cesiumModels.forEach(x => viewer.scene.primitives.add(x));
-        viewer.entities.add(ecofigEffegy.cesiumBoundry);
     }
 
     load(data) {

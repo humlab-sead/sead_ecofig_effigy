@@ -31,6 +31,7 @@ $ git clone https://github.com/humlab/sead_ecofig_effigy.git
 Move to folder and build assets:
 ```
 $ cd sead_ecofig_effigy
+$ npm install
 $ npm run build:assets
 ```
 
