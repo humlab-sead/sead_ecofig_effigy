@@ -1,8 +1,9 @@
 
 import { default as ecofigConfig } from './config.js'; 
 
-let __id = 0;
 'use strict';
+
+let __id = 0;
 
 const Json2Ecofig = {
 
@@ -31,9 +32,7 @@ const Json2Ecofig = {
 
 const EcofigFactory = {
 
-    clone: e => new Ecofig(
-        Object.assign({ }, e, { id: ++__id, position: e.position.splice(), values: EcofigFactory.cloneValues(e.values) })
-    ),
+    clone: e => new Ecofig(JSON.parse(JSON.stringify(e))),
 
     cloneValue: value => Object.assign({}, value, { position: value.position.slice() }),
     
@@ -47,20 +46,6 @@ const EcofigFactory = {
             position: position
         }),
 
-    // createEmpty() {
-    //     return new Ecofig({
-    //         id: ++__id,
-    //         site: '',
-    //         position: [0, 0],
-    //         epoch: null,
-    //         values: EcofigFactory.createDefaultValues()
-    //     })
-    // },
-
-    // createDefaultValues()
-    // {
-    //     return ecofigConfig.ecoCodeConfig.ecoCodeLabelMap.keys().map(x => EcofigFactory.createValue(x, 0.0));
-    // }
 }
 
 class Ecofig {
@@ -94,7 +79,7 @@ class Ecofig {
     }
 
     addValue(x) {
-        return this.values.append(x);
+        this.values.push(x);
     }
 }
 

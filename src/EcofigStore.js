@@ -58,9 +58,9 @@ class EcofigStore {
             });
     }
 
-    // find(filter = {}) {
-    //     return this.findAll();
-    // }
+    find(filter = {}) {
+        return this.values;
+    }
 
 }
 

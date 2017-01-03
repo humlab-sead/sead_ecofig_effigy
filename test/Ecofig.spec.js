@@ -86,7 +86,11 @@ describe('Ecofig', function() {
         it('can be cloned', function() {
             let ecofig1 = Json2Ecofig.create(geoData.features[0]);
             let ecofig2 = ecofig1.clone();
-            assert.deepEqual(ecofig2, ecofig2)
+            assert.equal(ecofig1.id, ecofig2.id, "id");
+            assert.deepEqual(ecofig1.position, ecofig2.position, "position");
+            assert.equal(ecofig1.epoch, ecofig2.epoch, "epoch");
+            assert.equal(ecofig1.id, ecofig2.id, "id");
+            assert.deepEqual(ecofig1.values, ecofig2.values, "values");
         });
     });
 

@@ -17,7 +17,7 @@ class GeoMidPointCalculator {
 
 class SimpleMidPointCalculator {
 
-    middleOf = (a, b) => a + (b - a) / 2;
+    middleOf(a, b) { return a + (b - a) / 2; }
 
     midpoint (c1, c2) {
         return [ this.middleOf(c1[0], c2[0]), this.middleOf(c1[1], c2[1])];
