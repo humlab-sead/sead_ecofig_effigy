@@ -22,7 +22,7 @@ var devPlugins = [
     //new webpack.OldWatchingPlugin(),
     //new webpack.HotModuleReplacementPlugin(),
     //new webpack.NoErrorsPlugin(),
-    //new webpack.DefinePlugin({ 'process.env.NODE_ENV': JSON.stringify('development')})
+    new webpack.DefinePlugin({ 'process.env.NODE_ENV': JSON.stringify('development')})
 ];
 
 var productionPlugins = [

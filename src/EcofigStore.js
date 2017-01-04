@@ -23,42 +23,48 @@ import { default as ecofigConfig } from './config.js';
 // }
 
 const EcofigLoader = {
-    cache: { },
-    load: function(url) {
-        EcofigLoader.cache[url] = EcofigLoader.cache.hasOwnProperty(url) ? EcofigLoader.cache[url] : fetch(ecofigConfig.restUrl, {
+    //cache: { },
+    load: function() {
+        let url = ecofigConfig.restUrl;
+        //EcofigLoader.cache[url] = EcofigLoader.cache.hasOwnProperty(url) ? EcofigLoader.cache[url] : fetch(ecofigConfig.restUrl, {
+        return fetch(ecofigConfig.restUrl, {
             method: 'get',
             mode: 'no-cors', // cors???
             headers: {
                 'Accept': 'application/json',
                 'Content-Type': 'application/json'
             }
-        })
+        }).then(data => Promise.resolve(data.json()));
     }
 }
 
 class EcofigStore {
     
-    constructor(loader=EcofigLoader) {
+    constructor(loader=EcofigLoader, data = null) {
         this.loader = loader;
-        this.values = null;
+        this.values = (data && data.features) ? Json2Ecofig.createMany(data.features) : null;
     }
 
-    getValuePromise() {
-        return new Promise(resolve => resolve(this.values));
+    load() {
+        return (this.values != null) ? Promise.resolve(this.values) :
+            this.loader
+                .load()
+                .then(data => this.store(data.features));
     }
 
-    findAll() {
-        if (this.values != null) {
-            return this.getValuePromise();
+    find(filter = null) {
+        if (this.values === null)
+            throw new Error("Store not initialized, use load()");
+        let ecofigs = this.values;
+        // FIXME: Implement more advanced filter capabilities
+        if (filter != null && filter.epoch) {
+            return ecofigs.filter((x) => x.epoch === filter.epoch)
         }
-        return this.loader.load()
-            .then(data => {
-                this.values = Json2Ecofig.createMany(data.features);
-                return this.values;
-            });
+        return ecofigs;
     }
 
-    find(filter = {}) {
+    store(features) {
+        this.values = Json2Ecofig.createMany(features);
         return this.values;
     }
 

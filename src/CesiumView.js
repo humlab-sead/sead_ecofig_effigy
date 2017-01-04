@@ -8,8 +8,6 @@ import { default as cesiumUtility } from './CesiumUtility.js';
 
 class CesiumView {
 
-// 'cesiumContainer'
-
     constructor(container) {
 
         Cesium.BingMapsApi.defaultKey = "AtX_asZEVy_1leXfOPX_93jqHdVNDK1_c4m_vafwQLV5-2GLt6yLQIjIQZJHWKSp";
@@ -37,18 +35,25 @@ class CesiumView {
 
     }
 
-    flyTo() { 
-        cesiumUtility.flyTo(this.viewer.camera, ecofigConfig.ecofigModelSetup.startDestination, ecofigConfig.ecofigModelSetup.startOrientation);
+    flyTo(destination, orientation) { 
+        cesiumUtility.flyTo(this.viewer.camera, destination, orientation);
     }
 
-    display(models, boundry) {
-        models.forEach(x => this.viewer.scene.primitives.add(x));
-        this.viewer.entities.add(boundry);
+    display(models) {
+        models.forEach(x => {
+            try {
+                x.forEach(y => this.viewer.entities.add(y));
+            } catch (ex) {
+                console.log(ex);
+            }
+        });
     }
 
-    removeAll() {
+    reset() {
+        // FIXME: Need smarter reset, and also to remove boundries
         this.viewer.entities.removeAll();
     }
+
 }
 
 export default CesiumView;

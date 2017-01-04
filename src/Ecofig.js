@@ -13,7 +13,7 @@ const Json2Ecofig = {
             id: ++__id,
             site: feature.properties.name,
             position: feature.geometry.coordinates,
-            epoch: feature.properties.epoch || null,
+            epoch: feature.properties.epoch || '',
             values: values
         });
     },
@@ -83,4 +83,4 @@ class Ecofig {
     }
 }
 
-export { Json2Ecofig, Ecofig };
+export { Json2Ecofig, Ecofig, EcofigFactory };

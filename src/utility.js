@@ -9,9 +9,21 @@ const randomCirclePoint = (origo, radius) => {
     return [origo[0]+pt_x, origo[1]+pt_y];
 }
 
+let contentLoadedResolver = (resolve) => document.addEventListener("DOMContentLoaded", resolve);
+
+const onReadyDocument = () => {
+    let readyState = document.readyState;
+    if (readyState === "interactive" || readyState === "complete") {
+        return Promise.resolve();
+    }
+    return new Promise((resolve) => document.addEventListener("DOMContentLoaded", resolve));
+    //return ["interactive", "complete"].includes(document.readyState) ? Promise.resolve() : new Promise(contentLoadedResolver)
+}
+
 var utility = {
     object2map: object2map,
-    randomCirclePoint: randomCirclePoint
+    randomCirclePoint: randomCirclePoint,
+    onReadyDocument: onReadyDocument
 }
 
 export default utility;

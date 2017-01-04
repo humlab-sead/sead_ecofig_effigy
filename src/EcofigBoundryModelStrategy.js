@@ -16,6 +16,7 @@ class CircleEcofigBoundryModelStrategy {
 
     createMaterial()
     {
+
         return utility.fromCssColorString(this.config.bgColor.rgb, this.config.bgColor.a)
     }
 

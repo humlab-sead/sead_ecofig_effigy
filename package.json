@@ -9,7 +9,7 @@
     "build:cesium": "cpr node_modules/cesium/Build/Cesium public/Cesium public/",
     "build:models": "cpr resources/Models/assets public/assets",
     "build:assets": "npm run build:models && npm run build:cesium",
-    "build": "npm run clean && npm run build:assets && webpack --config webpack.config.js --progress --profile --colors --display-error-details --display-cached",
+    "build": "npm run clean && npm run build:assets && webpack --config ./config/webpack.config.js --progress --profile --colors --display-error-details --display-cached",
     "devserver": "webpack-dev-server --config ./config/webpack.config.js --display-error-details",
     "dev": "npm run build && npm run devserver",
     "test:build": "webpack --config ./config/webpack.test.config.js --display-error-details --watch",
@@ -47,6 +47,7 @@
     "jquery": "^3.1.1",
     "jquery-ui": "^1.12.1",
     "json-loader": "^0.5.4",
+    "lodash": "^4.17.4",
     "mkdirp": "^0.5.1",
     "mocha": "^3.2.0",
     "mocha-loader": "^1.0.0",
@@ -58,8 +59,6 @@
   },
   "dependencies": {
     "cesium": "^1.28.0",
-    "jquery": "^3.1.1",
-    "jquery-ui": "^1.12.1",
     "protobufjs": "^6.3.1",
     "sizzle": "^2.3.3",
     "style-loader": "^0.13.1"

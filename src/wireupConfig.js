@@ -4,7 +4,7 @@ import { CircleEcofigBoundryModelStrategy } from './EcofigBoundryModelStrategy.j
 import { SimpleCircleEcofigBoundryStrategy } from './EcofigBoundryStrategy.js';
 import { GltfCesiumModelStrategy } from './CesiumModelStrategy.js';
 import { CircularEcofigLayoutStrategy } from './EcofigLayoutStrategy.js';
-import { MidPointCalculator } from './MidPointCalculator.js';
+import { GeoMidPointCalculator } from './MidPointCalculator.js';
 import { SimpleEcofigCoalesceStrategy } from './EcofigCoalesceStrategy.js';
 
 const wireupConfig = {
@@ -14,7 +14,7 @@ const wireupConfig = {
     },
     ecofigLayoutStrategy: CircularEcofigLayoutStrategy,
     cesiumModelStrategy: GltfCesiumModelStrategy,
-    midPointCalculator: MidPointCalculator,
+    midPointCalculator: GeoMidPointCalculator,
     ecofigCoalesceStrategy: SimpleEcofigCoalesceStrategy
 }
 

@@ -63,7 +63,7 @@ describe('EcofigStore', function() {
         // });
         it('can be loaded', function() {
             let store = new EcofigStore(EcofigTestLoader);
-            return store.findAll().then(
+            return store.load().then(
                 function (ecofigs) {
                     assert.isNotNull(ecofigs);
                     assert.isTrue(Array.isArray(ecofigs));

@@ -1,10 +1,4 @@
 'use strict';
-// require('cesium/Source/Widgets/widgets.css');
-// require('jquery-ui/themes/base/core.css');
-// require('jquery-ui/themes/base/menu.css');
-// require('jquery-ui/themes/base/theme.css');
-
-var $ = require('jquery');
 
 import "../css/main.css";
 import "../css/map.css";
@@ -12,35 +6,24 @@ import "../css/map.css";
 var BuildModuleUrl = require('cesium/Source/Core/buildModuleUrl');
 BuildModuleUrl.setBaseUrl('./Cesium/');
 
-import CesiumView from './CesiumView';
-import TimelineSlider from './TimelineSlider';
-import { default as wireup } from './wireup';
+import { default as CesiumView } from './CesiumView.js';
+import { default as EcofigStore } from './EcofigStore.js';
+import { EcofigEffigyController } from './EcofigEffigyController.js';
+import { default as wireup } from './wireup.js';
+import { default as utility } from './utility.js';
+//import { default as TimelineSlider } from './TimelineSlider';
 
-var cesiumView = null;
+utility.onReadyDocument().then(() => {
 
-$(document).ready(function () {
-
-    wireup.wireup();
+    wireup();
     
-    // TODO create store
+    let store = new EcofigStore();
+    let view = new CesiumView('cesiumContainer');
+    let controller = new EcofigEffigyController(view, store);
 
-    new TimelineSlider("#timeline", () => { } )
-
-    cesiumView = new CesiumView('cesiumContainer');
-    cesiumView.get("/geo2.json");
-    cesiumView.flyTo();
-
-    // setInterval(function() {
-    //     var camera = cesiumView.viewer.scene.camera;
-    //     var state = {
-    //         position: camera.position.clone(),
-    //         direction: camera.direction.clone(),
-    //         up: camera.up.clone(),
-    //         right: camera.right.clone(),
-    //         transform: camera.transform.clone(),
-    //         frustum: camera.frustum.clone()
-    //     };
-    //     console.log(state);
-    // }, 1000);
+    store.load().then(() => {
+        controller.display();
+        controller.flyHome();
+    });
 
 });

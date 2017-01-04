@@ -14,7 +14,7 @@ const wireup = () =>
     ecofigConfig.ecofigModelSetup.midPointCalculator = new wireupConfig.midPointCalculator();
     ecofigConfig.ecofigModelSetup.ecofigLayoutStrategy = new wireupConfig.ecofigLayoutStrategy();
     ecofigConfig.ecofigModelSetup.cesiumModelStrategy = new wireupConfig.cesiumModelStrategy();
-    ecofigConfig.ecofigModelSetup.ecofigCoalesceStrategy = new wireupConfig.ecofigCoalesceStrategy();
+    ecofigConfig.ecofigModelSetup.ecofigCoalesceStrategy = new wireupConfig.ecofigCoalesceStrategy(ecofigConfig.ecofigModelSetup.midPointCalculator);
 
 }
 
