@@ -12,6 +12,8 @@
 	width: 95vw;
 	margin-left: 2.5vw;
 	margin-right: 2.5vw;
+    padding: 2px 5px;
+    position: absolute;
 }
 
 #timelineContainer label {

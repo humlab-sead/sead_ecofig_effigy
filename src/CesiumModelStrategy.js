@@ -17,11 +17,11 @@ class CesiumModelStrategy {
 
 class GltfCesiumModelStrategy extends CesiumModelStrategy {
 
-    constructor() {
+    constructor(config=ecofigConfig.ecofigModelSetup.cesiumModelConfig) {
         super();
-        this.modelConfig = ecofigConfig.ecofigModelSetup.cesiumModelConfig;
-        this.assetPath = this.modelConfig.assetPath;
-        this.ecoCodeConfig = this.modelConfig.ecoCodeConfig;
+        this.modelConfig = config;
+        this.assetPath = config.assetPath;
+        this.ecoCodeConfig = config.ecoCodeConfig;
     }
 
     create(ecofig, ecofigValue) {
@@ -41,16 +41,19 @@ class GltfCesiumModelStrategy extends CesiumModelStrategy {
         // scale=[0.2, 0.15] [ scale[0] * c[0] + origo[0], scale[1] * c[1] + origo[1]
 
         let modelCount = ecoCodeConfig.setup.multiply ? Math.ceil(ecofigValue.scale * ecoCodeConfig.setup.multiply[1]) : 1;
-        let coordinate = (ecoCodeConfig.setup.spread === "random") ? (() => utility.randomCirclePoint(ecofig.position, 0.25)) : (() => ecofigValue.position);
-        let scale = ecoCodeConfig.setup.multiply ? 1 : ecofigValue.scale;
-
+        let coordinate = (ecoCodeConfig.setup.spread === "random") ? (() => utility.randomCirclePoint(ecofig.position, 0.1)) : (() => ecofigValue.position);
+        let scale = (ecoCodeConfig.setup.scale === true) ? ecofigValue.scale : (parseFloat(ecoCodeConfig.setup.scale) || 0.1);
+        let model = {
+            uri :this.assetPath + ecoCodeConfig.setup.asset,
+            scale: this.modelConfig.modelScale * scale,
+            //runAnimations: false,
+            //shadows: false
+        };
         while (modelCount-- > 0) {
+            let [x, y, z] = coordinate();
             models.push(new Cesium.Entity({
-                position : Cesium.Cartesian3.fromDegrees(...coordinate()),
-                model : {
-                    uri :this.assetPath + ecoCodeConfig.setup.asset,
-                    scale: this.modelConfig.modelScale * scale
-                }
+                position : Cesium.Cartesian3.fromDegrees(x, y, 0),
+                model : model
             }));
         }
 

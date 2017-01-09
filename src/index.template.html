@@ -8,14 +8,26 @@
   <style>
     @import url(./Cesium/Widgets/widgets.css);
   </style>
-
 </head>
 <body>
   <div id="cesiumContainer"></div>
   <div id="timelineContainer">
-    <!--div id="timeline"></div>
-    <div id="timelineLabelsContainer"></div-->
   </div>
-  <!-- script src="public/bundle.js"></script -->
+<div id="toolbar">
+<table><tbody>
+    <tr>
+        <td>
+            <select data-bind="options: ecoCodes,
+                       optionsText: 'label',
+                       value: currentCode,
+                       optionsCaption: 'Choose...'"></select>
+        </td>
+        <td>
+            <input type="range" min="0" max="100" step="0.1" data-bind="value: currentCode().scale">
+        </td>
+        <td><input type="checkbox" data-bind="checked: currentCode().visible"></td>
+    </tr>
+</tbody></table>
+</div>
 </body>
 </html>

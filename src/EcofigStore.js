@@ -53,13 +53,20 @@ class EcofigStore {
     }
 
     find(filter = null) {
+
         if (this.values === null)
             throw new Error("Store not initialized, use load()");
+
         let ecofigs = this.values;
         // FIXME: Implement more advanced filter capabilities
-        if (filter != null && filter.epoch) {
-            return ecofigs.filter((x) => x.epoch === filter.epoch)
+
+        if (filter && filter.epoch) {
+            return ecofigs.filter(x => x.epoch === filter.epoch)
         }
+
+        if (filter && filter.sites) {
+            return ecofigs.filter(x => filter.sites.includes(x.site));
+        }       
         return ecofigs;
     }
 

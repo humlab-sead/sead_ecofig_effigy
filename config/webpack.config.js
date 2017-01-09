@@ -1,10 +1,8 @@
 
 const path = require('path')
 const webpack = require('webpack')
-const env = process.env.NODE_ENV;
 const projectRoot = path.resolve(__dirname)
 const HtmlPlugin = require("html-webpack-plugin");
-
 
 var commonPlugins = [
     //new webpack.DllReferencePlugin({
@@ -18,25 +16,25 @@ var commonPlugins = [
 ];
 
 var devPlugins = [
-    //new webpack.optimize.OccurenceOrderPlugin(),
-    //new webpack.OldWatchingPlugin(),
-    //new webpack.HotModuleReplacementPlugin(),
-    //new webpack.NoErrorsPlugin(),
     new webpack.DefinePlugin({ 'process.env.NODE_ENV': JSON.stringify('development')})
 ];
 
 var productionPlugins = [
+    new webpack.DefinePlugin({'process.env.NODE_ENV': '"production"'}),
     new webpack.optimize.OccurenceOrderPlugin(),
     new webpack.optimize.CommonsChunkPlugin('common.js'),
     new webpack.optimize.DedupePlugin(),
     //new webpack.optimize.AggressiveMergingPlugin(),
-    new webpack.DefinePlugin({'process.env.NODE_ENV': '"production"'}),
     new webpack.optimize.UglifyJsPlugin({ compress: { warnings: false} })
 ];
 
 var plugins = commonPlugins.concat(
     process.env.NODE_ENV === "production" ? productionPlugins : devPlugins
 );
+
+if (process.env.NODE_ENV === "production") {
+    console.log("Building relase bundle...");
+}
 
 module.exports = {
     entry: ['babel-polyfill', './src/main.js'], //[ './src/main.js', './distdll/cesiumDll.dll.js' ],
@@ -70,7 +68,7 @@ module.exports = {
         ]
     },
     plugins: plugins,
-    devtool : "source-map", // '#cheap-module-inline-source-map'
+    devtool : process.env.NODE_ENV === "production" ? 'source-map' : 'eval-cheap-module-source-map',
     devServer: {
         contentBase: './public',
         inline: true,

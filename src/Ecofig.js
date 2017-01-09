@@ -81,6 +81,12 @@ class Ecofig {
     addValue(x) {
         this.values.push(x);
     }
+
+    wateryScale() {
+        return this.values.reduce( (a, x) => a + (x.ecoCode.water ? x.scale : 0.0), 0 ) 
+    }
+
+
 }
 
 export { Json2Ecofig, Ecofig, EcofigFactory };

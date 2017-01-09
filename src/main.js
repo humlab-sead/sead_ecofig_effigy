@@ -10,6 +10,7 @@ import { default as CesiumView } from './CesiumView.js';
 import { default as EcofigStore } from './EcofigStore.js';
 import { EcofigEffigyController } from './EcofigEffigyController.js';
 import { default as wireup } from './wireup.js';
+import { default as setupObservers } from './observe.js';
 import { default as utility } from './utility.js';
 //import { default as TimelineSlider } from './TimelineSlider';
 
@@ -22,6 +23,7 @@ utility.onReadyDocument().then(() => {
     let controller = new EcofigEffigyController(view, store);
 
     store.load().then(() => {
+        setupObservers(controller);
         controller.display();
         controller.flyHome();
     });

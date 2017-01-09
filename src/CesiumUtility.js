@@ -5,6 +5,7 @@ var Cesium = require('cesium/Source/Cesium');
 const fromDegrees = Cesium.Cartesian3.fromDegrees;
 const toRadians = Cesium.Math.toRadians;
 const fromDegreesArray = Cesium.Cartesian3.fromDegreesArray;
+
 const fromCssColorString = (rgb,a) => {
     return Cesium.Color.fromCssColorString(rgb).withAlpha(a);
     // if (rgb.length !== 7 || rgb[0] != '#')
@@ -14,6 +15,10 @@ const fromCssColorString = (rgb,a) => {
     // let b = parseInt(rgb.substr(5,2), 16);
     // return Cesium.Color.fromBytes(r,g,b,a);
 }
+
+const water = Cesium.Material(
+    
+);
 
 const distance = (p, q) =>  Cesium.Cartesian3.distance(fromDegrees(p[0], p[1]),fromDegrees(q[0], q[1]));
 const loadJson = url => Cesium.loadJson(url);
@@ -37,8 +42,17 @@ const CesiumUtility = {
     loadJson: loadJson,
     fromDegreesArray: fromDegreesArray,
     fromDegrees: fromDegrees,
+    cartesian3: {
+        fromDegreesArray: fromDegreesArray,
+        fromDegrees: fromDegrees
+    },
     toRadians: toRadians,
-    fromCssColorString: fromCssColorString
+    fromCssColorString: fromCssColorString,
+    blueColor: (a) => Cesium.Color.BLUE.withAlpha(a),
+
+    knockout: () => {
+        return Cesium.knockout;
+    }
 
 }
 

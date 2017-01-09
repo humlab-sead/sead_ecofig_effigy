@@ -6,7 +6,7 @@ import { default as ecofigEffigyFactory } from './EcofigEffigyFactory.js';
 class EcofigEffigyController {
 
     constructor(view, store) {
-        this.ecofigEffegies = [];
+        this.ecofigEffigies = [];
         this.view = view;
         this.store = store;
     }
@@ -27,6 +27,13 @@ class EcofigEffigyController {
     
     reset() {
         this.view.reset();
+    }
+
+    setEcoCodeVisibility(id, value)
+    {
+        this.ecofigEffigies
+            .filter(x => x.models.has(id))
+            .forEach(m => { m.models.get(id).forEach(e => e.show = value); });
     }
     
 }
