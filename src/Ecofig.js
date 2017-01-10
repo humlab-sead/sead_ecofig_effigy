@@ -1,6 +1,9 @@
 
 import { default as ecofigConfig } from './config.js'; 
 
+const defaultModelStrategy = ecofigConfig.ecofigModelSetup.cesiumModelStrategy;
+const defaultModelConfig = ecofigConfig.ecofigModelSetup;
+
 'use strict';
 
 let __id = 0;
@@ -39,13 +42,31 @@ const EcofigFactory = {
 class EcofigValue {
 
     constructor(ecofig, id, scale=1.0, position=[0,0], models=[]) {
+        this.ecofig = ecofig;
         this.id = id;
         this.position = position;
         this.scale = scale;
         this.ecoCode = ecofigConfig.ecoCodeConfig.ecoCodeMap.get(id)
         this.models = models;
-        this.ecofig = ecofig;
+        this.setup = defaultModelConfig.get(this.id);
     }
+
+    // createModels(strategy=defaultModelStrategy, config=defaultModelConfig) {
+    //     this.models = strategy.create(this.ecofig, this, config);
+    // }
+
+    computeScale() {
+        return (this.setup.scale ? this.scale : 1.0) * (parseFloat(this.setup.factor) || 1.0) * this.ecofig.scale;
+    }
+
+    // scaleModels(scale=this.scale) {
+    //     if (this.scale !== scale) {
+    //         this.scale = scale;
+    //     }
+    //     let modelScale = this.computeModelScale();
+    //     this.models.forEach(x => { x.model.scale = modelScale; });
+    // }
+
 }
 
 class Ecofig {
@@ -91,13 +112,14 @@ class Ecofig {
         return this.values.reduce( (a, x) => a + (x.ecoCode.water ? x.scale : 0.0), 0 ) 
     }
 
-    createModels(strategy=ecofigConfig.ecofigModelSetup.cesiumModelStrategy, config=ecofigConfig.ecofigModelSetup) {
-        this.values.forEach(
-            x => {
-                x.models = strategy.create(this, x, config);
-            }
-        )
-    }
+    // createModels(strategy=defaultModelStrategy) {
+    //     this.values.forEach(x => x.createModels(strategy))
+    // }
+
+    // scaleModels() {
+    //     this.values.forEach(x => x.scaleModels())
+    // }
+
 }
 
 export { Json2Ecofig, Ecofig, EcofigFactory };

@@ -2,42 +2,46 @@
 
 import { default as ecofigConfig } from './config.js';
 
-const ecoCodeConfig = ecofigConfig.ecofigModelSetup.cesiumModelConfig;
+const defaultModelStrategy = ecofigConfig.ecofigModelSetup.cesiumModelStrategy;
+const defaultModelConfig = ecofigConfig.ecofigModelSetup;
+const defaultBoundryStrategy = ecofigConfig.ecofigModelSetup.boundry.modelStrategy;
+const defaultBoundryConfig = ecofigConfig.ecofigModelSetup.boundry.config;
+const defaultCoalesceStrategy = ecofigConfig.ecofigModelSetup.ecofigCoalesceStrategy;
 
-class EcofigEffigy { //  alt-names: SiteEffigy, SiteDepiction, EcofigEffigy
+class EcofigEffigy {
 
-    constructor(ecofigs, options) {
-        this.update(ecofigs, options);
+    constructor(ecofigs, scale=defaultModelConfig.modelScale) {
+        this.ecofigs = ecofigs;
+        this.ecofig = this.coalesce();
+        this.scale = scale;
+        this.update();
     }
 
-    update(ecofigs, options={}, scale=ecofigConfig.ecofigModelSetup.modelScale) {
-        this.ecofigs = ecofigs;
-        this.scale = scale;
-        this.ecofig = this.coalesce();
+    update() {
         this.layout();
-        // FIXME Move to ecofigValue???
-        ecofig.createModels();
+        this.models = this.createModels();
         this.boundry = this.createBoundry();
     }
 
     getModels() {
-        return this.values.reduce((a, b) => a.models.concat(b), []).set('boundry', [ this.boundry ]);
+        return this.models.set('boundry', [ this.boundry ]);
+    }
+
+    getEcoCodeModels(id) {
+        return this.models.has(id) ? this.models.get(id) : [];
     }
 
     createModels(strategy=ecofigConfig.ecofigModelSetup.cesiumModelStrategy, config=ecofigConfig.ecofigModelSetup)
     {
-        this.ecofig.values.forEach(
-            x => { x.models = strategy.create(this.ecofig, x, config); }
-        )
-        //return new Map(this.ecofig.values.map(x => [ x.ecoCode.id, strategy.create(this.ecofig, x, config) ]));
+        return new Map(this.ecofig.values.map(x => [ x.ecoCode.id, strategy.create(this.ecofig, x, config) ]));
     }
 
-    createBoundry(strategy=ecofigConfig.ecofigModelSetup.boundry.modelStrategy, config=ecofigConfig.ecofigModelSetup.boundry.config)
+    createBoundry(strategy=defaultBoundryStrategy, config=defaultBoundryConfig)
     {
         return strategy.create(this.ecofig, config.config);
     }
 
-    coalesce(strategy=ecofigConfig.ecofigModelSetup.ecofigCoalesceStrategy) {
+    coalesce(strategy=defaultCoalesceStrategy) {
         return strategy.coalesce(this.ecofigs);
     }
 
@@ -46,16 +50,7 @@ class EcofigEffigy { //  alt-names: SiteEffigy, SiteDepiction, EcofigEffigy
         return strategy.layout(this.ecofig);
     }
 
-    scaleValue(ecofigValue, globalScale=this.scale) {
-        let config = ecoCodeConfig.get(ecofigValue.ecoCode.id);
-        // if (!this.models.has(id))
-        //     return null;
-        //let ecofigValue = this.ecofig.getVale(id);
-        return (config.scale ? ecofigValue.scale : 1.0) * (parseFloat(config.factor) || 1.0) * globalScale;
-    }
-
     rescale(id, scale) {
-        .forEach(m => { m.models.get(id).forEach(e => { e.show = value; }); });
     }
 }
 
