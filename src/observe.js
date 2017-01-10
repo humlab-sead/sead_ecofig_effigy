@@ -4,7 +4,7 @@ import { default as ecofigConfig } from './config.js';
 const ko = Cesium.knockout;
 
 var EcoCode = (id, label, visible, scale) => ({
-    id: name,
+    id: id,
     label: label,
     visible: ko.observable(visible),
     scale: ko.observable(scale)

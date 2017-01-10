@@ -19,6 +19,7 @@ class EcofigEffigyController {
         for (let ecofigEffigy of ecofigEffigies) {
             this.view.display(ecofigEffigy.getModels());
         }
+        this.ecofigEffigies = ecofigEffigies;
     }
 
     flyHome() {
@@ -33,9 +34,12 @@ class EcofigEffigyController {
     {
         this.ecofigEffigies
             .filter(x => x.models.has(id))
-            .forEach(m => { m.models.get(id).forEach(e => e.show = value); });
+            .forEach(m => { m.models.get(id).forEach(e => { e.show = value; }); });
     }
-    
+    rescale(id, value)
+    {
+        this.ecofigEffigies.filter(x => x.models.has(id)).rescape(id, value);
+    }   
 }
 
 export { EcofigEffigyController };

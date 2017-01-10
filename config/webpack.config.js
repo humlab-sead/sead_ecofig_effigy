@@ -12,7 +12,12 @@ var commonPlugins = [
     new HtmlPlugin({
         template: "./src/index.template.html",
         inject: "body"
-    })
+    }),
+    // new webpack.optimize.CommonsChunkPlugin({
+    //     name: 'vendor',
+    //     minChunks: 2,
+    //     chunks: ['application', 'diffux_ci', 'specs', 'activity_map'],
+    // }),
 ];
 
 var devPlugins = [
@@ -22,7 +27,7 @@ var devPlugins = [
 var productionPlugins = [
     new webpack.DefinePlugin({'process.env.NODE_ENV': '"production"'}),
     new webpack.optimize.OccurenceOrderPlugin(),
-    new webpack.optimize.CommonsChunkPlugin('common.js'),
+    //new webpack.optimize.CommonsChunkPlugin('common.js'),
     new webpack.optimize.DedupePlugin(),
     //new webpack.optimize.AggressiveMergingPlugin(),
     new webpack.optimize.UglifyJsPlugin({ compress: { warnings: false} })
@@ -37,7 +42,7 @@ if (process.env.NODE_ENV === "production") {
 }
 
 module.exports = {
-    entry: ['babel-polyfill', './src/main.js'], //[ './src/main.js', './distdll/cesiumDll.dll.js' ],
+    entry: ['babel-polyfill', './src/main.js'], // ./distdll/cesiumDll.dll.js' ],
     output: {
         path: './public',
         filename: 'bundle.js',
@@ -57,7 +62,7 @@ module.exports = {
                 test: /\.js$/,
                 loader: 'eslint',
                 include: projectRoot,
-                exclude: /(node_modules|lib|public)/
+                exclude: /(node_modules|public)/
             }
         ],
         loaders: [
@@ -68,7 +73,7 @@ module.exports = {
         ]
     },
     plugins: plugins,
-    devtool : process.env.NODE_ENV === "production" ? 'source-map' : 'eval-cheap-module-source-map',
+    devtool : 'source-map', //process.env.NODE_ENV === "production" ? 'source-map' : 'eval-cheap-module-source-map',
     devServer: {
         contentBase: './public',
         inline: true,

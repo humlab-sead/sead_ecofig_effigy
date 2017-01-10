@@ -7,6 +7,13 @@ import { default as utility } from './utility.js';
 
 // import { default as cesiumUtility } from './CesiumUtility.js';
 
+const randomCirclePoint = (ecofig, value, circleRadius=0.2) => utility.randomCirclePoint(ecofig.position, circleRadius);
+const valuePoint = (ecofig, value) => value.position;
+
+var coordinateComputor = (x) => {
+    return (x === "random") ? randomCirclePoint : valuePoint;
+}
+
 class CesiumModelStrategy {
     create() {
         return null;
@@ -30,27 +37,39 @@ class GltfCesiumModelStrategy extends CesiumModelStrategy {
         return this.createModels(ecofig, ecofigValue, ecoCodeConfig);
     }
 
-    createModels(ecofig, ecofigValue, ecoCodeConfig) {
-        // FIXME Scale, Multiply, background etc
-        // FIXME change to entity api
+    computeScale(ecofigValue, config, globalScale=this.modelConfig.modelScale) {
+        return (config.scale ? ecofigValue.scale : 1.0) * (parseFloat(config.factor) || 1.0) * globalScale;
+    }
 
+    // FIXME: Radius should be within boundry (and in Cartesian3 instead of degrees)!
+    computeCoordinate(ecofig, ecofigValue, config, circleRadius=0.2)
+    {
+        return (config.spread === "random") ?
+            utility.randomCirclePoint(ecofig.position, circleRadius) : ecofigValue.position;
+    }
+
+    computeModelCount(ecofigValue, config)
+    {
+        return config.multiply ? Math.ceil(ecofigValue.scale * config.multiply[1]) : 1;
+    }
+
+    createModels(ecofig, ecofigValue, ecoCodeConfig) {
+        // FIXME Allow runtime changes?
+        // FIXME Scale, Multiply, background etc
+        let config = ecoCodeConfig.setup;
         let models = [];
 
-        //[ "BEco1",  { type: "default", setup: { asset: "waterdrop.gltf", scale: false, multiply: [0,10], spread: "random", bgColor: {r: 0, g: 0, b:255, a:0.25 }}}] 
-
-        // scale=[0.2, 0.15] [ scale[0] * c[0] + origo[0], scale[1] * c[1] + origo[1]
-
-        let modelCount = ecoCodeConfig.setup.multiply ? Math.ceil(ecofigValue.scale * ecoCodeConfig.setup.multiply[1]) : 1;
-        let coordinate = (ecoCodeConfig.setup.spread === "random") ? (() => utility.randomCirclePoint(ecofig.position, 0.1)) : (() => ecofigValue.position);
-        let scale = (ecoCodeConfig.setup.scale === true) ? ecofigValue.scale : (parseFloat(ecoCodeConfig.setup.scale) || 0.1);
+        let modelCount = this.computeModelCount(ecofigValue, config);
+        let scale = this.computeScale(ecofigValue, config);
+        let computeCoordinate = coordinateComputor(config.spread);
         let model = {
-            uri :this.assetPath + ecoCodeConfig.setup.asset,
-            scale: this.modelConfig.modelScale * scale,
+            uri: this.assetPath + config.asset,
+            scale: scale,
             //runAnimations: false,
             //shadows: false
         };
         while (modelCount-- > 0) {
-            let [x, y, z] = coordinate();
+            let [x, y, z] = computeCoordinate(ecofig, ecofigValue);
             models.push(new Cesium.Entity({
                 position : Cesium.Cartesian3.fromDegrees(x, y, 0),
                 model : model

@@ -14,8 +14,8 @@ const Json2Ecofig = {
             site: feature.properties.name,
             position: feature.geometry.coordinates,
             epoch: feature.properties.epoch || '',
-            values: values
-        });
+            values: null
+        }).addValues(values);
     },
 
     createMany: features => features.map( x => Json2Ecofig.create(x) ),
@@ -25,27 +25,27 @@ const Json2Ecofig = {
         let map = ecofigConfig.ecoCodeConfig.ecoCodeLabelMap;
         return Object.keys(items)
             .filter(x => map.has(x))
-            .map(x => EcofigFactory.createValue(map.get(x).id , parseFloat(items[x]) / 100.0 || 0.0))
+            .map(x => new EcofigValue(x, parseFloat(items[x]) / 100.0 || 0.0))
             .filter(x => x.scale > 0);
     }
 }
 
 const EcofigFactory = {
-
     clone: e => new Ecofig(JSON.parse(JSON.stringify(e))),
-
     cloneValue: value => Object.assign({}, value, { position: value.position.slice() }),
-    
     cloneValues: values => values.map(x => EcofigFactory.cloneValue(x)),
+}
 
-    createValue: (ecocodeKey, scale=0.0, position=[0,0]) => (
-        {
-            id: ecocodeKey,
-            ecoCode: ecofigConfig.ecoCodeConfig.ecoCodeMap.get(ecocodeKey),
-            scale: scale,
-            position: position
-        }),
+class EcofigValue {
 
+    constructor(ecofig, id, scale=1.0, position=[0,0], models=[]) {
+        this.id = id;
+        this.position = position;
+        this.scale = scale;
+        this.ecoCode = ecofigConfig.ecoCodeConfig.ecoCodeMap.get(id)
+        this.models = models;
+        this.ecofig = ecofig;
+    }
 }
 
 class Ecofig {
@@ -78,7 +78,12 @@ class Ecofig {
         return this.values.find(z => z.ecoCode.id === id);
     }
 
+    addValues(values) {
+        values.forEach(x => this.addValue(x));
+    }
+
     addValue(x) {
+        x.ecofig = this;
         this.values.push(x);
     }
 
@@ -86,7 +91,13 @@ class Ecofig {
         return this.values.reduce( (a, x) => a + (x.ecoCode.water ? x.scale : 0.0), 0 ) 
     }
 
-
+    createModels(strategy=ecofigConfig.ecofigModelSetup.cesiumModelStrategy, config=ecofigConfig.ecofigModelSetup) {
+        this.values.forEach(
+            x => {
+                x.models = strategy.create(this, x, config);
+            }
+        )
+    }
 }
 
 export { Json2Ecofig, Ecofig, EcofigFactory };
