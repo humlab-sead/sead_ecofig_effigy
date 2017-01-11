@@ -2,11 +2,8 @@
 
 import { default as ecofigConfig } from './config.js';
 
-const defaultModelStrategy = ecofigConfig.ecofigModelSetup.cesiumModelStrategy;
 const defaultModelConfig = ecofigConfig.ecofigModelSetup;
-const defaultBoundryStrategy = ecofigConfig.ecofigModelSetup.boundry.modelStrategy;
-const defaultBoundryConfig = ecofigConfig.ecofigModelSetup.boundry.config;
-const defaultCoalesceStrategy = ecofigConfig.ecofigModelSetup.ecofigCoalesceStrategy;
+const defaultBoundryConfig = defaultModelConfig.boundry.config;
 
 class EcofigEffigy {
 
@@ -31,21 +28,21 @@ class EcofigEffigy {
         return this.models.has(id) ? this.models.get(id) : [];
     }
 
-    createModels(strategy=ecofigConfig.ecofigModelSetup.cesiumModelStrategy, config=ecofigConfig.ecofigModelSetup)
+    createModels(strategy=ecofigConfig.getDefaultModelStrategy(), config=defaultModelConfig)
     {
         return new Map(this.ecofig.values.map(x => [ x.ecoCode.id, strategy.create(this.ecofig, x, config) ]));
     }
 
-    createBoundry(strategy=defaultBoundryStrategy, config=defaultBoundryConfig)
+    createBoundry(strategy=ecofigConfig.getDefaultBoundryStrategy(), config=defaultBoundryConfig)
     {
         return strategy.create(this.ecofig, config.config);
     }
 
-    coalesce(strategy=defaultCoalesceStrategy) {
+    coalesce(strategy=ecofigConfig.getDefaultCoalesceStrategy()) {
         return strategy.coalesce(this.ecofigs);
     }
 
-    layout(strategy=ecofigConfig.ecofigModelSetup.ecofigLayoutStrategy) {
+    layout(strategy=ecofigConfig.getDefaultLayoutStrategy()) {
         // FIXME: Should be bound to models as well
         return strategy.layout(this.ecofig);
     }

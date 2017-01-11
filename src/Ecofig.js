@@ -1,8 +1,6 @@
 
 import { default as ecofigConfig } from './config.js'; 
-
-const defaultModelStrategy = ecofigConfig.ecofigModelSetup.cesiumModelStrategy;
-const defaultModelConfig = ecofigConfig.ecofigModelSetup;
+import { default as utility } from './utility.js';
 
 'use strict';
 
@@ -17,7 +15,7 @@ const Json2Ecofig = {
             site: feature.properties.name,
             position: feature.geometry.coordinates,
             epoch: feature.properties.epoch || '',
-            values: null
+            values: []
         }).addValues(values);
     },
 
@@ -28,46 +26,54 @@ const Json2Ecofig = {
         let map = ecofigConfig.ecoCodeConfig.ecoCodeLabelMap;
         return Object.keys(items)
             .filter(x => map.has(x))
-            .map(x => new EcofigValue(x, parseFloat(items[x]) / 100.0 || 0.0))
+            .map(x => new EcofigValue(null, x, parseFloat(items[x]) / 100.0 || 0.0))
             .filter(x => x.scale > 0);
     }
 }
 
-const EcofigFactory = {
-    clone: e => new Ecofig(JSON.parse(JSON.stringify(e))),
+const EcofigCloneService = {
+    clone: e => {
+        return new Ecofig({
+            id: -e.id,
+            site: e.site,
+            position: e.position.splice(),
+            epoch: e.epoch || '',
+            values: []
+        }).addValues(EcofigCloneService.cloneValues(e.values));
+        //let a = new Ecofig(JSON.parse(JSON.stringify(e)))
+    },
     cloneValue: value => Object.assign({}, value, { position: value.position.slice() }),
-    cloneValues: values => values.map(x => EcofigFactory.cloneValue(x)),
+    cloneValues: values => values.map(x => EcofigCloneService.cloneValue(x)),
 }
 
 class EcofigValue {
 
-    constructor(ecofig, id, scale=1.0, position=[0,0], models=[]) {
+    constructor(ecofig, id, scale=1.0, position=[0,0]) {
         this.ecofig = ecofig;
         this.id = id;
         this.position = position;
         this.scale = scale;
-        this.ecoCode = ecofigConfig.ecoCodeConfig.ecoCodeMap.get(id)
-        this.models = models;
-        this.setup = defaultModelConfig.get(this.id);
+        this.ecoCode = ecofigConfig.getEcoCode(id);
+        this.options = ecofigConfig.getEcoCodeSetup(id);
     }
 
-    // createModels(strategy=defaultModelStrategy, config=defaultModelConfig) {
-    //     this.models = strategy.create(this.ecofig, this, config);
-    // }
-
-    computeScale() {
-        return (this.setup.scale ? this.scale : 1.0) * (parseFloat(this.setup.factor) || 1.0) * this.ecofig.scale;
+    computeScale(options=this.options) {
+        return (options.scale ? this.scale : 1.0) * (parseFloat(options.factor) || 1.0) * this.ecofig.scale;
     }
 
-    // scaleModels(scale=this.scale) {
-    //     if (this.scale !== scale) {
-    //         this.scale = scale;
-    //     }
-    //     let modelScale = this.computeModelScale();
-    //     this.models.forEach(x => { x.model.scale = modelScale; });
-    // }
+    getModelCount() {
+        return Array.isArray(this.options.multiply) ? Math.ceil(this.scale * this.options.multiply[1]) : 1;
+    }
 
+    computeCoordinate(magnitude=0.2)
+    {
+        if (this.options.spread === "random")
+            return utility.randomCirclePoint(this.ecofig.position, magnitude)
+        return this.position;
+    }
 }
+
+// FIXME: Radius should be within boundry (and in Cartesian3 instead of degrees)!
 
 class Ecofig {
 
@@ -76,7 +82,7 @@ class Ecofig {
     }
 
     clone() {
-        return EcofigFactory.clone(this);
+        return EcofigCloneService.clone(this);
     }
 
     sum() {
@@ -101,6 +107,7 @@ class Ecofig {
 
     addValues(values) {
         values.forEach(x => this.addValue(x));
+        return this;
     }
 
     addValue(x) {
@@ -112,14 +119,9 @@ class Ecofig {
         return this.values.reduce( (a, x) => a + (x.ecoCode.water ? x.scale : 0.0), 0 ) 
     }
 
-    // createModels(strategy=defaultModelStrategy) {
-    //     this.values.forEach(x => x.createModels(strategy))
-    // }
-
-    // scaleModels() {
-    //     this.values.forEach(x => x.scaleModels())
-    // }
-
+    unhookValues() {
+        this.values.forEach(x => { x.ecofig = null; } )
+    }
 }
 
-export { Json2Ecofig, Ecofig, EcofigFactory };
+export { Json2Ecofig, Ecofig, EcofigCloneService };

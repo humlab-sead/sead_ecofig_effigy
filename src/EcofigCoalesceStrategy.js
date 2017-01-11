@@ -1,7 +1,6 @@
 "use strict";
 
-import { default as ecofigConfig } from './config.js'; 
-import { Ecofig, EcofigFactory } from './Ecofig.js';
+import { EcofigCloneService } from './Ecofig.js';
 
 var __coalesceCounter = 0;
 
@@ -42,15 +41,13 @@ class SimpleEcofigCoalesceStrategy { // alt-names: SiteCoalesceStrategy
                 if (value) {
                     value.scale += z.scale;
                 } else {
-                    ecofig.addValue(EcofigFactory.cloneValue(z));
+                    ecofig.addValue(EcofigCloneService.cloneValue(z));
                 }
             }
         );
-
         ecofig.normalize();
         return ecofig;
     }
-
 }
 
 export { SimpleEcofigCoalesceStrategy };
