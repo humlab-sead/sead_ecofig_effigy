@@ -8,7 +8,7 @@
 // import { GltfCesiumModelStrategy } from './CesiumModelStrategy.js';
 // import { CircularEcofigLayoutStrategy } from './EcofigLayoutStrategy.js';
 
-const modelScale = 1500.0;
+const modelScale = 10000.0;
 const mergeProximity = 15000.0;
 
 const ecofigBoundryConfig = {

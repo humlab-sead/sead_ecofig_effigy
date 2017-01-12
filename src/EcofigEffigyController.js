@@ -36,9 +36,16 @@ class EcofigEffigyController {
             .filter(x => x.models.has(id))
             .forEach(m => { m.models.get(id).forEach(e => { e.show = value; }); });
     }
+
+    setGlobalScale(value)
+    {
+        ecofigConfig.globalScale = value;
+        this.ecofigEffigies.forEach(x => x.rescale());
+    }
+
     rescale(id, value)
     {
-        this.ecofigEffigies.filter(x => x.models.has(id)).rescape(id, value);
+        this.ecofigEffigies.filter(x => x.models.has(id)).rescale(id, value);
     }   
 }
 

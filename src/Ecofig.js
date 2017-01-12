@@ -1,6 +1,5 @@
 
 import { default as ecofigConfig } from './config.js'; 
-import { default as utility } from './utility.js';
 
 'use strict';
 
@@ -9,7 +8,7 @@ let __id = 0;
 const Json2Ecofig = {
 
     create: feature => {
-        let values = Json2Ecofig.getValues(feature.properties.environmentalIndicators);
+        let values = Json2Ecofig.createValues(feature.properties.environmentalIndicators);
         return new Ecofig({
             id: ++__id,
             site: feature.properties.name,
@@ -21,12 +20,12 @@ const Json2Ecofig = {
 
     createMany: features => features.map( x => Json2Ecofig.create(x) ),
 
-    getValues: items =>
+    createValues: items =>
     {
         let map = ecofigConfig.ecoCodeConfig.ecoCodeLabelMap;
         return Object.keys(items)
             .filter(x => map.has(x))
-            .map(x => new EcofigValue(null, x, parseFloat(items[x]) / 100.0 || 0.0))
+            .map(x => new EcofigValue(null, map.get(x).id, parseFloat(items[x]) / 100.0 || 0.0))
             .filter(x => x.scale > 0);
     }
 }
@@ -36,13 +35,13 @@ const EcofigCloneService = {
         return new Ecofig({
             id: -e.id,
             site: e.site,
-            position: e.position.splice(),
+            position: e.position.slice(),
             epoch: e.epoch || '',
             values: []
         }).addValues(EcofigCloneService.cloneValues(e.values));
         //let a = new Ecofig(JSON.parse(JSON.stringify(e)))
     },
-    cloneValue: value => Object.assign({}, value, { position: value.position.slice() }),
+    cloneValue: value => new EcofigValue(value.ecofig, value.id, value.scale, value.position.slice()),
     cloneValues: values => values.map(x => EcofigCloneService.cloneValue(x)),
 }
 
@@ -58,19 +57,13 @@ class EcofigValue {
     }
 
     computeScale(options=this.options) {
-        return (options.scale ? this.scale : 1.0) * (parseFloat(options.factor) || 1.0) * this.ecofig.scale;
+        return (options.scale ? this.scale : 1.0) * (parseFloat(options.factor) || 1.0) * ecofigConfig.globalScale;
     }
 
     getModelCount() {
         return Array.isArray(this.options.multiply) ? Math.ceil(this.scale * this.options.multiply[1]) : 1;
     }
 
-    computeCoordinate(magnitude=0.2)
-    {
-        if (this.options.spread === "random")
-            return utility.randomCirclePoint(this.ecofig.position, magnitude)
-        return this.position;
-    }
 }
 
 // FIXME: Radius should be within boundry (and in Cartesian3 instead of degrees)!

@@ -3,18 +3,18 @@ import { default as ecofigConfig } from './config.js';
 
 const ko = Cesium.knockout;
 
-var EcoCode = (id, label, visible, scale) => ({
+var ecoCode = (id, label, visible, scale) => ({
     id: id,
     label: label,
-    visible: ko.observable(visible),
-    scale: ko.observable(scale)
+    visible: ko.observable(visible)
 });
 
-var ecoCodes = ecofigConfig.ecoCodeConfig.values.map(x => EcoCode(x.id, x.label, true, 0.0));
+var ecoCodes = ecofigConfig.ecoCodeConfig.values.map(x => ecoCode(x.id, x.label, true, 0.0));
 
 var viewModel = {
     currentCode: ko.observable(ecoCodes[0]),
-    ecoCodes: ko.observableArray(ecoCodes)
+    ecoCodes: ko.observableArray(ecoCodes),
+    scale: ko.observable(ecofigConfig.globalScale)
 };
 
 var setup = (controller) =>  {
@@ -31,7 +31,7 @@ var setup = (controller) =>  {
             controller.setEcoCodeVisibility(viewModel.currentCode().id, value);
         })
     );
-
+    viewModel.scale.subscribe( value => controller.setGlobalScale(value) );
     // Bind the viewModel to the DOM elements of the UI that call for it.
     //var toolbar = document.getElementById('toolbar');
 

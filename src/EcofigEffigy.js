@@ -47,7 +47,13 @@ class EcofigEffigy {
         return strategy.layout(this.ecofig);
     }
 
-    rescale(id, scale) {
+    rescale() {
+        this.ecofig.values.forEach(
+            ecofigValue => {
+                let scale = ecofigValue.computeScale();
+                this.getEcoCodeModels(ecofigValue.id).forEach(z => z.scale = scale);
+            }
+        )
     }
 }
 

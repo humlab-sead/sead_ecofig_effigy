@@ -3,6 +3,7 @@
 var Cesium = require('cesium/Source/Cesium');
 
 import { default as ecofigConfig } from './config.js';
+import { default as utility } from './utility.js';
 
 class CesiumModelStrategy {
     create() {
@@ -25,26 +26,29 @@ class GltfCesiumModelStrategy extends CesiumModelStrategy {
         return this.createModels(ecofig, ecofigValue);
     }
 
-    createModels(ecofig, ecofigValue) {
+    computeCoordinate(ecofigValue, magnitude=0.2)
+    {
+        if (ecofigValue.options.spread === "random")
+            return utility.randomCirclePoint(ecofigValue.ecofig.position, magnitude)
+        return ecofigValue.position;
+    }
 
-        let entities = [];
-        let computeCoordinate = coordinateComputor(ecofigValue.options.spread);
+    createModels(ecofig, ecofigValue) {
         let model = {
             uri: this.assetPath + ecofigValue.options.asset,
             scale: ecofigValue.computeScale(),                      // runAnimations: false, shadows: false
         };
+        let entities = [];
         let count = ecofigValue.getModelCount()
         while (count-- > 0) {
-            let [x, y, z] = computeCoordinate(ecofig, ecofigValue);
+            let [x, y, z] = this.computeCoordinate(ecofigValue);
             entities.push(new Cesium.Entity({
                 position : Cesium.Cartesian3.fromDegrees(x, y, 0),
                 model : model
             }));
         }
-
         return entities;
     }
-
 }
 
 export { GltfCesiumModelStrategy };
