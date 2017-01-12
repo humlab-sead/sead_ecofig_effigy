@@ -51,7 +51,7 @@ class EcofigEffigy {
         this.ecofig.values.forEach(
             ecofigValue => {
                 let scale = ecofigValue.computeScale();
-                this.getEcoCodeModels(ecofigValue.id).forEach(z => z.scale = scale);
+                this.getEcoCodeModels(ecofigValue.id).forEach(z => z.model.scale = scale);
             }
         )
     }

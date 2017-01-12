@@ -86,11 +86,11 @@ const ecofigMaterialStrategy = {
             return options.imageUrl;
         }
         let wateryScale = ecofig.wateryScale();
-        if (wateryScale >= 0.4) {
-            return './assets/Textures/water.jpg'
-        }
+        // if (wateryScale >= 0.4) {
+        //     return './assets/Textures/water.jpg'
+        // }
         if (wateryScale >= 0.0) {
-            return utility.blueColor(wateryScale * 0.25);
+            return utility.blueColor(wateryScale);
             //return new Cesium.Material({
                 // baseWaterColor: rgba color object base color of the water.
                 // blendColor: rgba color object used when blending from water to non-water areas.
