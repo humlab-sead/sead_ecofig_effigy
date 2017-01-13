@@ -1,0 +1,78 @@
+[
+    {
+        "site": {
+            "Country": "England",
+            "LatDD": 52.21667,
+            "LongDD": 0.1533333,
+            "SiteName": "Barnwell Station",
+            "SiteCODE": "SITE000045"
+        },
+        "sample": {
+            "SampleCODE": "SAMP000083",
+            "CalAgeEarliest": 25273,
+            "CalAgeLatest": 22192,
+            "Total Of Abundance": 12
+        },
+        "ecofig": {
+            "Aquatics": 8.33,
+            "Carrion": 0,
+            "Disturbed/arable": 8.33,
+            "Dry dead wood": 0,
+            "Dung/foul habitats": 0,
+            "General synanthropic": 0,
+            "Halotolerant": 0,
+            "Heathland & moorland": 25,
+            "Indicators: Coniferous": 0,
+            "Indicators: Deciduous": 0,
+            "Indicators: Dung": 0,
+            "Indicators: Running water": 0,
+            "Indicators: Standing water": 0,
+            "Meadowland": 25,
+            "Mould beetles": 0,
+            "Open wet habitats": 0,
+            "Pasture/Dung": 0,
+            "Sandy/dry disturbed/arable": 16.67,
+            "Stored grain pest": 0,
+            "Wetlands/marshes": 8.33,
+            "Wood and trees": 8.33
+        }
+    },
+    {
+        "site": {
+            "Country": "England",
+            "LatDD": 52.21667,
+            "LongDD": 0.1533333,
+            "SiteName": "Barnwell Station",
+            "SiteCODE": "SITE000045"
+        },
+        "sample": {
+            "SampleCODE": "SAMP000084",
+            "CalAgeEarliest": 25273,
+            "CalAgeLatest": 22192,
+            "Total Of Abundance": 17
+        },
+        "ecofig": {
+            "Aquatics": 0,
+            "Carrion": 0,
+            "Disturbed/arable": 5.88,
+            "Dry dead wood": 0,
+            "Dung/foul habitats": 0,
+            "General synanthropic": 0,
+            "Halotolerant": 5.88,
+            "Heathland & moorland": 17.65,
+            "Indicators: Coniferous": 0,
+            "Indicators: Deciduous": 0,
+            "Indicators: Dung": 0,
+            "Indicators: Running water": 0,
+            "Indicators: Standing water": 0,
+            "Meadowland": 17.65,
+            "Mould beetles": 0,
+            "Open wet habitats": 17.65,
+            "Pasture/Dung": 0,
+            "Sandy/dry disturbed/arable": 23.53,
+            "Stored grain pest": 0,
+            "Wetlands/marshes": 5.88,
+            "Wood and trees": 5.88
+        }
+    }
+]

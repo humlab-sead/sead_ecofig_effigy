@@ -7,18 +7,19 @@ class EcofigEffigyFactory {
 
     create(ecofigs) {
         let groupedEcofigs = _.groupBy(ecofigs, this.groupByKey);
-        return Object.keys(groupedEcofigs).map(x => new EcofigEffigy(groupedEcofigs[x], {name: x }));
+        return Object.keys(groupedEcofigs).map(x => new EcofigEffigy(groupedEcofigs[x], { name: x }));
     }
 
     groupByKey() { throw new Error('EcofigEffigyFactory is abstract'); }
 }
 
 /*
-* Default - just group by site and epoch
+* Default - just group by siteName and time???
 */
 class DefaultEcofigEffigyFactory extends EcofigEffigyFactory {
 
-    groupByKey(x) { return `${x.site}/${x.epoch}` }
+    // FIXME: Is this enough? Also group by prximity???
+    groupByKey(x) { return `${x.siteName}` }
 
 }
 

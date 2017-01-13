@@ -49,7 +49,7 @@ class EcofigStore {
         return (this.values != null) ? Promise.resolve(this.values) :
             this.loader
                 .load()
-                .then(data => this.store(data.features));
+                .then(data => this.store(data));
     }
 
     find(filter = null) {
@@ -60,18 +60,18 @@ class EcofigStore {
         let ecofigs = this.values;
         // FIXME: Implement more advanced filter capabilities
 
-        if (filter && filter.epoch) {
-            return ecofigs.filter(x => x.epoch === filter.epoch)
+        if (filter && filter.age) {
+            return ecofigs.filter(x => x.ageEarliest >= filter.age && filter.age >= x.ageLatest)
         }
 
-        if (filter && filter.sites) {
-            return ecofigs.filter(x => filter.sites.includes(x.site));
-        }       
+        if (filter && filter.siteNames) {
+            return ecofigs.filter(x => filter.sites.includes(x.siteName));
+        }     
         return ecofigs;
     }
 
-    store(features) {
-        this.values = Json2Ecofig.createMany(features);
+    store(ecofigJsons) {
+        this.values = Json2Ecofig.createMany(ecofigJsons);
         return this.values;
     }
 

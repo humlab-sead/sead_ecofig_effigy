@@ -7,13 +7,18 @@ let __id = 0;
 
 const Json2Ecofig = {
 
-    create: feature => {
-        let values = Json2Ecofig.createValues(feature.properties.environmentalIndicators);
+    create: json => {
+        let values = Json2Ecofig.createValues(json.ecofig);
         return new Ecofig({
             id: ++__id,
-            site: feature.properties.name,
-            position: feature.geometry.coordinates,
-            epoch: feature.properties.epoch || '',
+            country: json.site['Country'],
+            siteName: json.site['SiteName'],
+            siteCode: json.site['SiteCODE'],
+            position: [ json.site['LongDD'], json.site['LatDD'] ],
+            sampleCode: json.sample['SampleCODE'],
+            ageEarliest: json.sample['CalAgeEarliest'],
+            ageLatest: json.sample['CalAgeLatest'],
+            totalOfAbundance: json.sample["Total Of Abundance"],
             values: []
         }).addValues(values);
     },
@@ -23,9 +28,12 @@ const Json2Ecofig = {
     createValues: items =>
     {
         let map = ecofigConfig.ecoCodeConfig.ecoCodeLabelMap;
-        return Object.keys(items)
-            .filter(x => map.has(x))
-            .map(x => new EcofigValue(null, map.get(x).id, parseFloat(items[x]) / 100.0 || 0.0))
+        return Object.keys(items).filter(x => map.has(x))
+            .map(x => {
+                let scale = parseFloat(items[x]) / 100.0 || 0.0;
+                let ecoCode = map.get(x).id;
+                return new EcofigValue(null, ecoCode, scale);
+            })
             .filter(x => x.scale > 0);
     }
 }
@@ -34,12 +42,15 @@ const EcofigCloneService = {
     clone: e => {
         return new Ecofig({
             id: -e.id,
-            site: e.site,
+            country: e.country,
+            siteName: e.siteName,
+            siteCode: e.siteCode,
             position: e.position.slice(),
-            epoch: e.epoch || '',
+            ageEarliest: e.ageEarliest,
+            ageLatest: e.ageLatest,
+            totalOfAbundance: e.totalOfAbundance,
             values: []
         }).addValues(EcofigCloneService.cloneValues(e.values));
-        //let a = new Ecofig(JSON.parse(JSON.stringify(e)))
     },
     cloneValue: value => new EcofigValue(value.ecofig, value.id, value.scale, value.position.slice()),
     cloneValues: values => values.map(x => EcofigCloneService.cloneValue(x)),

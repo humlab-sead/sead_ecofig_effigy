@@ -14,7 +14,8 @@ var ecoCodes = ecofigConfig.ecoCodeConfig.values.map(x => ecoCode(x.id, x.label,
 var viewModel = {
     currentCode: ko.observable(ecoCodes[0]),
     ecoCodes: ko.observableArray(ecoCodes),
-    scale: ko.observable(ecofigConfig.globalScale)
+    scale: ko.observable(ecofigConfig.globalScale),
+    age: ko.observable(0)
 };
 
 var setup = (controller) =>  {
@@ -32,35 +33,9 @@ var setup = (controller) =>  {
         })
     );
     viewModel.scale.subscribe( value => controller.setGlobalScale(value) );
-    // Bind the viewModel to the DOM elements of the UI that call for it.
-    //var toolbar = document.getElementById('toolbar');
+    viewModel.age.subscribe( value => controller.display({ age: -value }) );
 
     ko.applyBindings(viewModel, document.getElementById('toolbar'));
 }
-
-// // Make the skyAtmosphere's HSB parameters subscribers of the viewModel.
-// function subscribeParameter(name) {
-//     Cesium.knockout.getObservable(viewModel, name).subscribe(
-//         function(newValue) {
-//             skyAtmosphere[name] = newValue;
-//         }
-//     );
-// }
-
-// subscribeParameter('hueShift');
-// subscribeParameter('saturationShift');
-// subscribeParameter('brightnessShift');
-
-// Cesium.knockout.getObservable(viewer, '_selectedEntity').subscribe(function(entity) {
-//     if (!Cesium.defined(entity)) {
-//         console.log('De-selected entity.');
-//     } else {
-//         console.log('Selected entity ' + (entity.name || entity.id));
-//     }
-// });
-
-// Cesium.knockout.getObservable(viewer.infoBox.viewModel, 'showInfo').subscribe(function(newValue) {
-  
-// });
 
 export default setup;

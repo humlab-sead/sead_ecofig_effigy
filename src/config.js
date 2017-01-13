@@ -6,7 +6,7 @@ import { default as ecofigDefaultModelSetup } from './config.ecofig.model.js';
 const ecofigSetup = {
     ecoCodeConfig: ecoCodeConfig,
     ecofigModelSetup: ecofigDefaultModelSetup,
-    restUrl: '/geo2.json',
+    restUrl: '/ecofig_data.json',
 
     getEcoCode: id => ecofigSetup.ecoCodeConfig.ecoCodeMap.get(id),
     getEcoCodeByLabel: label => ecofigSetup.ecoCodeConfig.ecoCodeLabelMap.get(label),

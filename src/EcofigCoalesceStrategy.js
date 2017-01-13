@@ -2,9 +2,7 @@
 
 import { EcofigCloneService } from './Ecofig.js';
 
-var __coalesceCounter = 0;
-
-class SimpleEcofigCoalesceStrategy { // alt-names: SiteCoalesceStrategy
+class SimpleEcofigCoalesceStrategy {
 
     constructor(midPointCalculator) {
         this.midPointCalculator = midPointCalculator;
@@ -23,28 +21,30 @@ class SimpleEcofigCoalesceStrategy { // alt-names: SiteCoalesceStrategy
             return (p || q).clone();
         }
 
-        if (p.site !== q.site) {
-            throw "SimpleEcofigCoalesceStrategy.merge: site mismatch";
+        if (p.siteName !== q.siteName) {
+            throw "SimpleEcofigCoalesceStrategy.merge: siteName mismatch";
         }
 
         // Skip cloning of already cloned ecofigs
         let ecofig = p.id > 0 ? p.clone() : p;
-
-        ecofig.id = --__coalesceCounter;
-        ecofig.site = p.site === q.site ? p.site : (p.site + '*');
-        ecofig.position = this.midPointCalculator.midpoint(p.position, q.position);
-        ecofig.epoch = p.epoch || q.epoch;
 
         q.values.forEach(
             z => {
                 let value = ecofig.getValue(z.id);
                 if (value) {
                     value.scale += z.scale;
+                    // FIXME: Use when weighing ecofigValues??
+                    //value.scale = p.totalOfAbundance * value.scale + q.totalOfAbundance * p.scale / (p.totalOfAbundance)
                 } else {
                     ecofig.addValue(EcofigCloneService.cloneValue(z));
                 }
             }
         );
+
+        ecofig.position = this.midPointCalculator.midpoint(p.position, q.position);
+        ecofig.ageEarliest = Math.max(p.ageEarliest, q.ageEarliest);
+        ecofig.ageLatest = Math.max(p.ageLatest, q.ageLatest);
+        ecofig.totalOfAbundance = p.totalOfAbundance + q.totalOfAbundance;
         ecofig.normalize();
         return ecofig;
     }

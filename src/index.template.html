@@ -15,6 +15,7 @@
   </div>
 <div id="toolbar">
 <table><tbody>
+    
     <tr>
         <td>
             <select data-bind="options: ecoCodes,
@@ -27,6 +28,12 @@
         </td>
         <td><input type="checkbox" data-bind="checked: currentCode().visible"></td>
     </tr>
+
+    <tr>
+        <td colspan="2"><input type="range" width="100%" min="-24000" max="0" step="500" data-bind="value: age"></td>
+        <td><span data-bind="text: age"></span>BP</td>
+    </tr>
+
 </tbody></table>
 </div>
 </body>

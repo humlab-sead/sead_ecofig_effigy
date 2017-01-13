@@ -11,7 +11,7 @@ class EcofigEffigyController {
         this.store = store;
     }
  
-    display(filter= null)
+    display(filter=null)
     {
         let ecofigs = this.store.find(filter);
         let ecofigEffigies = ecofigEffigyFactory.create(ecofigs);

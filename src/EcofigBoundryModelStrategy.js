@@ -34,7 +34,7 @@ class PolygonEcofigBoundryModelStrategy extends EcofigBoundryModelStrategy {
         let coordinates = this.flatten(this.boundryStrategy.create(ecofig));
 
         return {
-            //name : ecofig.site,
+            name : ecofig.siteName,
             description: this.createTooltip(ecofig),
             polygon : {
                 hierarchy : {
@@ -51,7 +51,7 @@ class CircleEcofigBoundryModelStrategy extends EcofigBoundryModelStrategy {
     create(ecofig) {
         return {
             position: utility.cartesian3.fromDegrees(ecofig.position[0], ecofig.position[1], 0),
-            //name: ecofig.site,
+            name: ecofig.siteName,
             description: this.createTooltip(ecofig),
             ellipse : {
                 semiMinorAxis : 10000.0,
@@ -61,19 +61,7 @@ class CircleEcofigBoundryModelStrategy extends EcofigBoundryModelStrategy {
                 material : ecofigMaterialStrategy.create(ecofig, this.options),
                 outline : false
             }
-        }
-        // return {
-        //     position: ecofig.position.slice(),
-        //     name : ecofig.site,
-        //     ellipse : {
-        //         semiMinorAxis : 0.15,
-        //         semiMajorAxis : 0.2,
-        //         //extrudedHeight : 0.0,
-        //         //rotation : utility.toRadians(45),
-        //         material : ecofigMaterialStrategy.create(ecofig, this.options),
-        //         outline : false
-        //     }
-        // };     
+        } 
     }
 }
 

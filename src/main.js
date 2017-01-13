@@ -24,7 +24,7 @@ utility.onReadyDocument().then(() => {
 
     store.load().then(() => {
         setupObservers(controller);
-        controller.display();
+        controller.display({ age: 0 });
         controller.flyHome();
     });
 
