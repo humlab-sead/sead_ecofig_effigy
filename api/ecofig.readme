@@ -1,0 +1,8 @@
+
+Ecofig CSV data has been converted with csvtojson package.
+The CSV headers has been prefixed changed with "site." and ".ecofig" to indicate JSON-nesting.
+
+site.Country;site.LatDD;site.LongDD;site.SiteName;site.SiteCODE;site.SampleCODE;ecofig.Aquatics;ecofig.Carrion;ecofig.Disturbed/arable;ecofig.Dry dead wood;ecofig.Dung/foul habitats;ecofig.General synanthropic;ecofig.Halotolerant;ecofig.Heathland & moorland;ecofig.Indicators: Coniferous;ecofig.Indicators: Deciduous;ecofig.Indicators: Dung;ecofig.Indicators: Running water;ecofig.Indicators: Standing water;ecofig.Meadowland;ecofig.Mould beetles;ecofig.Open wet habitats;ecofig.Pasture/Dung;ecofig.Sandy/dry disturbed/arable;ecofig.Stored grain pest;ecofig.Wetlands/marshes;ecofig.Wood and trees;ecofig.CalAgeEarliest;ecofig.CalAgeLatest;ecofig.Total Of Abundance
+
+1. Install package: npm install -g csvtojson
+2. Convert CSV: csvtojson ecofig_data.csv --delimiter=';' --trim=true  > ecofig_data.json
