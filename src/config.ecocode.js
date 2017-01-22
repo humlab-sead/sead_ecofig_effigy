@@ -1,26 +1,21 @@
 "use strict";
 /*
-Aquatics
-Vatten drop?
+Aquatics - Vatten drop?
 
-Carrion
-Halv-rutten ko med lite revben utstickande
+Carrion - Halv-rutten ko med lite revben utstickande
  
 Disturbed/arable
  - Är detta odlad jord? Ja
  - Symbol: Plöjd åker? – kanske det... inte en traktor eftersom det bör vara lite mer historisk... plog (inspiration here: https://www.google.se/search?client=firefox-b-ab&biw=1280&bih=557&tbm=isch&sa=1&q=plowing+ard&oq=plowing+ard&gs_l=img.3...16457.16944.0.17099.0.0.0.0.0.0.0.0..0.0....0...1c.1.64.img..0.0.0.dHAdTmD3QFI)
-S
  
 Dung/foul habitats
 - Är detta tecken på boskap? – inte nödvändigtvis, kan vara andra betande djur (rådjur, ibex...) men även human poo, rått bajs m.m. Kan också vara äckliga miljöer som avlopsrör, latriner.
 - Symbol: Ko? – fungerar bättre på ”Dung”
 Kan man rita geggamojs...? Har funderar länge på detta utan mycket framgång...
  
-General synanthropic
- - Symbol: En människa
+General synanthropic - Symbol: En människa
  
-Halotolerant
-- Symbol: Cyanobacteria in a pile of salt?
+Halotolerant - Symbol: Cyanobacteria in a pile of salt?
 Intresant förslag! En mycket svår symbol... saltkristaller om det går att göra dem scalable?
  
 Heathland & moorland
@@ -32,52 +27,40 @@ Indicators: Coniferous
 - Symbol: pine, fir, spruce, or other cone-bearing trees and shrubs? Or just a cone (kotte)?
 Tree is best, as it is more correct for the range of things that could be indicated and less open to interpretation.
  
-Indicators: Deciduous
- - Symbol: Tree in autumn colors?
+Indicators: Deciduous - Symbol: Tree in autumn colors?
 Oak tree, or birch... autumn colours could be nice
  
  - How can an environment be deciduous, isn't that a seasonal property? The environment is dominated by deciduous vegetation – an oak forest, for example. Deciduousness is a property of the tree’s mechanism for coping with seasonal changes.
  
-Indicators: Dung
- - Symbol:  A cow (again)?
+Indicators: Dung - Symbol:  A cow (again)?
 Ja. (Konflikt med Carrion – jag tror det blir bra om Carrion ko är tydligt död!)
  
-Indicators: Running water
- - Symbol: Stream or waterfall?
+Indicators: Running water - Symbol: Stream or waterfall?
 Stream if possible, rapids or waterfall OK
  
-Indicators: Standing water
- - Symbol: Pond/lake?
+Indicators: Standing water - Symbol: Pond/lake?
 Yes
  
-Meadowland
- - Symbol: Various flowers (& unicorns)?
+Meadowland - Symbol: Various flowers (& unicorns)?
 Yes, especially the unicorns... not
  
-Open wet habitats
- - Archipelago-ish environment?
+Open wet habitats - Archipelago-ish environment?
 Not really, more of a damp meadow like environment... think of a water meadow, or a recently drained flooded field near the river.
  
-Pasture/Dung
- - Fence with (yet more) cows?
+Pasture/Dung - Fence with (yet more) cows?
 Yes, this one emphasises domestic animals, or really the landscape they create (although a herd in Africa can create something similar)
  
-Sandy/dry disturbed/arable
- - Pile of sand?
+Sandy/dry disturbed/arable - Pile of sand?
 Perhaps similar to arable, but with more open ground... think of dry, recently ploughed fields
  
-Stored grain pest
- - Symbol: Beetle + grain?
+Stored grain pest - Symbol: Beetle + grain?
 Grain is enough (beetles are implicit and the proxy for the grain)
- 
-Wetlands/marshes
- - Symbol: marsh with cigar-plants?
+
+Wetlands/marshes - Symbol: marsh with cigar-plants?
 Good idea, is easily recognisable
- 
-Wood and trees
- - Symbol: Tree(s)​?
-​Yes, perhaps a collection of mixed types (some deciduous and some coniferous)?
+Wood and trees - Symbol: Trees? Yes, perhaps a collection of mixed types (some deciduous and some coniferous)?
 */
+
 const __EcoCodes = [
     { id: 'BEco1',  water: true, label: 'Aquatics', definition: 'Living in/on water, in any form. From temporary pools to lakes and rivers.' },
     { id: 'BEco1a', water: true, label: 'Indicators: Standing water', definition: 'Primary habitat in/on pools, ponds, slow flowing water – including temporary ponds, but not species specifically in vegetation and mud or banks of ponds.' },

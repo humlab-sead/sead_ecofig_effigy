@@ -1,14 +1,15 @@
 "use strict";
 
-var Viewer = require('cesium/Source/Widgets/Viewer/Viewer');
-var Cesium = require('cesium/Source/Cesium');
+// Alt #1: var Viewer = require('cesium/Source/Widgets/Viewer/Viewer');
+// Alt #1: var Cesium = require('cesium/Source/Cesium');
+import { default as Cesium } from "cesiumDll/Cesium";
 
-import { default as ecofigConfig } from './config.js';
+//import { default as ecofigConfig } from './config.js';
 import { default as cesiumUtility } from './CesiumUtility.js';
 
 class CesiumView {
 
-    constructor(container, config=ecofigConfig) {
+    constructor(container /*, config=ecofigConfig*/) {
 
         Cesium.BingMapsApi.defaultKey = "AtX_asZEVy_1leXfOPX_93jqHdVNDK1_c4m_vafwQLV5-2GLt6yLQIjIQZJHWKSp";
 
@@ -22,7 +23,7 @@ class CesiumView {
             requestVertexNormals: true
         });
 
-        this.viewer = new Viewer(container, {
+        this.viewer = new Cesium.Viewer(container, {
             homeButton: false,
             infoBox: true,
             imageryProvider:imageryProvider,

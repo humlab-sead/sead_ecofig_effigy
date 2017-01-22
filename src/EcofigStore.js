@@ -25,7 +25,6 @@ import { default as ecofigConfig } from './config.js';
 const EcofigLoader = {
     //cache: { },
     load: function() {
-        let url = ecofigConfig.restUrl;
         //EcofigLoader.cache[url] = EcofigLoader.cache.hasOwnProperty(url) ? EcofigLoader.cache[url] : fetch(ecofigConfig.restUrl, {
         return fetch(ecofigConfig.restUrl, {
             method: 'get',
@@ -60,8 +59,10 @@ class EcofigStore {
         let ecofigs = this.values;
         // FIXME: Implement more advanced filter capabilities
 
-        if (filter && filter.age) {
-            return ecofigs.filter(x => x.ageEarliest >= filter.age && filter.age >= x.ageLatest)
+        if (filter && filter.ageEarliest && filter.ageLatest) {
+            return ecofigs.filter(
+                x => -x.ageEarliest >= filter.ageLatest && filter.ageEarliest >= -x.ageLatest
+            )
         }
 
         if (filter && filter.siteNames) {

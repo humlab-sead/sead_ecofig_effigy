@@ -2,7 +2,7 @@
 /* eslint-env mocha */
 import geoData  from './fixtures/geo2.json';
 import { Json2Ecofig } from '../src/Ecofig.js';
-import { EcofigStore } from '../src/EcofigStore.js';
+// import { EcofigStore } from '../src/EcofigStore.js';
 import { EcofigEffigyController } from '../src/EcofigEffigyController.js';
 
 var assert = require('chai').assert;

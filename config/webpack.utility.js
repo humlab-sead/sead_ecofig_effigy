@@ -1,10 +1,11 @@
 
 var path = require('path');
-var __devRoot = path.resolve(__dirname, '..');
+
+const root = path.resolve(__dirname, '..');
 
 function devRoot(args) {
     args = Array.prototype.slice.call(arguments, 0);
-    return path.join.apply(path, [__devRoot].concat(args));
+    return path.join.apply(path, [root].concat(args));
 }
 
 function devNode(args) {
@@ -12,9 +13,48 @@ function devNode(args) {
     return devRoot.apply(path, ['node_modules'].concat(args));
 }
 
-const devPath = {
+module.exports = {
+    root: root,
+    application: {
+        root: root,
+        source: path.resolve(root, 'src'),
+        public: path.resolve(root, 'public'),
+        excludes: [
+            path.resolve(root, "node_modules"),
+            path.resolve(root, "api"),
+            path.resolve(root, "css"),
+            path.resolve(root, "distdll"),
+            path.resolve(root, "resources"),
+            path.resolve(root, "public"),
+            path.resolve(root, "test")
+        ],
+    },
     devRoot: devRoot,
-    devNode: devNode
-}
+    devNode: devNode,
+    test: {
+        root: root,
+        source: path.resolve(root, 'test'),
+        public: path.resolve(root, 'public/test'),
+        excludes: [
+            path.resolve(root, "node_modules"),
+            path.resolve(root, "api"),
+            path.resolve(root, "css"),
+            path.resolve(root, "distdll"),
+            path.resolve(root, "resources"),
+            path.resolve(root, "public")
+        ]        
+    },
+    cesium: {
+        root: root,
+        output: path.resolve(root, "distdll"),
+        dev: {
+            source: path.resolve(root, "node_modules/cesium/Source/"),
+            entry: "cesium/Source/Cesium.js",
+        },
+        prod: {
+            source: path.resolve(root, "node_modules/cesium/Build/Cesium/"),
+            entry: "cesium/Source/Cesium.js"
+        }
+    }
 
-exports.devPath = devPath;
+}

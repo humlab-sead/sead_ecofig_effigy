@@ -1,6 +1,7 @@
 'use strict';
 
-var Cesium = require('cesium/Source/Cesium');
+// Alt #1: var Cesium = require('cesium/Source/Cesium');
+import { default as Cesium } from "cesiumDll/Cesium";
 
 import { default as ecofigConfig } from './config.js';
 import { default as utility } from './utility.js';
@@ -41,7 +42,7 @@ class GltfCesiumModelStrategy extends CesiumModelStrategy {
         let entities = [];
         let count = ecofigValue.getModelCount()
         while (count-- > 0) {
-            let [x, y, z] = this.computeCoordinate(ecofigValue);
+            let [x, y] = this.computeCoordinate(ecofigValue);
             entities.push(new Cesium.Entity({
                 position : Cesium.Cartesian3.fromDegrees(x, y, 0),
                 model : model

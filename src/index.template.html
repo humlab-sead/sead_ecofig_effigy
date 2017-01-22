@@ -30,11 +30,19 @@
     </tr>
 
     <tr>
-        <td colspan="2"><input type="range" width="100%" min="-24000" max="0" step="500" data-bind="value: age"></td>
-        <td><span data-bind="text: age"></span>BP</td>
+        <td colspan="2">
+            <section class="range-slider">
+                <span class="rangeValues"></span>
+                <input value="-2000" min="-24000" max="0" step="500" type="range" data-bind="value: ageEarliest">
+                <input value="0" min="-24000" max="0" step="500" type="range" data-bind="value: ageLatest">
+            </section>
+        </td>
+        <td><span data-bind="text: ageEarliest"></span>-<span data-bind="text: ageLatest"></span>BP</td>
+
     </tr>
 
 </tbody></table>
 </div>
+<script src="cesiumDll.dll.js"></script>
 </body>
 </html>

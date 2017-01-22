@@ -1,46 +1,37 @@
 "use strict";
 
-const configValues = require("../config");
-const commonWebpackSettings = require("./webpack.base.config");
-
 const path = require("path");
 const webpack = require("webpack");
-
-const PATHS = configValues.PATHS;
-
-const outputPath = path.join(PATHS.base, "distdll");
+const cesiumPath = require('./webpack.utility.js').cesium;
+const input = cesiumPath.dev;
 
 const webpackConfig = {
     entry : {
-        cesiumDll : ["cesium/Source/Cesium.js"],
+        cesiumDll : [ input.entry ],
     },
-    devtool : "#source-map",
+    devtool : 'eval-cheap-module-source-map',
     output : {
-        path : outputPath,
+        path: cesiumPath.output,
         filename : "[name].dll.js",
         library : "[name]_[hash]",
         sourcePrefix: "",
     },
     plugins : [
+        new webpack.optimize.OccurenceOrderPlugin(),
+        new webpack.optimize.DedupePlugin(),
         new webpack.DllPlugin({
-            path : path.join(outputPath, "[name]-manifest.json"),
+            path : path.resolve(cesiumPath.output, "[name]-manifest.json"),
             name : "[name]_[hash]",
-            context : configValues.CESIUM.sourcePath
+            context : input.source
         }),
-
-        // Setting DefinePlugin affects React library size!
         new webpack.DefinePlugin({
             'process.env.NODE_ENV': '"production"'
         }),
-
-
         new webpack.optimize.UglifyJsPlugin({
             compress: {
                 warnings: false
             }
         })
-
-
     ],
     module : {
         unknownContextCritical : false,

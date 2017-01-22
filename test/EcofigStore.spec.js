@@ -72,7 +72,7 @@ describe('EcofigStore', function() {
                     assert.deepEqual(ecofigs[0].position, geoData.features[0].geometry.coordinates);
                     //done();
                 },
-                function (err) {
+                function (/*err*/) {
                     //done(err);
                 });
         });

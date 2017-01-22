@@ -1,7 +1,7 @@
 'use strict';
 /* eslint-env mocha */
-import geoData  from './fixtures/geo2.json';
-import { Json2Ecofig } from '../src/Ecofig.js';
+// import geoData  from './fixtures/geo2.json';
+// import { Json2Ecofig } from '../src/Ecofig.js';
 import { GeoMidPointCalculator, SimpleMidPointCalculator } from '../src/MidPointCalculator.js';
 
 var assert = require('chai').assert;

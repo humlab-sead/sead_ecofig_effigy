@@ -12,6 +12,7 @@ require('jquery-ui/ui/widgets/slider');
 import "../css/timeline.css";
 
 class TimelineSlider {
+    
 
     constructor(id, slide_callback) {
         this.config = {

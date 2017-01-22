@@ -4,7 +4,7 @@ import geoData  from './fixtures/geo2.json';
 import { Json2Ecofig } from '../src/Ecofig.js';
 import { ecofigEffigyFactory } from '../src/EcofigEffigyFactory.js';
 
-var assert = require('chai').assert;
+// var assert = require('chai').assert;
 
 describe('EcofigEffigyFactory', function() {
 

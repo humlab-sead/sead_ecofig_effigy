@@ -9,7 +9,7 @@ const randomCirclePoint = (origo, radius) => {
     return [origo[0]+pt_x, origo[1]+pt_y];
 }
 
-let contentLoadedResolver = (resolve) => document.addEventListener("DOMContentLoaded", resolve);
+// let contentLoadedResolver = (resolve) => document.addEventListener("DOMContentLoaded", resolve);
 
 const onReadyDocument = () => {
     let readyState = document.readyState;

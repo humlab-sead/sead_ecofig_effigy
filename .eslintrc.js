@@ -26,6 +26,7 @@ module.exports = {
     "require": true,
     "process": true,
     "module": true,
-    "Map": true
+    "Map": true,
+    "Promise": true
   }
 }

@@ -1,14 +1,12 @@
 
 const path = require('path')
 const webpack = require('webpack')
-const projectRoot = path.resolve(__dirname)
 const HtmlPlugin = require("html-webpack-plugin");
 
+const configUtility = require('./webpack.utility.js');
+console.log(path.resolve(configUtility.application.root, "distdll/cesiumDll-manifest.json"));
+
 var commonPlugins = [
-    //new webpack.DllReferencePlugin({
-    //    scope : "cesiumDll",
-    //    manifest: require(path.join(projectRoot, "distdll/cesiumDll-manifest.json")),
-    //})
     new HtmlPlugin({
         template: "./src/index.template.html",
         inject: "body"
@@ -21,7 +19,14 @@ var commonPlugins = [
 ];
 
 var devPlugins = [
-    new webpack.DefinePlugin({ 'process.env.NODE_ENV': JSON.stringify('development')})
+    new webpack.DefinePlugin({ 'process.env.NODE_ENV': JSON.stringify('development')}),
+    // Alt #2: Remove if Cesium loaded as script
+    new webpack.DllReferencePlugin({
+        context: ".",
+        scope : "cesiumDll",
+        manifest: require(path.resolve(configUtility.application.root, "distdll/cesiumDll-manifest.json")),
+    }),
+    new webpack.NoErrorsPlugin()
 ];
 
 var productionPlugins = [
@@ -30,6 +35,7 @@ var productionPlugins = [
     //new webpack.optimize.CommonsChunkPlugin('common.js'),
     new webpack.optimize.DedupePlugin(),
     //new webpack.optimize.AggressiveMergingPlugin(),
+    //new webpack.NoErrorsPlugin(),
     new webpack.optimize.UglifyJsPlugin({ compress: { warnings: false} })
 ];
 
@@ -38,13 +44,17 @@ var plugins = commonPlugins.concat(
 );
 
 if (process.env.NODE_ENV === "production") {
-    console.log("Building relase bundle...");
+    console.log("Building release bundle...");
 }
 
 module.exports = {
-    entry: ['babel-polyfill', './src/main.js'], // ./distdll/cesiumDll.dll.js' ],
+    entry: [
+        // FIXME! Commented out for compile performance...
+        //'babel-polyfill',
+        './src/main.js'
+    ],
     output: {
-        path: './public',
+        path: configUtility.application.public,
         filename: 'bundle.js',
         sourcePrefix: ""
     },
@@ -52,8 +62,8 @@ module.exports = {
         extensions: ['', '.js'],
     //     fallback: [ path.join(__dirname, './node_modules') ],
         alias: {
-            'src': path.join(__dirname, 'src'),
-            'assets': path.join(__dirname, './src/assets')
+            'src': configUtility.application.source,
+            //'assets': path.join(__dirname, './src/assets')
         }
     },
     module: {
@@ -61,21 +71,36 @@ module.exports = {
             {
                 test: /\.js$/,
                 loader: 'eslint',
-                include: projectRoot,
-                exclude: /(node_modules|public)/
+                include: configUtility.application.source,
+                exclude: configUtility.application.excludes 
             }
         ],
         loaders: [
-            { test: /\.css$/,                  loader: 'style!css' },
-            { test : /\.(png|gif|jpg|jpeg)$/,  loader: "file-loader" },
-            { test: /Cesium\.js$/,             loader: "script", exclude: /node_modules/ },
-            { test: /\.js$/,                   loader: 'babel-loader', exclude: [/node_modules/] }
+            {
+                test: /\.css$/,
+                loader: 'style!css'
+            },
+            {
+                test : /\.(png|gif|jpg|jpeg)$/,
+                loader: "file-loader"
+            },
+            // Alt #1: Remove if cesiumDLL is used
+            // { test: /Cesium\.js$/,             loader: "script", exclude: /node_modules/ },
+            {
+                test: /\.js$/,
+                loader: 'babel-loader', // ?cacheDirectory=true
+                exclude: configUtility.application.excludes,
+                query : {
+                    cacheDirectory : true
+                }
+            }
         ]
     },
     plugins: plugins,
-    devtool : 'source-map', //process.env.NODE_ENV === "production" ? 'source-map' : 'eval-cheap-module-source-map',
+    devtool : 'source-map',
+    //process.env.NODE_ENV === "production" ? 'source-map' : 'eval-cheap-module-source-map',
     devServer: {
-        contentBase: './public',
+        contentBase: configUtility.application.public,
         inline: true,
         // hot: true,
         // port: '',
@@ -83,17 +108,9 @@ module.exports = {
         clientLogLevel: "info",
         quiet: false,
         noinfo: false,
-        // proxy: {
-        //     '/api': {
-        //         target: 'file://' + path.join(__dirname, 'api/geo2.json'),
-        //         bypass: function(req, res, proxyOptions) {
-        //             return path.join(__dirname, 'api/geo2.json');
-        //         }
-        //     }
-        // },
         stats: { colors: true },
         watchOptions: {
-            ignored: /(node_modules|test|public)/
+            ignored: /(node_modules|api|css|distdll|resources|test)/
             // aggregateTimeout: 300,
             // poll: 1000
         }

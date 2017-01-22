@@ -3,7 +3,7 @@
 import geoData  from './fixtures/geo2.json';
 import { SimpleEcofigCoalesceStrategy } from '../src/EcofigCoalesceStrategy.js';
 import { Json2Ecofig } from '../src/Ecofig.js';
-import { GeoMidPointCalculator, SimpleMidPointCalculator } from '../src/MidPointCalculator.js';
+import { GeoMidPointCalculator } from '../src/MidPointCalculator.js';
 
 var assert = require('chai').assert;
 

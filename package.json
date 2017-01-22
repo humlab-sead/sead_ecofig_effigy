@@ -6,8 +6,9 @@
   "scripts": {
     "clean:all": "npm cache clean && npm run rimraf -- public/*",
     "clean": "mkdirp public && rimraf public/*",
-    "copy:data": "cp api/geo2.json public/",
-    "build:cesium": "cpr node_modules/cesium/Build/Cesium public/Cesium public/",
+    "copy:data": "cp api/ecofig_data.json public/",
+    "copy:cesium": "cpr node_modules/cesium/Build/Cesium public/cesium",
+    "build:cesium": "webpack --config config/webpack.cesium.js --progress --profile --colors --display-error-details --display-cached && cp ./distdll/** ./public/",
     "build:models": "npm run compile:glb",
     "build:assets": "npm run build:models && npm run build:cesium && npm run copy:data",
     "build:dev": "npm run clean && npm run build:assets && webpack --config ./config/webpack.config.js --progress --profile --colors --display-error-details --display-cached",
