@@ -53,7 +53,7 @@ const ecofigDefaultModelSetup = {
             [ "BEco7b", { type: "default", setup: { asset: "pond-optimized.glb", scale: true, factor: 1.0, multiply: false, spread: "random", bgColor: {r: 0, g: 0, b:255, a:0.25 }}}], // "Carrion"
             [ "BEco7c", { type: "default", setup: { asset: "dung-optimized.glb", scale: false, factor: 1.0, multiply: [1,10], spread: "random", bgColor: {r: 0, g: 0, b:255, a:0.25 }}}], // "Indicators: Dung"
             [ "BEco8",  { type: "default", setup: { asset: "human-optimized.glb", scale: false, factor: 0.01, multiply: [1,10], spread: "random", bgColor: {r: 0, g: 0, b:255, a:0.25 }}}], // 'Mould beetles of all types'
-            [ "BEco9a", { type: "default", setup: { asset: "human-optimized.glb", scale: false, factor: 0.01, multiply: [1,10], spread: "random", bgColor: {r: 0, g: 0, b:255, a:0.25 }}}], // "General synanthropic"
+            [ "BEco9a", { type: "default", setup: { asset: "human-optimized.glb", scale: false, factor: 0.3, multiply: [1,100], spread: "random", bgColor: {r: 0, g: 0, b:255, a:0.25 }}}], // "General synanthropic"
             [ "BEco9b", { type: "default", setup: { asset: "wheat-optimized.glb", scale: true, factor: 1.0, multiply: false, spread: null, bgColor: {r: 0, g: 0, b:255, a:0.25 }}}], // "Stored grain pest"
             [ "BEco10", { type: "default", setup: { asset: "tree5-optimized.glb", scale: false, factor: 0.5, multiply: [1,5], spread: "random", bgColor: {r: 0, g: 0, b:255, a:0.25 }}}], // "Dry dead wood": "",
             [ "BEco12", { type: "default", setup: { asset: "grass-optimized.glb", scale: false, factor: 1.0, multiply: [1,100], spread: "random", bgColor: {r: 0, g: 0, b:255, a:0.25 }}}], // "Heathland & moorland"

@@ -78,6 +78,17 @@ All necessery files now reside in the ./public folder. Copy these files to the w
 * [Cesium](http://www.dropwizard.io/1.0.2/docs/) - The web framework used
 * [Webpack](https://maven.apache.org/) - Bundler
 
+## Attributions
+
+Natural Earth II Natural Earth II with Shaded Relief, Water, and Drainages downloaded from [here](http://www.naturalearthdata.com/downloads/10m-raster-data/10m-natural-earth-2/)
+
+Tiling (512x512) has been done with GDAL:
+```
+apt-get install gdal-bin
+apt-get install python-gdal
+
+gdal_retile.py -v -s_srs EPSG:4326 -r bilinear -levels 4 -ps 512 512 -co "TILED=YES" -co "COMPRESS=JPEG" -targetDir pyramid/ NE2_HR_LC_SR_W_DR.tif
+```
 ## License
 
 This project is licensed under the MIT License - see the [LICENSE.md](LICENSE.md) file for details

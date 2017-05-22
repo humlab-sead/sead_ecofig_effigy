@@ -59,9 +59,10 @@ class EcofigStore {
         let ecofigs = this.values;
         // FIXME: Implement more advanced filter capabilities
 
+
         if (filter && filter.ageEarliest && filter.ageLatest) {
             return ecofigs.filter(
-                x => -x.ageEarliest >= filter.ageLatest && filter.ageEarliest >= -x.ageLatest
+                x => -x.ageEarliest <= filter.ageLatest && filter.ageEarliest <= -x.ageLatest
             )
         }
 
@@ -77,7 +78,5 @@ class EcofigStore {
     }
 
 }
-
-//const __EcofigStore = new EcofigStore();
 
 export default EcofigStore;
